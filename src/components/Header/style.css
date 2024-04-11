@@ -1,0 +1,8 @@
+.navbar{
+    background: var(--dark-color);
+}
+.nav-link{
+    font-size: 1.2rem !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+}
