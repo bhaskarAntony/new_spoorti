@@ -19,7 +19,8 @@ function Header() {
     <Navbar expand="lg" className="navbar">
       <Container fluid>
         <Navbar.Brand href="#"><img src={logo} alt="logo" /></Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" onClick={handleShow} />
+      
+        <button className='btn btn-light d-block d-md-none' onClick={handleShow}><i className='bi bi-list fs-3'></i></button>
         <Navbar.Collapse id="navbarScroll">
          <div className="d-none d-md-block w-100">
          <Nav
