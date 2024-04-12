@@ -20,7 +20,7 @@ function Header() {
       <Container fluid>
         <Navbar.Brand href="#"><img src={logo} alt="logo" /></Navbar.Brand>
       
-        <button className='btn btn-light d-block d-md-none' onClick={handleShow}><i className='bi bi-list fs-3'></i></button>
+        <button className='btn p-0 bg-transparent text-white  d-block d-md-none' onClick={handleShow}><i className='bi bi-list fs-1'></i></button>
         <Navbar.Collapse id="navbarScroll">
          <div className="d-none d-md-block w-100">
          <Nav
