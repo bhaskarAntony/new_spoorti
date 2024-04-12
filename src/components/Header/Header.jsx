@@ -31,7 +31,7 @@ function Header() {
             <Nav.Link href="#action1">Home</Nav.Link>
             <Nav.Link href="#action2">About us</Nav.Link>
             <Nav.Link href="#action2">Contact us</Nav.Link>
-            <Nav.Link href="#action2">Order Food</Nav.Link>
+            <Nav.Link href="/food">Order Food</Nav.Link>
             <Nav.Link href="#action2">Rooms</Nav.Link>
             <Nav.Link href="#action2">Events</Nav.Link>
             <Nav.Link href="#action2">Live Stream</Nav.Link>
@@ -50,13 +50,21 @@ function Header() {
 
 
 
-      <Offcanvas show={show} onHide={handleClose}>
+      <Offcanvas show={show} onHide={handleClose} className='mobile-nav'>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <Offcanvas.Title> <img src={logo} alt="" /> </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+         <ul >
+            <li><a href=""><i class="bi bi-house-door-fill"></i> Home</a></li>
+            <li><a href=""><i class="bi bi-file-person-fill"></i> About us</a></li>
+            <li><a href=""><i class="bi bi-person-lines-fill"></i> Contact us</a></li>
+            <li><a href="/food"><i class="bi bi-basket"></i> Order food</a></li>
+            <li><a href=""><i class="bi bi-building"></i> Book Rooms</a></li>
+            <li><a href=""><i class="bi bi-stars"></i> Events</a></li>
+            <li><a href=""><i class="bi bi-camera-video-fill"></i> Live Stream</a></li>
+            <li><a href=""><i class="bi bi-images"></i> Gallery</a></li>
+         </ul>
         </Offcanvas.Body>
       </Offcanvas>
    </>

@@ -6,3 +6,28 @@
     color: #fff !important;
     font-weight: 700 !important;
 }
+
+
+.mobile-nav{
+    background-color: #114232 !important;
+}
+.mobile-nav ul li{
+    font-size: 1.2rem;
+}
+.mobile-nav ul{
+    padding: 0px;
+    list-style-type: none;
+}
+.mobile-nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    background-color: #7cc9af19;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.mobile-nav ul li a:hover{
+    background-color: #7cc9af63;
+}

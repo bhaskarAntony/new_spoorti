@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<script>
+      
+
+        function passible(array, sum){
+            for(let i =0; i<array.length; i++){
+                for(let j=0; j<array.length; j++){
+                    if(array[i] + array[j] == sum){
+                       if(i != j){
+                       if(array[i]>array[j]){
+                        console.log(array[i], array[j])
+                       }
+                       }
+                    }
+                }
+            }
+        }
+        let a = [5, 7, 3, 9, 1, 2]
+        let sum = 11;
+        passible(a, sum);
+
+        // function passible(array, sum){
+        //     for(let i =0; i<array.length-1; i++){
+        //         for(let j=i+1; j<array.length; j++){
+        //             if(array[i] + array[j] == sum){
+                       
+        //                 console.log(array[i], array[j])
+                      
+        //             }
+        //         }
+        //     }
+        // }
+        // let a = [5, 7, 3, 9, 1, 2]
+        // let sum = 11;
+        // passible(a, sum);
+</script>
+</body>
+</html>
