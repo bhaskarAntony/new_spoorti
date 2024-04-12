@@ -5,10 +5,11 @@ const menu = [
         time:'8:30AM - 10:30AM',
         foods:[
             {
-                image:'',
-                price: 1,
-                title:'',
-                caption:''
+                image:'https://www.indianhealthyrecipes.com/wp-content/uploads/2022/04/idli-recipe.jpg',
+                price: 60,
+                title:'Idly',
+                caption:'Steamed Rice Cakes accompanied with sambar and coconut chutney',
+                veg:true,
             }
         ]
     },

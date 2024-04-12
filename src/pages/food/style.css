@@ -67,6 +67,26 @@
     color: #fff;
   
 }
+.food-card{
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 10px;
+}
+.food-card img{
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.caption{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.food-card .price{
+    flex: 1;
+    white-space: nowrap;
+}
 
 @media(max-width:768px){
     .food-tabs .nav-link{
