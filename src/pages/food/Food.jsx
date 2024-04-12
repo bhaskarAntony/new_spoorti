@@ -7,14 +7,14 @@ import FoodItems from './FoodItems'
 function Food() {
   return (
     <Tabs
-    defaultActiveKey="profile"
+    defaultActiveKey="veg"
     id="uncontrolled-tab-example"
     className="mb-3 food-tabs"
   >
-    <Tab eventKey="home" title="veg">
+    <Tab eventKey="veg" title="veg">
       <FoodItems/>
     </Tab>
-    <Tab eventKey="profile" title="Non veg">
+    <Tab eventKey="nonveg" title="nonveg">
       Tab content for Profile
     </Tab>
   </Tabs>
