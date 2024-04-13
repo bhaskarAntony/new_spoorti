@@ -80,6 +80,8 @@ function FoodCart() {
                             </div>
                         </div>
                     </div>
+
+                    <button className="order-btn fs-4">Confirm Order <i className="bi bi-arrow-right-circle-fill"></i></button>
                 </div>
             ) : (
                 <p>No items selected</p>
