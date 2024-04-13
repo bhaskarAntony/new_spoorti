@@ -28,7 +28,7 @@ function FoodItems({ type }) {
                 }
                 return item;
             });
-            return updatedItems;
+            return updatedItems.filter(item => item.quantity > 0); // Remove product if quantity becomes 0
         });
     };
 
@@ -65,40 +65,48 @@ function FoodItems({ type }) {
             </div>
 
             <div className="allfoods p-2">
-                {selectedItems.length}
-                <h1 className="fs-1 fw-bold mt-3">{selectedCategory}</h1>
-                <hr />
+              
                 <div className="row">
                     {menu.map((item, index) => (
-                        item.title === selectedCategory && item.foods.map((fooditem, foodIndex) => (
-                            fooditem.veg === type ? (
-                                <div className="col-12 col-md-3 mb-4" key={fooditem.id}>
-                                    <div className="food-card d-flex flex-column justify-content-between h-100 p-3">
-                                        <div className="food-card-top" onClick={() => setSelectedItem(fooditem)}>
-                                            <img src={fooditem.image} alt="" className='w-100 mb-3' data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" />
-                                            {(selectedItems.some(selectedItem => selectedItem.id === fooditem.id) && selectedItems.find(selectedItem => selectedItem.id === fooditem.id).quantity > 0) ? (
-                                                <div className="add active d-flex align-items-center">
-                                                    <button onClick={() => removeQuantity(fooditem.id)} className='fs-4'>-</button>
-                                                    <span className='fs-4'>{selectedItems.find(selectedItem => selectedItem.id === fooditem.id).quantity}</span>
-                                                    <button onClick={() => addQuantity(fooditem.id)} className='fs-4'>+</button>
+                        item.title === selectedCategory && item.all.map((allitem, allindex) => (
+                          <section className='mt-3'>
+                            <h1 className="fs-1 fw-bold mt-3">{allitem.title}</h1>
+                            <hr />
+                          <div className="row">
+                            {
+                                allitem.foods.map((fooditem, foodIndex)=>(
+                                    fooditem.veg === type ? (
+                                        <div className="col-12 col-md-3 mb-4" key={fooditem.id}>
+                                            <div className="food-card d-flex flex-column justify-content-between h-100 p-3">
+                                                <div className="food-card-top" onClick={() => setSelectedItem(fooditem)}>
+                                                    <img src={fooditem.image} alt="" className='w-100 mb-3' data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" />
+                                                    {(selectedItems.some(selectedItem => selectedItem.id === fooditem.id) && selectedItems.find(selectedItem => selectedItem.id === fooditem.id).quantity > 0) ? (
+                                                        <div className="add active d-flex align-items-center">
+                                                            <button onClick={() => removeQuantity(fooditem.id)} className='fs-4'>-</button>
+                                                            <span className='fs-4'>{selectedItems.find(selectedItem => selectedItem.id === fooditem.id).quantity}</span>
+                                                            <button onClick={() => addQuantity(fooditem.id)} className='fs-4'>+</button>
+                                                        </div>
+                                                    ) : (
+                                                        <div className="add d-flex align-item-center justify-content-center">
+                                                            <span className="fs-4" onClick={() => handleAddClick(fooditem)}>Add</span>
+                                                        </div>
+                                                    )}
+                                                    <div className="type">
+                                                        <div className={`type-circle ${fooditem.veg === 'veg' ? 'bg-success' : 'bg-danger'}`}></div>
+                                                    </div>
                                                 </div>
-                                            ) : (
-                                                <div className="add d-flex align-item-center justify-content-center">
-                                                    <span className="fs-4" onClick={() => handleAddClick(fooditem)}>Add</span>
+                                                <span className="fs-5 d-block fw-bold text-dark">{fooditem.title}</span>
+                                                <div className="d-flex gap-3 mt-2 align-items-center">
+                                                    <small className="fs-6 text-secondary caption">{fooditem.caption}</small>
+                                                    <span className="fs-5 price fw-bold btn btn-outline-success p-1 btn-sm">&#8377; {fooditem.price}/-</span>
                                                 </div>
-                                            )}
-                                            <div className="type">
-                                                <div className={`type-circle ${fooditem.veg === 'veg' ? 'bg-success' : 'bg-danger'}`}></div>
                                             </div>
                                         </div>
-                                        <span className="fs-5 d-block fw-bold text-dark">{fooditem.title}</span>
-                                        <div className="d-flex gap-3 mt-2 align-items-center">
-                                            <small className="fs-6 text-secondary caption">{fooditem.caption}</small>
-                                            <span className="fs-5 price fw-bold btn btn-outline-success p-1 btn-sm">&#8377; {fooditem.price}/-</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            ) : (null)
+                                    ) : (null)
+                                ))
+                            }
+                          </div>
+                          </section>
                         ))
                     ))}
                 </div>
@@ -131,15 +139,13 @@ function FoodItems({ type }) {
                     </div>
                 </div>
             </div>
-            
-            {
-                selectedItems.length>0?(
-                    <div className="bottom-bar">
-                    <span className="fs-5 d-block">{selectedItems.length} items Added <i class="bi bi-arrow-right-circle-fill"></i></span>
+
+            {selectedItems.length > 0 && (
+                <div className="bottom-bar">
+                    <span className="fs-5 d-block">{selectedItems.length} items Added <i className="bi bi-arrow-right-circle-fill"></i></span>
                     <span className="fs-6">Add items worth &#8377;89 more to get delivery</span>
-                        </div>
-                ):(null)
-            }
+                </div>
+            )}
         </div>
     );
 }
