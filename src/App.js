@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import { TranslationHOC } from './helpers/TranslationHOC';
 import Home from './pages/Home/Home';
 import Food from './pages/food/Food';
+import ViewFood from './pages/food/ViewFood';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/food' element={<Food/>}/>
+      <Route path='/food/order/:id' element={<ViewFood/>}/>
     </Routes>
     </BrowserRouter>
     </TranslationHOC>

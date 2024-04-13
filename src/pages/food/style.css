@@ -67,6 +67,9 @@
     color: #fff;
   
 }
+.allfoods a{
+    text-decoration: none;
+}
 .food-card{
     padding: 10px;
     background-color: #fff;
@@ -99,17 +102,29 @@
     border-radius: 100px;
     background-color: green;
 }
-.type-veg{
-    background-color: rgb(0, 128, 64);
+.add, .food-card-top .active{
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    width: 100px;
+    justify-content: space-between;
+    background-color: #0707078a;
+    border-radius: 100px;
+    font-size: 1rem;
+    color: #ffffff;
+    backdrop-filter: blur(5px);
 }
-.type-nonveg{
-    background-color: red;
-}
+
 .filter{
     z-index: 1020;
     box-shadow: 0px 10px 40px #fff;
 }
-
+.food-card-top .active button{
+    color: #fff;
+    border: none;
+    background-color: transparent;
+}
 .filter button{
     white-space: nowrap;
 }
@@ -128,6 +143,17 @@
     white-space: nowrap;
 }
 
+
+
+
+/* view page  */
+.food-banner{
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 @media(max-width:768px){
     .food-tabs .nav-link{
         width: 100% !important;
