@@ -1,8 +1,8 @@
-header{
+/* header{
     position: sticky;
     top: 0px;
     z-index: 1020;
-}
+} */
 .navbar{
     background: var(--dark-color);
 }
