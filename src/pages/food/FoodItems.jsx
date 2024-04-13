@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import menu from '../../data/foods';
 import './style.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function FoodItems({ type }) {
     const [selectedCategory, setSelectedCategory] = useState('Breakfast');
     const [selectedItems, setSelectedItems] = useState([]);
     const [selectedItem, setSelectedItem] = useState({});
+    const navigate = useNavigate()
 
     const addQuantity = (id) => {
         setSelectedItems(prevItems => {
@@ -141,10 +142,13 @@ function FoodItems({ type }) {
             </div>
 
             {selectedItems.length > 0 && (
-                <div className="bottom-bar">
-                    <span className="fs-5 d-block">{selectedItems.length} items Added <i className="bi bi-arrow-right-circle-fill"></i></span>
-                    <span className="fs-6">Add items worth &#8377;89 more to get delivery</span>
-                </div>
+        //   <Link to={{ pathname: "/cart", state: 'hello'}}>
+               
+        //         </Link>
+            <div className="bottom-bar" onClick={()=>navigate('/cart', {state: { cartItems: selectedItems}})}>
+            <span className="fs-5 d-block">{selectedItems.length} items Added <i className="bi bi-arrow-right-circle-fill"></i></span>
+            <span className="fs-6">Add items worth &#8377;89 more to get delivery</span>
+        </div>
             )}
         </div>
     );
