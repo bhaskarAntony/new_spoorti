@@ -105,8 +105,8 @@ function FoodItems({ type }) {
      </div>
         </div>
         <div className="col-12 col-md-7 py-4">
-        <span className="fs-4">{selectedItem.title}</span>
-        <div className="d-flex flex-md-column gap-3 mt-2 align-items-md-start">
+        <span className="fs-4 fw-bold">{selectedItem.title}</span>
+        <div className="d-flex flex-md-column gap-3 mt-2 align-items-md-start align-items-center">
         <small className="fs-6 text-secondary caption">{selectedItem.caption}</small>
          <span className="fs-5 price fw-bold btn btn-outline-success p-1 btn-sm">&#8377; {selectedItem.price}/-</span>
         </div>
