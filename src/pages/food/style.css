@@ -70,8 +70,44 @@
 .food-card{
     padding: 10px;
     background-color: #fff;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.food-card:hover{
+    transform: scale(1.05);
+}
+.food-card-top{
+    position: relative;
+}
+.type{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    left: 3px;
+    top: 3px;
+    border-radius: 5px;
+}
+.type-circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: green;
+}
+.type-veg{
+    background-color: rgb(0, 128, 64);
+}
+.type-nonveg{
+    background-color: red;
+}
+
+.filter button{
+    white-space: nowrap;
 }
 .food-card img{
     height: 200px;

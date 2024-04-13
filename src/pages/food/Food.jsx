@@ -1,26 +1,30 @@
 import React, { useState } from 'react'
 import './style.css'
-import { Tabs } from 'react-bootstrap'
-import { Tab } from 'bootstrap/dist/js/bootstrap.bundle'
+import { Tabs, Tab } from 'react-bootstrap'
 import FoodItems from './FoodItems'
 
 function Food() {
-    const [type, setType] = useState(null);
+    const [type, setType] = useState('veg'); // Set default type to 'veg'
 
-  return (
-    <Tabs
-    defaultActiveKey="veg"
-    id="uncontrolled-tab-example"
-    className="mb-3 food-tabs"
-  >
-    <Tab eventKey="veg" title="veg" onclick={()=>setType('veg')}>
-      <FoodItems/>
-    </Tab>
-    <Tab eventKey="nonveg" title="nonveg" onclick={()=>setType('nonveg')}>
-      Tab content for Profile
-    </Tab>
-  </Tabs>
-  )
+    const handleTabSelect = (selectedType) => {
+        setType(selectedType); // Update type state when switching tabs
+    };
+
+    return (
+        <Tabs
+            defaultActiveKey="veg"
+            id="uncontrolled-tab-example"
+            className="mb-3 food-tabs"
+            onSelect={handleTabSelect} // Handle tab selection
+        >
+            <Tab eventKey="veg" title="Veg">
+                <FoodItems type={type} />
+            </Tab>
+            <Tab eventKey="nonveg" title="Non-Veg">
+                <FoodItems type={type} />
+            </Tab>
+        </Tabs>
+    );
 }
 
-export default Food
+export default Food;
