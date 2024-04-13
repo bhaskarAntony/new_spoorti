@@ -37,8 +37,27 @@
 }
 .rooms-inner .room-card{
     flex: 1;
-    min-width: 100px;
+    min-width: 150px;
     position: relative;
+}
+.room-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.room-card button{
+  transform: scale(0);
+  transition: 0.7s;
+  padding: 10px;
+  border-radius: 100px;
+}
+.room-card:hover h1{
+  display: none;
+}
+.room-card:hover button{
+    transform: scale(1)
 }
 
 
