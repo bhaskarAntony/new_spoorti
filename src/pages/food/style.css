@@ -167,6 +167,21 @@
     height: 150px;
     object-fit: cover;
 }
+
+
+
+.bottom-bar{
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f21329;
+    color: #fff;
+    width: fit-content;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 100px;
+}
 @media(max-width:768px){
     .food-tabs .nav-link{
         width: 100% !important;
@@ -195,5 +210,12 @@
     }
     .bottom-card{
         width: 100%;
+    }
+    .bottom-bar{
+        width: 100%;
+        border-radius: 0px;
+        left: 0px;
+        bottom: 0px;
+        transform: translateX(0px);
     }
 }

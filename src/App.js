@@ -7,6 +7,7 @@ import Home from './pages/Home/Home';
 import Food from './pages/food/Food';
 import ViewFood from './pages/food/ViewFood';
 import Room from './pages/Rooms/Room';
+import Event from './pages/Events/Event';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path='/' element={<Home/>}/>
       <Route path='/food' element={<Food/>}/>
       <Route path='/room' element={<Room/>}/>
+      <Route path='/event' element={<Event/>}/>
       <Route path='/food/order/:id' element={<ViewFood/>}/>
     </Routes>
     </BrowserRouter>
