@@ -48,7 +48,7 @@ function FoodCart() {
     return (
         <div>
             {items && items.length > 0 ? (
-                <div className='cart-container p-2 p-md-4'>
+                <div className='cart-container p-2 p-md-4 container-fluid'>
                     <h1>Selected Items:</h1>
                     <div className="row">
                         <div className="col-12 col-md-7">

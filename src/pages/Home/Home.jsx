@@ -7,7 +7,7 @@ function Home() {
   return (
     <div>
         <Hero/>
-        <div className="container-fluid s1 p-2 p-md-4 py-5">
+        <div className="container-fluid s1 p-2 p-md-4 py-5 overflow-hidden">
             <div className="row align-items-center">
                 <div className="col-12 col-md-6 mb-4">
                     <h1 className="fs-1 fw-bold">Discover Exclusive Benefits of Booking Rooms for Police Officers</h1>
