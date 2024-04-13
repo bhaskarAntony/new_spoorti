@@ -15,7 +15,7 @@ function Header() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
   return (
-   <>
+   <header>
     <Navbar expand="lg" className="navbar">
       <Container fluid>
         <Navbar.Brand href="#"><img src={logo} alt="logo" /></Navbar.Brand>
@@ -67,7 +67,7 @@ function Header() {
          </ul>
         </Offcanvas.Body>
       </Offcanvas>
-   </>
+   </header>
   );
 }
 

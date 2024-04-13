@@ -41,7 +41,7 @@ function FoodItems({ type }) {
                 ))}
             </div>
 
-            <div className="filter p-3 d-flex gap-3 py-4 overflow-auto flex-nowrap position-sticky top-0 bg-white">
+            <div className="filter p-3 d-flex gap-3 py-4 overflow-auto flex-nowrap position-sticky  bg-white">
                 <button className="btn btn-outline-secondary px-4 rounded-3"><i className="bi bi-funnel"></i> Filter</button>
                 <button className="btn btn-outline-secondary px-4 rounded-3"><i className="bi bi-star"></i> Rating 4.0+</button>
                 <button className="btn btn-outline-secondary px-4 rounded-3"><i className="bi bi-check-circle"></i> Pure veg</button>
