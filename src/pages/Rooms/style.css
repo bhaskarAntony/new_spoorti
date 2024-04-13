@@ -27,7 +27,21 @@
 }
 .room-book-card .form-control{
     padding: 15px;
+    border: none;
+  
+}
+.room-book-card .form-control:focus{
+    box-shadow: none;
+    border: none;
+}
+.input-group{
     border: 2px solid #d2d1d1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.input-group-text{
+    background-color: transparent !important;
+    border: none !important;
 }
 
 .rooms-inner{

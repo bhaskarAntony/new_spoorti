@@ -12,26 +12,35 @@ function Room() {
         <div className="room-book-card">
             <div className="row align-item-center">
                 <div className="col-12 col-md-3">
-                    <div className="form-group mt-2">
-                        <label htmlFor="check" className="form-label">Check in</label>
-                        <input type="date"  className="form-control" id='check' />
+                   <div className="form-group">
+                   <label htmlFor="check" className="form-label">Check in</label>
+                   <div className="input-group mt-2">
+                        <span class="input-group-text" id="basic-addon1">  <i class="bi bi-calendar2-week fs-4 text-primary"></i></span>
+                  <input type="date"  className="form-control" id='check' />
                     </div>
+                   </div>
                 </div>
                 <div className="col-12 col-md-3">
-                    <div className="form-group mt-2">
-                        <label htmlFor="check" className="form-label">Check out</label>
-                        <input type="date"  className="form-control" id='check' />
+                <div className="form-group">
+                   <label htmlFor="check" className="form-label">Check out</label>
+                   <div className="input-group mt-2">
+                        <span class="input-group-text" id="basic-addon1">  <i class="bi bi-calendar2-week fs-4 text-primary"></i></span>
+                  <input type="date"  className="form-control" id='check' />
                     </div>
+                   </div>
                 </div>
                 <div className="col-12 col-md-3">
-                    <div className="form-group mt-2">
-                        <label htmlFor="check" className="form-label">Adult</label>
-                        <input type="number"  className="form-control" id='adult' placeholder='Adult' />
+                <div className="form-group">
+                   <label htmlFor="check" className="form-label">No.Of Guests</label>
+                   <div className="input-group mt-2">
+                        <span class="input-group-text" id="basic-addon1">  <i class="bi-people-fill fs-4 text-primary"></i></span>
+                  <input type="date"  className="form-control" id='check' />
                     </div>
+                   </div>
                 </div>
                 <div className="col-12 col-md-3">
                     <div className="form-group">
-                        <button className="btn btn-primary w-100">Check Availability</button>
+                        <button className="btn btn-primary w-100 d-flex align-items-center justify-content-between">Check Availability <i class="bi bi-arrow-right"></i></button>
                     </div>
                 </div>
             </div>

@@ -28,7 +28,7 @@
     border-radius: 20px;
 }
 .menu-item:hover img, .room-card:hover img{
-    filter: blur(10px)
+    filter: blur(5px)
 
 }
 .menu-item:hover, .room-card:hover{
