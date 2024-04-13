@@ -57,7 +57,7 @@ function FoodItems({ type }) {
                             fooditem.veg === type ? (
                                 <div className="col-12 col-md-3 mb-4" key={fooditem.id}>
                                     <div className="food-card d-flex flex-column justify-content-between h-100 p-3">
-                                        <div className="food-card-top" >
+                                        <div className="food-card-top" onClick={()=>setSelectedItem(fooditem)} >
                                             <img src={fooditem.image} alt="" className='w-100 mb-3' data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" />
                                             {(selectedFood && selectedFood.id === fooditem.id && selectedFood.quantity > 0) ? (
                                                 <div className="add active d-flex align-items-center">
@@ -89,11 +89,15 @@ function FoodItems({ type }) {
 
             <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Details</h5>
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">{selectedItem.title}</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    
+    <div className="row">
+        <div className="col-12 col-md-5">
+            <img src={selectedItem.image} alt={selectedItem.title} className="w-100 rounded-3" />
+        </div>
+    </div>
   </div>
 </div>
         </div>

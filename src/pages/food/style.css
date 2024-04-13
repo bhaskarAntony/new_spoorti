@@ -21,26 +21,26 @@
 
 }
 
-.menu-item{
+.menu-item, .room-card{
     flex: 1;
     position: relative;
     overflow: hidden;
     border-radius: 20px;
 }
-.menu-item:hover img{
+.menu-item:hover img, .room-card:hover img{
     filter: blur(10px)
 
 }
-.menu-item:hover{
+.menu-item:hover, .room-card:hover{
     transition: 0.8s;
     transform: scale(1.03);
     cursor: pointer;
 }
-.menu-info p{
+.menu-info p, .room-info h1{
     position: relative;
     overflow: hidden;
 }
-.menu-info p:before{
+.menu-info p:before, .room-info h1::before{
     content: "";
     position: absolute;
     width: 100%;
@@ -49,11 +49,11 @@
     bottom: 0px;
     transform: translateX(-100%);
 }
-.menu-item:hover .menu-info p::before{
+.menu-item:hover .menu-info p::before, .room-card:hover .room-info h1:hover{
     transform: translateX(0px);
     transition: 1s;
 }
-.menu-info{
+.menu-info, .room-info{
     position: absolute;
     left: 0;
     bottom: 0;
@@ -164,7 +164,7 @@
     .food-tabs{
         flex-wrap: nowrap !important;
     }
-    .menu-item{
+    .menu-item, .room-card{
         flex: 1;
         min-width: 100px;
         width: 100%;

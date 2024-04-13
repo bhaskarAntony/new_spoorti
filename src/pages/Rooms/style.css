@@ -1,0 +1,51 @@
+.room-banner{
+    background: linear-gradient(#00000048, #000), url('../../assets//images/gallery_banner_3x.png') no-repeat center;
+    background-size: cover;
+    min-height: 50vh;
+    color: #fff;
+}
+
+.room-book-card{
+    width: 80%;
+    margin: auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(-60px);
+    background-color: #fff;
+    border-radius: 10px;
+}
+.room-book-card .row{
+    width: 100%;
+}
+.room-book-card button{
+    margin-top: 40px;
+    padding: 15px;
+}
+.room-book-card .form-control{
+    padding: 15px;
+    border: 2px solid #d2d1d1;
+}
+
+.rooms-inner{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.rooms-inner .room-card{
+    flex: 1;
+    min-width: 100px;
+    position: relative;
+}
+
+
+
+
+@media(max-width:768px){
+    .room-book-card{
+        width: 90%;
+    }
+}
