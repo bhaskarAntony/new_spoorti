@@ -70,7 +70,7 @@
 .allfoods a{
     text-decoration: none;
 }
-.food-card{
+.food-card, .bottom-card{
     padding: 10px;
     background-color: #fff;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -118,8 +118,7 @@
 
 .filter{
     z-index: 1020;
-    top: 75px !important;
-    box-shadow: 0px 10px 20px #fff;
+    box-shadow: 0px 10px 40px #fff;
 }
 .food-card-top .active button{
     color: #fff;
@@ -139,7 +138,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.food-card .price{
+ .price{
     flex: 1;
     white-space: nowrap;
 }
@@ -154,6 +153,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.offcanvas{
+    min-height:45vh;
+    overflow: auto;
+}
+.bottom-card{
+    width: 70%;
+    margin: auto;
+}
+.bottom-card img{
+    height: 150px;
+    object-fit: cover;
 }
 @media(max-width:768px){
     .food-tabs .nav-link{
@@ -174,5 +186,14 @@
     .food-categories img{
      width: 100% !important;    
      height: 110px;
+    }
+    .offcanvas{
+        min-height: 80vh;
+    }
+    .bottom-card img{
+        height: 250px;
+    }
+    .bottom-card{
+        width: 100%;
     }
 }

@@ -41,7 +41,7 @@ function FoodItems({ type }) {
                 ))}
             </div>
 
-            <div className="filter p-3 d-flex gap-3 py-4 overflow-auto flex-nowrap position-sticky  bg-white">
+            <div className="filter p-3 d-flex gap-3 py-4 overflow-auto flex-nowrap position-sticky top-0 bg-white">
                 <button className="btn btn-outline-secondary px-4 rounded-3"><i className="bi bi-funnel"></i> Filter</button>
                 <button className="btn btn-outline-secondary px-4 rounded-3"><i className="bi bi-star"></i> Rating 4.0+</button>
                 <button className="btn btn-outline-secondary px-4 rounded-3"><i className="bi bi-check-circle"></i> Pure veg</button>
@@ -93,11 +93,27 @@ function FoodItems({ type }) {
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
+   
+    <div className="bottom-card">
     <div className="row">
-        <div className="col-12 col-md-5">
-            <img src={selectedItem.image} alt={selectedItem.title} className="w-100 rounded-3" />
+        <div className="col-12 col-md-3">
+     <div className="food-card-top">
+     <img src={selectedItem.image} alt={selectedItem.title} className="w-100 rounded-3" />
+     <div className="type">
+    <div className={`type-circle ${selectedItem.veg === 'veg' ? 'bg-success' : 'bg-danger'}`}></div>
+        </div>
+     </div>
+        </div>
+        <div className="col-12 col-md-7 py-4">
+        <span className="fs-4">{selectedItem.title}</span>
+        <div className="d-flex flex-md-column gap-3 mt-2 align-items-md-start">
+        <small className="fs-6 text-secondary caption">{selectedItem.caption}</small>
+         <span className="fs-5 price fw-bold btn btn-outline-success p-1 btn-sm">&#8377; {selectedItem.price}/-</span>
+        </div>
         </div>
     </div>
+        
+          </div>
   </div>
 </div>
         </div>
