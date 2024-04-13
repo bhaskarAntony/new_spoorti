@@ -11,7 +11,7 @@ import Event from './pages/Events/Event';
 import FoodCart from './pages/food/FoodCart';
 
 function App() {
-
+  
   return (
     <div className="App">
    

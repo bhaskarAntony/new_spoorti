@@ -34,12 +34,12 @@
     box-shadow: none;
     border: none;
 }
-.input-group{
+.room-book-card .input-group{
     border: 2px solid #d2d1d1;
     border-radius: 10px;
     overflow: hidden;
 }
-.input-group-text{
+.room-book-card .input-group-text{
     background-color: transparent !important;
     border: none !important;
 }
