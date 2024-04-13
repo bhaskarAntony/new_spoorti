@@ -105,6 +105,10 @@
 .type-nonveg{
     background-color: red;
 }
+.filter{
+    z-index: 1020;
+    box-shadow: 0px 10px 40px #fff;
+}
 
 .filter button{
     white-space: nowrap;

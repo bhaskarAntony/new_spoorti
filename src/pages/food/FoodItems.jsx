@@ -8,7 +8,7 @@ function FoodItems({type}) {
     //   type = "veg";
     // }
   return (
-    <div className=' container-fluid p-2 p-md-4'>
+    <div className=' container-fluid p-2 p-md-4 bg-white'>
         <div className="food-categories">
             {
                menu.map((item, index)=>(
@@ -22,7 +22,7 @@ function FoodItems({type}) {
             }
         </div>
 
-        <div className="filter p-3 d-flex gap-3 py-4 overflow-auto flex-nowrap">
+        <div className="filter p-3 d-flex gap-3 py-4 overflow-auto flex-nowrap position-sticky top-0 bg-white">
           <button className="btn btn-outline-secondary px-4 rounded-3"><i class="bi bi-funnel"></i> Filter</button>
           <button className="btn btn-outline-secondary px-4 rounded-3"><i class="bi bi-star"></i> Rating 4.0+</button>
           <button className="btn btn-outline-secondary px-4 rounded-3"><i class="bi bi-check-circle"></i> Pure veg</button>
