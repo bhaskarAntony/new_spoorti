@@ -2,7 +2,8 @@
     background: linear-gradient(#00000048, #000), url('../../assets//images/event_banner.png') no-repeat center;
 }
 .event-view-banner{
-    min-height: 50vh;
+    min-height: 40vh;
+
     color: #fff;
 }
 .event-card{

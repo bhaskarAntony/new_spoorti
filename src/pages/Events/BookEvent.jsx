@@ -36,8 +36,8 @@ function BookEvent() {
                 <div className="row">
                    {
                     events.map((eventItem, eventIndex)=>(
-                        <div className="col-12 col-md-4" key={eventIndex}>
-                        <div className="event-card p-3 rounded-4">
+                        <div className="col-12 col-md-4 mb-3" key={eventIndex}>
+                        <div className="event-card p-3 rounded-4 h-100">
                             <div className="event-card-top">
                                 <img src={eventItem.image} alt={eventItem.venue} className='w-100 mb-2 rounded-4'/>
                             </div>
