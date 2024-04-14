@@ -34,7 +34,6 @@ function Header() {
             <Nav.Link href="/food">Order Food</Nav.Link>
             <Nav.Link href="/room">Rooms</Nav.Link>
             <Nav.Link href="/event">Events</Nav.Link>
-            <Nav.Link href="#action2">Live Stream</Nav.Link>
             <Nav.Link href="#action2">Gallery</Nav.Link>
 
           
@@ -61,8 +60,7 @@ function Header() {
             <li><a href=""><i class="bi bi-person-lines-fill"></i> Contact us</a></li>
             <li><a href="/food"><i class="bi bi-basket"></i> Order food</a></li>
             <li><a href="/room"><i class="bi bi-building"></i> Book Rooms</a></li>
-            <li><a href=""><i class="bi bi-stars"></i> Events</a></li>
-            <li><a href=""><i class="bi bi-camera-video-fill"></i> Live Stream</a></li>
+            <li><a href="/event"><i class="bi bi-stars"></i> Events</a></li>
             <li><a href=""><i class="bi bi-images"></i> Gallery</a></li>
          </ul>
         </Offcanvas.Body>
