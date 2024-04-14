@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import './style.css'
 import { Tabs, Tab } from 'react-bootstrap'
-// import FoodItems from './FoodItems'
+import BookEvent from './BookEvent';
+import LiveStream from './LiveStream';
+
 
 function Event() {
     const [type, setType] = useState('veg'); // Set default type to 'veg'
@@ -18,10 +20,10 @@ function Event() {
             onSelect={handleTabSelect} // Handle tab selection
         >
             <Tab eventKey="veg" title="Event">
-                {/* <FoodItems type={type} /> */}
+                <BookEvent/>
             </Tab>
             <Tab eventKey="nonveg" title="Live Stream">
-                {/* <FoodItems type={type} /> */}
+                <LiveStream/>
             </Tab>
         </Tabs>
     );

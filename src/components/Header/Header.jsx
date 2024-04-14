@@ -33,7 +33,7 @@ function Header() {
             <Nav.Link href="#action2">Contact us</Nav.Link>
             <Nav.Link href="/food">Order Food</Nav.Link>
             <Nav.Link href="/room">Rooms</Nav.Link>
-            <Nav.Link href="#action2">Events</Nav.Link>
+            <Nav.Link href="/event">Events</Nav.Link>
             <Nav.Link href="#action2">Live Stream</Nav.Link>
             <Nav.Link href="#action2">Gallery</Nav.Link>
 
