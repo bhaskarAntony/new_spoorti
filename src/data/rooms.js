@@ -2,7 +2,7 @@ const roomsdata = [
     {
         id:1,
         title:'Delux',
-        image:'https://lh3.googleusercontent.com/proxy/LNBP5Yyj7wEkm-QWIZi_A0IKFvs0oY14BoPWGG4CeSY4zmb1fX-TQUMVLMrZmDU_MtNVlFAKaMvvKHZYwgwezTbU6o3cUPwh6eD3hjvhQSeAC9eqqWkx8XTo',
+        image:'https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg',
         goundfloor: {
             rooms:[101, 102, 103, 104, 105, 106, 107, 108, 109, 110],
             booked:[105, 108, 104],

@@ -120,8 +120,14 @@ function RoomView() {
                             {room && (
                                 <>
                                     <img src={room.image} alt={room.title} className="w-100 rounded-4 big" />
-                                    <div className="row mt-4 small-images">
+                                    <div className="row mt-4 small-images mt-3">
                                         {/* Additional images of the room */}
+                                        <div className="col-12 col-md-6">
+                                            <img src="https://www.home-designing.com/wp-content/uploads/2015/03/tufted-headboard.jpg" alt="" className="w-100 rounded-3" />
+                                        </div>
+                                        <div className="col-12 col-md-6">
+                                            <img src="https://www.essentialhome.eu/blog/wp-content/uploads/2023/09/105-1.jpg" alt="" className="w-100 rounded-3" />
+                                        </div>
                                     </div>
                                 </>
                             )}

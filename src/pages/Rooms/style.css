@@ -61,7 +61,7 @@
     align-items: center;
     padding: 10px;
 }
-.room-card button{
+.room-card a{
   transform: scale(0);
   transition: 0.7s;
   padding: 10px;
@@ -70,7 +70,7 @@
 .room-card:hover h1{
   display: none;
 }
-.room-card:hover button{
+.room-card:hover a{
     transform: scale(1)
 }
 .rview-right .big{
