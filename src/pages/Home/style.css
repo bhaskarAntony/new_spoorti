@@ -6,3 +6,31 @@
     margin-bottom: 10px;
     font-size: 1.2rem;
 }
+
+.service-card{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.service-card img{
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.step-card{
+    background: linear-gradient(45deg, #b5b5b53a, #2d2d2dc2);
+    border-radius: 20px;
+}
+.accordion-button{
+    background-color: transparent !important;
+    padding: 20px;
+}
+.accordion-item{
+    background-color: #fff !important;
+    border-radius: 20px !important;
+}
+.faqs, .start{
+    background-color: #feeace;
+}
+

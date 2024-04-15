@@ -10,6 +10,7 @@ import Room from './pages/Rooms/Room';
 import Event from './pages/Events/Event';
 import FoodCart from './pages/food/FoodCart';
 import EventView from './pages/Events/EventView';
+import Footer from './components/footer/Footer';
 
 function App() {
   
@@ -28,6 +29,7 @@ function App() {
       <Route path='/eventView/:id' element={<EventView/>}/>
       <Route path='/food/order/:id' element={<ViewFood/>}/>
     </Routes>
+    <Footer/>
     </BrowserRouter>
     </TranslationHOC>
     </div>

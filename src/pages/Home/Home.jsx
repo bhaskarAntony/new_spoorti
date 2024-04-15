@@ -1,13 +1,61 @@
 import React from 'react'
 import Hero from '../../components/carousel/Hero'
 import i1  from '../../assets/images/events_2.png'
+import i2  from '../../assets/images/gallery_1_2x.png'
+import i3  from '../../assets/images/gallery_1_2x.png'
+import i4  from '../../assets/images/gallery_1_2x.png'
+import i5 from '../../assets/images/download_mobile.png'
 import './style.css'
+
+const roomBookingFAQs = [
+    {
+        question: "How can I book a room?",
+        answer: "You can book a room by visiting our website and selecting the 'Book Now' option. Alternatively, you can call our reservation desk at [reservation phone number]."
+    },
+    {
+        question: "What types of rooms do you offer?",
+        answer: "We offer a variety of room types to suit different needs, including standard rooms, deluxe rooms, suites, and family rooms."
+    },
+    {
+        question: "What amenities are included with the room?",
+        answer: "Our rooms come with standard amenities such as complimentary Wi-Fi, air conditioning, TV, and toiletries. Additional amenities may vary depending on the room type."
+    },
+    {
+        question: "Can I cancel or modify my booking?",
+        answer: "Yes, you can cancel or modify your booking by contacting our reservation desk at least 24 hours before your scheduled arrival."
+    },
+    {
+        question: "Is breakfast included in the room rate?",
+        answer: "It depends on the room package you select. Some packages include complimentary breakfast, while others may offer it as an optional add-on."
+    },
+    {
+        question: "Do you offer discounts for group bookings?",
+        answer: "Yes, we offer discounts for group bookings. Please contact our reservation desk for more information on group rates and discounts."
+    },
+    {
+        question: "What is your check-in/check-out policy?",
+        answer: "Our standard check-in time is [check-in time], and check-out time is [check-out time]. Early check-in and late check-out may be available upon request, subject to availability and additional charges."
+    },
+    {
+        question: "Do you have parking facilities?",
+        answer: "Yes, we offer complimentary parking facilities for guests. Please let us know in advance if you require parking space."
+    },
+    {
+        question: "Are pets allowed in the rooms?",
+        answer: "We have limited pet-friendly rooms available. Please inform us in advance if you plan to bring your pet, as additional charges and restrictions may apply."
+    },
+    {
+        question: "How can I contact the front desk for assistance?",
+        answer: "You can contact our front desk 24/7 for assistance by dialing [front desk phone number] or visiting the reception area."
+    }
+];
+
 
 function Home() {
   return (
     <div>
         <Hero/>
-        <div className="container-fluid s1 p-2 p-md-4 py-5 overflow-hidden">
+        <div className="container-fluid s1 p-3 p-md-5 py-5 overflow-hidden">
             <div className="row align-items-center">
                 <div className="col-12 col-md-6 mb-4">
                     <h1 className="fs-1 fw-bold">Discover Exclusive Benefits of Booking Rooms for Police Officers</h1>
@@ -28,7 +76,7 @@ function Home() {
             </div>
         </div>
 
-        <div className="steps container-fluid bg-dark text-white p-2 p-md-4">
+        <div className="steps container-fluid bg-black text-white p-2 p-md-4">
             <div className="row">
                 <div className="col-12 col-md-4 mb-3">
                     <div className="step-card text-center border h-100 p-3">
@@ -63,6 +111,189 @@ function Home() {
                     </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div className="services p-3 p-md-5 bg-light ">
+            <h1 className="fs-1 fw-bold py-5 text-center">Discover Our Additional Services</h1>
+            <div className="row">
+               <div className="col-12 col-md-4">
+                <div className="service-card p-2">
+                <img src={i2} alt="" className='w-100' />
+                <h2 className="fs-3 fw-bold">Enhance Your Stay with Us</h2>
+                <p className="fs-5">Indulge in our laundry services, diverse dining options, and exciting recreational facilities.</p>
+                <button className="btn btn-primary">Learn more</button>
+                </div>
+               </div>
+               <div className="col-12 col-md-4">
+                <div className="service-card p-2">
+                <img src={i2} alt="" className='w-100' />
+                <h2 className="fs-3 fw-bold">Experience Our Dining Options</h2>
+                <p className="fs-5">Savor a variety of delicious cuisines prepared by our talented chefs.</p>
+                <button className="btn btn-primary">Explore</button>
+                </div>
+               </div>
+
+               <div className="col-12 col-md-4">
+                <div className="service-card p-2">
+                <img src={i2} alt="" className='w-100' />
+                <h2 className="fs-3 fw-bold">Enjoy Our Recreational Facilities</h2>
+                <p className="fs-5">Stay active and entertained with our state-of-the-art amenities.</p>
+                <button className="btn btn-primary">Discover</button>
+                </div>
+               </div>
+            </div>
+        </div>
+
+        <div className="welcome p-3 p-md-5">
+            <div className="row align-items-center">
+                <div className="col-12 col-md-6">
+                        <div className="welcome-left">
+                            <img src={i1} alt="" className="w-100" />
+                        </div>
+                </div>
+                <div className="col-12 col-md-6">
+                        <div className="welcome-right">
+                           <span className="tag fs-3">Simplifying Room Bookings</span>
+                           <h1 className="fs-1 fw-bold">Welcome to Our Home</h1>
+                           <p className="fs-5">At our organization, we are dedicated to providing convenient and hassle-free room bookings for police officers. Our mission is to ensure that every officer has a comfortable and secure place to stay during their assignments. With our user-friendly platform, you can easily search for available rooms, select your desired dates, and complete the booking process.</p>
+                           <div className="btns">
+                            <button className='btn btn-outline-dark btn rounded-1 '>Learn more</button>
+                            <button className='btn  btn rounded-1 '>Sign up</button>
+                           </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div className="welcome p-3 p-md-5 bg-light">
+            <div className="row align-items-center">
+                <div className="col-12 col-md-6">
+                        <div className="welcome-left">
+                            <img src={i1} alt="" className="w-100" />
+                        </div>
+                </div>
+                <div className="col-12 col-md-6">
+                        <div className="welcome-right">
+                           <h1 className="fs-1 fw-bold">Empowering Police Officers Through Seamless Room Bookings</h1>
+                           <p className="fs-5">Join thousands of officers who have experienced our convenient booking process and exceptional service.</p>
+                           <div className="btns d-flex flex-nowrap mt-4">
+                            <div className='w-100'>
+                                <h1 className="fs-1 fw-bold">50%</h1>
+                                <p className="fs-6">Officers Served: 10,000+</p>
+                            </div>
+                            <div className='w-100'>
+                                <h1 className="fs-1 fw-bold">50%</h1>
+                                <p className="fs-6">Positive Feedback: 98% Satisfaction Rate</p>
+                            </div>
+                           </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div className="start p-3 p-md-5">
+            <div className="row">
+                <div className="col-12 col-md-6">
+                    <div className="start-left">
+                        <h1 className="fs-1 fw-bold">Start Your Booking <br /> Journey Today</h1>
+                    </div>
+                </div>
+                <div className="col-12 col-md-6">
+                    <div className="start-right">
+                        <p className="fs-5">Discover a wide range of rooms and venues for your next stay or event.</p>
+                        <div className="btns mt-4 d-flex gap-3">
+                            <button className='btn btn-dark btn rounded-1 fs-4'>Book</button>
+                            <button className='btn  btn btn-outline-dark rounded-1 fs-4 '>Sign up</button>
+                           </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className=" p-3 p-md-5 ">
+            <div className="row shadow-sm p-2 p-md-5 rounded-4 bg-primary text-white">
+                <div className="col-12 col-md-6">
+                    <div className="start-left">
+                        <h1 className="fs-1 fw-bold">Stay Updated with Exclusive Offers</h1>
+                        <p className="fs-6">Subscribe to our newsletter for the latest updates</p>
+                    </div>
+                </div>
+                <div className="col-12 col-md-6">
+                    <div className="start-right d-flex flex-column align-items-md-end">
+                        <p className="fs-6">Discover a wide range of rooms and venues for your next stay or event.</p>
+                        <div className="btns mt-4 d-flex gap-3">
+                           <input type="text" className='form-control w-100'  placeholder='Enter Email'/>
+                            <button className='btn btn-dark   btn rounded-1 nowrap w-50'>Sign up</button>
+                           </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="contact p-3 p-md-5">
+           <div className=" p-3 bg-black rounded-5 text-white py-5 ">
+           <div className="row mb-4">
+                <div className="col-12 col-md-6">
+                    <div className="conatct-left">
+                        <p className="fs-3">Bookings</p>
+                        <h1 className="fs-1 fw-bold">Contact Us</h1>
+                        <p className="fs-5">We're here to assist you. Contact us for any inquiries or support.</p>
+                    </div>
+                </div>
+                <div className="col-12 col-md-6">
+                    <div className='d-flex gap-2 mb-3'>
+                    <i class="bi bi-envelope-fill fs-4 text-primary"></i>
+                        <div>
+                            <span className="fw-bold fs-4 d-block">Email</span>
+                            <span className="fw-bold fs-6 text-secondary">Support@gmail.com</span>
+                        </div>
+                    </div>
+                    <div className='d-flex gap-2 mb-3'>
+                    <i class="bi bi-phone fs-4 text-primary"></i>
+                        <div>
+                            <span className="fw-bold fs-4 d-block">Phone</span>
+                            <span className="fw-bold fs-6 text-secondary">Support@gmail.com</span>
+                        </div>
+                    </div>
+                    <div className='d-flex gap-2 mb-3'>
+                    <i class="bi-building fs-4 text-primary"></i>
+                        <div>
+                            <span className="fw-bold fs-4 d-block">Office</span>
+                            <span className="fw-bold fs-6 text-secondary">sss Road Bangalore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d62201.18256434718!2d77.51956637356142!3d12.999082292404488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scommissioner%20office%20bangalore!5e0!3m2!1sen!2sin!4v1713148407278!5m2!1sen!2sin" width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className='w-100 rounded-5'></iframe>
+           </div>
+        </div>
+
+        <div className="faqs p-3 p-md-5">
+            <h1 className="fs-1 fw-bold text-center">Faqs</h1>
+
+            <div className="row">
+            <div class="accordion" id="accordionExample">
+
+         <div className="row">
+         {
+                roomBookingFAQs.map((item, index)=>(
+                    <div className="col-12 col-md-6">
+                    <div class="accordion-item  mb-3">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                       {item.question}
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                       {item.answer}
+                      </div>
+                    </div>
+                  </div>
+                   </div>
+                ))
+            }
+         </div>
+</div>
             </div>
         </div>
     </div>
