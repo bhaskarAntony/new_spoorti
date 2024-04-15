@@ -15,6 +15,7 @@ import { useEffect, useState } from 'react';
 import RoomView from './pages/Rooms/RoomView';
 import LiveStream from './pages/Events/LiveStream';
 import Login from './pages/Login';
+import About from './pages/about/About';
 
 function App() {
  
@@ -31,6 +32,7 @@ function App() {
       <Route path='/room' element={<Room/>}/>
       <Route path='/roomview/:id' element={<RoomView/>}/>
       <Route path='/event' element={<Event/>}/>
+      <Route path='/about' element={<About/>}/>
       <Route path='/stream' element={<LiveStream/>}/>
       <Route path='/eventView/:id' element={<EventView/>}/>
       <Route path='/food/order/:id' element={<ViewFood/>}/>

@@ -1,0 +1,20 @@
+.about-banner{
+    background:linear-gradient(#00000012, #000), url('../../assets//images/about_banner.png') no-repeat center;
+    background-size: cover;
+    padding: 20px;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.profile-card img{
+    height: 250px;
+    object-fit: cover;
+   
+}
+.profile-card{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-bottom: 20px;
+}
