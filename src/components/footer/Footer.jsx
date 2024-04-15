@@ -100,14 +100,14 @@ function Footer() {
             
         </div>
     </div>
-    {/* <hr /> */}
+   
     <div className="text-center">
         <span className="fs-6">Copyrights@2024</span>
     </div>
 </section>
 </>
 
-
+// cc 
   )
 }
 
