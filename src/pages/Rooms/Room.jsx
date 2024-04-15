@@ -34,7 +34,7 @@ function Room() {
                    <label htmlFor="check" className="form-label">No.Of Guests</label>
                    <div className="input-group mt-2">
                         <span class="input-group-text" id="basic-addon1">  <i class="bi-people-fill fs-4 text-primary"></i></span>
-                  <input type="number"  className="form-control" id='check' />
+                  <input type="number"  className="form-control" id='check' min={1} />
                     </div>
                    </div>
                 </div>

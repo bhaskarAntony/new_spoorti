@@ -120,13 +120,13 @@ function RoomView() {
                             {room && (
                                 <>
                                     <img src={room.image} alt={room.title} className="w-100 rounded-4 big" />
-                                    <div className="row mt-4 small-images mt-3">
+                                    <div className="row mt-4 small-images">
                                         {/* Additional images of the room */}
                                         <div className="col-12 col-md-6">
                                             <img src="https://www.home-designing.com/wp-content/uploads/2015/03/tufted-headboard.jpg" alt="" className="w-100 rounded-3" />
                                         </div>
                                         <div className="col-12 col-md-6">
-                                            <img src="https://www.essentialhome.eu/blog/wp-content/uploads/2023/09/105-1.jpg" alt="" className="w-100 rounded-3" />
+                                            <img src="https://www.home-designing.com/wp-content/uploads/2015/03/tufted-headboard.jpg" alt="" className="w-100 rounded-3" />
                                         </div>
                                     </div>
                                 </>
@@ -177,6 +177,9 @@ function RoomView() {
                                     </div>
                                 </>
                             )}
+                              <button className="btn btn-primary w-100 p-3 d-flex align-items-center justify-content-between" 
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"
+                            >Check Availability <i className="bi bi-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>

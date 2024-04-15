@@ -79,7 +79,7 @@ function EventView() {
                             <label htmlFor="numberOfDays" className="form-label">No.Of Days</label>
                             <div className="input-group mt-2">
                                 <span className="input-group-text" id="basic-addon1"><i className="bi-people-fill fs-4 text-primary"></i></span>
-                                <input type="number" className="form-control" id='numberOfDays' placeholder='1' onChange={handleChange} />
+                                <input type="number" className="form-control" id='numberOfDays' placeholder='1' onChange={handleChange} min={1}/>
                             </div>
                         </div>
                     </div>
