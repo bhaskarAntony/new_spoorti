@@ -14,6 +14,9 @@ import Footer from './components/footer/Footer';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './Database/firebase';
 import { useEffect, useState } from 'react';
+import RoomView from './pages/Rooms/RoomView';
+import LiveStream from './pages/Events/LiveStream';
+import Login from './pages/Login';
 
 function App() {
  
@@ -28,9 +31,12 @@ function App() {
       <Route path='/food' element={<Food/>}/>
       <Route path='/cart' element={<FoodCart/>}/>
       <Route path='/room' element={<Room/>}/>
+      <Route path='/roomview/:id' element={<RoomView/>}/>
       <Route path='/event' element={<Event/>}/>
+      <Route path='/stream' element={<LiveStream/>}/>
       <Route path='/eventView/:id' element={<EventView/>}/>
       <Route path='/food/order/:id' element={<ViewFood/>}/>
+      <Route path='/login' element={<Login/>}/>
     </Routes>
     <Footer/>
     </BrowserRouter>

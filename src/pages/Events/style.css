@@ -13,10 +13,23 @@
     min-height:70vh;
     overflow: auto;
 }
+.login{
+    display: flex;
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 400px;
+    padding: 20px;
+}
 
 
 @media(max-width:768px){
     .book-btn button{
+        width: 100%;
+    }
+    .card{
         width: 100%;
     }
     /* .event-container .offcanvas{

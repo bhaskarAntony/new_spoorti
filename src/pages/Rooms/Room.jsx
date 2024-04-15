@@ -55,7 +55,7 @@ function Room() {
                         <div className="room-card">
                             <img src={item.image} alt="" className="w-100" />
                             <div className="room-info">
-                                <button className="btn-primary btn px-3">Book Now</button>
+                                <a href={`/roomview/${item.id}`} className="btn-primary btn px-3">Book Now</a>
                                 <h1 className="fs-4">{item.title}</h1>
                             </div>
                         </div>

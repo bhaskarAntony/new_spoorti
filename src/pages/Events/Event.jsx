@@ -3,6 +3,7 @@ import './style.css'
 import { Tabs, Tab } from 'react-bootstrap'
 import BookEvent from './BookEvent';
 import LiveStream from './LiveStream';
+import Login from './Login';
 
 
 function Event() {
@@ -23,7 +24,7 @@ function Event() {
                 <BookEvent/>
             </Tab>
             <Tab eventKey="nonveg" title="Live Stream">
-                <LiveStream/>
+                <Login/>
             </Tab>
         </Tabs>
     );
