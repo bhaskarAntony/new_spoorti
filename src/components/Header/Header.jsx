@@ -14,6 +14,7 @@ function Header() {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    
   return (
    <header>
     <Navbar expand="lg" className="navbar">

@@ -11,9 +11,12 @@ import Event from './pages/Events/Event';
 import FoodCart from './pages/food/FoodCart';
 import EventView from './pages/Events/EventView';
 import Footer from './components/footer/Footer';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from './Database/firebase';
+import { useEffect, useState } from 'react';
 
 function App() {
-  
+ 
   return (
     <div className="App">
    

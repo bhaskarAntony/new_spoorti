@@ -622,6 +622,65 @@ const menu = [
                     },
     
                 ]
+            },
+            {
+                title:'BEVERAGES',
+                foods:[
+                    {
+                        id:1,
+                        image:'https://th.bing.com/th/id/OIP.7RKLf2zBUdSvSpe4hYUqFQHaLH?w=178&h=267&c=7&r=0&o=5&pid=1.7',
+                        price: 60,
+                        title:'Lassi sweet/Salt ',
+                        caption:'Steamed Rice Cakes accompanied with sambar and coconut chutney',
+                        veg:'veg',
+                         
+                    },
+                    {
+                        id:2,
+                        image:'https://i0.wp.com/www.bostongirlbakes.com/wp-content/uploads/2017/01/How-To-Make.jpg',
+                        price: 40,
+                        title:'Butter milk',
+                        caption:'Steamed Rice Cakes accompanied with sambar and coconut chutney',
+                        veg:'veg',
+                         
+                    },
+                    {
+                        id:3,
+                        image:'https://th.bing.com/th/id/OIP.glET1vW8y1B6U4tMOgq16wHaFE?w=258&h=180&c=7&r=0&o=5&pid=1.7',
+                        price: 40,
+                        title:'Fresh lime Soda',
+                        caption:'Steamed Rice Cakes accompanied with sambar and coconut chutney',
+                        veg:'veg',
+                       
+                    },
+                    {
+                        id:4,
+                        image:'https://th.bing.com/th/id/OIP.9xD4kx4aOJifUjxhwLM7qwHaEo?w=280&h=180&c=7&r=0&o=5&pid=1.7',
+                        price: 40,
+                        title:'Tea',
+                        caption:'Steamed Rice Cakes accompanied with sambar and coconut chutney',
+                        veg:'veg',
+                        
+                    },
+                    {
+                        id:5,
+                        image:'https://th.bing.com/th/id/OIP.GQXxbImnDAklcjWPCge9PQHaE7?w=232&h=180&c=7&r=0&o=5&pid=1.7',
+                        price: 40,
+                        title:'Coffe',
+                        caption:'Steamed Rice Cakes accompanied with sambar and coconut chutney',
+                        veg:'veg',
+                          
+                    },
+                    {
+                        id:6,
+                        image:'https://th.bing.com/th/id/OIP.u7O0T9INZu1b18c9MV4c-QHaE5?w=286&h=189&c=7&r=0&o=5&pid=1.7',
+                        price: 30,
+                        title:'Milk',
+                        caption:'Steamed Rice Cakes accompanied with sambar and coconut chutney',
+                        veg:'veg',
+                         
+                    },
+                ]
             }
            ]
     },
@@ -629,27 +688,91 @@ const menu = [
         image:'https://www.vikhrolicucina.com/uploads/stories/1674223639_samosasingaraindianfriedbakedpastrywithsavoryfillingspicedpotatoesonionpeas.jpg',
         title:'Snacks',
         time:'4:30PM - 07:30PM',
-        foods:[
-            {
-                image:'',
-                price: 1,
-                title:'',
-                caption:''
-            }
-        ]
+       all:[
+        {
+            title:'SNACKS',
+            foods:[
+                {
+                    id:1,
+                    image:'https://keyassets-p2.timeincuk.net/wp/prod/wp-content/uploads/sites/53/2018/04/Onion-bhaji.jpg',
+                    price: 80,
+                    title:'onion bhaji ',
+                    caption:'Steamed Rice Cakes accompanied with sambar and coconut chutney',
+                    veg:'veg',  
+                },
+                {
+                    id:2,
+                    image:'https://th.bing.com/th/id/OIP.DLieZPy6olfchAdaklyF_gHaF9?w=271&h=218&c=7&r=0&o=5&pid=1.7',
+                    price: 80,
+                    title:'Vegetable pakora ',
+                    caption:'Steamed Rice Cakes accompanied with sambar and coconut chutney',
+                    veg:'veg',  
+                },
+                {
+                    id:3,
+                    image:'https://th.bing.com/th/id/OIP.GqUvr8wmgKYa7LL8YpnGMAHaE7?w=195&h=180&c=7&r=0&o=5&pid=1.7',
+                    price: 60,
+                    title:'French Fries ',
+                    caption:'Steamed Rice Cakes accompanied with sambar and coconut chutney',
+                    veg:'veg',  
+                },
+                {
+                    id:4,
+                    image:'https://th.bing.com/th/id/OIP.gk2wo_o3axdCw3aSbDNt0AHaLH?w=178&h=237&c=7&r=0&o=5&pid=1.7',
+                    price: 60,
+                    title:'Potato Wedges ',
+                    caption:'Steamed Rice Cakes accompanied with sambar and coconut chutney',
+                    veg:'veg',  
+                },
+                {
+                    id:5,
+                    image:'https://th.bing.com/th/id/OIP.xfJR5aNLhgJw0iQ9p8hWqAHaE8?w=270&h=180&c=7&r=0&o=5&pid=1.7',
+                    price: 50,
+                    title:'Masala Peanut ',
+                    caption:'Steamed Rice Cakes accompanied with sambar and coconut chutney',
+                    veg:'veg',  
+                },
+            ]
+        }
+       ]
     },
     {
         image:'https://www.acouplecooks.com/wp-content/uploads/2023/01/Vegan-Stir-Fry-006.jpg',
-        title:'Dinner',
+        title:'Deserts',
         time:'7:30PM - 10:30PM',
-        foods:[
+       all:[
+        {
+            title:'DESSERT',
+            foods:[
+                {
+                        id:1,
+                        image:'https://th.bing.com/th/id/OIP.q3u8JQohgtcoeaw77VMOCAHaE8?w=294&h=196&c=7&r=0&o=5&pid=1.7',
+                        price: 50,
+                        title:'Rava Kesari ',
+                        caption:'Steamed Rice Cakes accompanied with sambar and coconut chutney',
+                        veg:'veg',  
+                },
+                {
+                    id:2,
+                    image:'https://th.bing.com/th?q=Rasgulla+vs+Gulab+Jamun&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247',
+                    price: 60,
+                    title:'Gulab jamun 2pacs ',
+                    caption:'Steamed Rice Cakes accompanied with sambar and coconut chutney',
+                    veg:'veg',  
+            },
             {
+                id:3,
                 image:'',
-                price: 1,
-                title:'',
-                caption:''
-            }
-        ]
+                price: 60,
+                title:'Ice Cream ',
+                caption:'Steamed Rice Cakes accompanied with sambar and coconut chutney',
+                veg:'veg',  
+        },
+            
+                
+            ]
+        },
+       ]
     }
 ]
 export default menu;
