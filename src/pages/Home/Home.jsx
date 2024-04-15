@@ -55,6 +55,24 @@ function Home() {
   return (
     <div>
         <Hero/>
+        <div className="start p-3 p-md-5">
+            <div className="row">
+                <div className="col-12 col-md-6">
+                    <div className="start-left">
+                        <h1 className="fs-1 fw-bold">Start Your Booking <br /> Journey Today</h1>
+                    </div>
+                </div>
+                <div className="col-12 col-md-6">
+                    <div className="start-right">
+                        <p className="fs-5">Discover a wide range of rooms and venues for your next stay or event.</p>
+                        <div className="btns mt-4 d-flex gap-3">
+                            <a href='/login' className='btn btn-dark btn rounded-1 fs-4'>Book</a>
+                            <a href='/login' className='btn  btn btn-outline-dark rounded-1 fs-4 '>Sign up</a>
+                           </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div className="container-fluid s1 p-3 p-md-5 py-5 overflow-hidden">
             <div className="row align-items-center">
                 <div className="col-12 col-md-6 mb-4">
@@ -62,8 +80,8 @@ function Home() {
                     <p className="fs-4 text-secondary">Experience top-notch accommodations tailored to the unique needs of police officers and their families.</p>
                     <ul>
                         <li><i class="bi bi-check2 text-success"></i> Secure and Convenient Booking Process</li>
-                        <li><i class="bi bi-check2 text-success"></i>  Secure and Convenient Booking Process</li>
-                        <li><i class="bi bi-check2 text-success"></i>  Secure and Convenient Booking Process</li>
+                        <li><i class="bi bi-check2 text-success"></i>  Special Discounts for Police Officers</li>
+                        <li><i class="bi bi-check2 text-success"></i> Enhanced Safety and Security Measures</li>
                     </ul>
                     <div className="d-flex gap-2 mt-4">
                         <button className="btn btn-dark p-2 px-5">Sign up</button>
@@ -103,7 +121,7 @@ function Home() {
                 <div className="col-12 col-md-4 mb-3">
                     <div className="step-card text-center border h-100 p-3">
                     <i class="bi bi-box-seam-fill display-1"></i>
-                        <h1 className="fs-2 fw-bold">Step-by-Step Guide</h1>
+                        <h1 className="fs-2 fw-bold">Complete Your Booking</h1>
                         <p className="fs-6 text-secondary">Searching for available rooms, selecting dates, and completing the booking process is quick and easy.</p>
                         <div className="d-flex gap-2 mt-4 justify-content-center">
                         <button className="btn btn-light p-2 px-5">Confirm</button>

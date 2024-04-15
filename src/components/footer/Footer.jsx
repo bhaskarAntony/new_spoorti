@@ -32,10 +32,12 @@ function Footer() {
                     <div className="m1">
                         <h2 className='fs-4'>Quick Search</h2>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Event</a></li>
+                            <li><a href="/">About Us</a></li>
+                            <li><a href="/food">Order Food</a></li>
+                            <li><a href="/room">Book a room</a></li>
+                            <li><a href="/">Contact Us</a></li>
+                            <li><a href="/">Gallery</a></li>
+                            <li><a href="/event">Events</a></li>
                             
                         </ul>
                     </div>
@@ -44,11 +46,12 @@ function Footer() {
                 </div>
                 <div className="col-lg-4 col-md -12">
                     <div className="m1">
-                        <h2 className='fs-4'>For Companies</h2>
+                        <h2 className='fs-4'>More</h2>
                         <ul>
-                            <li><a href="#">Corporate Training</a></li>
-                            <li><a href="#">HR services</a></li>
-                            <li><a href="#">Hire trained graduates</a></li>
+                            <li><a href="/room">Room Bookings</a></li>
+                            <li><a href="/food">Food Ordering</a></li>
+                            <li><a href="/event">Event Booking</a></li>
+                            <li><a href="/event">Live Stream</a></li>
                         
                             
                         </ul>
@@ -65,7 +68,7 @@ function Footer() {
                     Get in Touch
                 </h2>
                <ul>
-                   <li><a>info@be-practicle.com</a></li>
+                   <li><a>spoort@gmail.com</a></li>
                    <li><a>+91-9242079779</a></li>
                    <li><a>
                    <address>#737C,1stFloor,1st cross 3rd Stage,4th Block Basaveshwara nagar Bengaluru-560079</address></a></li>
@@ -99,7 +102,7 @@ function Footer() {
     </div>
     {/* <hr /> */}
     <div className="text-center">
-        <span className="fs-6">Copyrights@2023</span>
+        <span className="fs-6">Copyrights@2024</span>
     </div>
 </section>
 </>
