@@ -27,7 +27,12 @@ function Signup() {
                 <label htmlFor="">confrom password</label>
                 <input type="password" placeholder='confirm password' className="p-3 form-control" />
             </div>
-           
+            <div class="form-check mt-3">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+            <label class="form-check-label" for="flexCheckDefault">
+               Accept Sporti privacy policy
+            </label>
+            </div>
           
             <Link to={'/login'} className="btn btn-primary mt-3 p-3">Login</Link>
             <span className="fs-6 mt-3">have you already account? <a href="">Login</a></span>

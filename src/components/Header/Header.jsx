@@ -19,7 +19,7 @@ function Header() {
    <header>
     <Navbar expand="lg" className="navbar">
       <Container fluid>
-        <Navbar.Brand href="/"><img src={logo} alt="logo" /></Navbar.Brand>
+        <Navbar.Brand href="/" classname="d-flex gap-2 align-items-center logo"><img src='./spoorti_logo.jpg' alt="logo" /> <h1 className="fs-3 fw-bold text-white">Sporti</h1></Navbar.Brand>
       
         <button className='btn p-0 bg-transparent text-white  d-block d-md-none' onClick={handleShow}><i className='bi bi-list fs-1'></i></button>
         <Navbar.Collapse id="navbarScroll">
@@ -36,9 +36,7 @@ function Header() {
             <Nav.Link href="/room">Rooms</Nav.Link>
             <Nav.Link href="/event">Events</Nav.Link>
             <Nav.Link href="/faqs">Faqs</Nav.Link>
-            <Nav.Link href="/gallery">Gallery</Nav.Link>
-
-          
+            <Nav.Link href="/gallery">Gallery</Nav.Link> 
           </Nav>
          </div>
         <div className="d-flex gap-2  d-none d-lg-block">
@@ -53,7 +51,7 @@ function Header() {
 
       <Offcanvas show={show} onHide={handleClose} className='mobile-nav'>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title> <img src={logo} alt="" /> </Offcanvas.Title>
+          <Offcanvas.Title  classname="d-flex gap-2 align-items-center logo"><img src='./spoorti_logo.jpg' alt="logo" /> <h1 className="fs-3 fw-bold text-white">Sporti</h1> </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
          <ul >
@@ -64,7 +62,7 @@ function Header() {
             <li><a href="/room"><i class="bi bi-building"></i> Book Rooms</a></li>
             <li><a href="/event"><i class="bi bi-stars"></i> Events</a></li>
             <li><a href="/faqs"><i class="bi bi-stars"></i> Faqs</a></li>
-            <li><a href="/galley"><i class="bi bi-images"></i> Gallery</a></li>
+            <li><a href="/gallery"><i class="bi bi-images"></i> Gallery</a></li>
             <li><a href="/login" className='btn btn-light w-100 p-3'>Login</a></li>
          </ul>
         </Offcanvas.Body>
