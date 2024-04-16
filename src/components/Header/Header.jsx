@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from '../../assets/images/logo.svg'
+import logo from '../../assets/images/spoorti_logo.jpg'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useState } from 'react';
 
@@ -19,7 +19,7 @@ function Header() {
    <header>
     <Navbar expand="lg" className="navbar">
       <Container fluid>
-        <Navbar.Brand href="/" classname="d-flex gap-2 align-items-center logo"><img src='./spoorti_logo.jpg' alt="logo" /> <h1 className="fs-3 fw-bold text-white">Sporti</h1></Navbar.Brand>
+        <Navbar.Brand href="/" ><div className='d-flex gap-2 align-items-center logo'><img src={logo} alt="logo" /> <h1 className="fs-3 fw-bold text-white">Sporti</h1></div></Navbar.Brand>
       
         <button className='btn p-0 bg-transparent text-white  d-block d-md-none' onClick={handleShow}><i className='bi bi-list fs-1'></i></button>
         <Navbar.Collapse id="navbarScroll">
@@ -51,7 +51,7 @@ function Header() {
 
       <Offcanvas show={show} onHide={handleClose} className='mobile-nav'>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title  classname="d-flex gap-2 align-items-center logo"><img src='./spoorti_logo.jpg' alt="logo" /> <h1 className="fs-3 fw-bold text-white">Sporti</h1> </Offcanvas.Title>
+          <Offcanvas.Title  ><div className='d-flex gap-2 align-items-center logo'><img src={logo} alt="logo" />  <h1 className="fs-3 fw-bold text-white">Sporti</h1></div> </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
          <ul >

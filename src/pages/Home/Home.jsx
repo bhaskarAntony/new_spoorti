@@ -261,21 +261,21 @@ function Home() {
                     <i class="bi bi-envelope-fill fs-4 text-primary"></i>
                         <div>
                             <span className="fw-bold fs-4 d-block">Email</span>
-                            <span className="fw-bold fs-6 text-secondary">Support@gmail.com</span>
+                            <span className="fw-bold fs-6 text-secondary">sportikarnataka@gmail.com</span>
                         </div>
                     </div>
                     <div className='d-flex gap-2 mb-3'>
                     <i class="bi bi-phone fs-4 text-primary"></i>
                         <div>
                             <span className="fw-bold fs-4 d-block">Phone</span>
-                            <span className="fw-bold fs-6 text-secondary">Support@gmail.com</span>
+                            <span className="fw-bold fs-6 text-secondary">+91 8277945903</span>
                         </div>
                     </div>
                     <div className='d-flex gap-2 mb-3'>
                     <i class="bi-building fs-4 text-primary"></i>
                         <div>
                             <span className="fw-bold fs-4 d-block">Office</span>
-                            <span className="fw-bold fs-6 text-secondary">sss Road Bangalore</span>
+                            <span className="fw-bold fs-6 text-secondary">#01, Prim Rose Road, Ashok Nagar Bengaluru - 560025 Karnataka </span>
                         </div>
                     </div>
                 </div>
