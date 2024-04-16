@@ -52,7 +52,7 @@ function EventView() {
            <div className="event-view-banner bg-primary text-center d-flex align-items-center justify-content-center flex-column" >
 
                 <h1 className='display-3 fw-bold'>Event: {event.venue}</h1>
-                <p className="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, repellat!</p>
+              
             </div>
             <div className="room-book-card">
                 <div className="row align-item-center">

@@ -1,0 +1,16 @@
+.contact{
+    background-color: aliceblue;
+}
+.contact .form-control{
+    padding: 15px;
+}
+
+.contact .form-control:focus, .contact .form-control:active{
+    box-shadow: none !important;
+    border: none;
+}
+
+.contact .form-control:hover{
+    background-color: rgba(65, 105, 225, 0.139);
+    border: 1px solid royalblue;
+}

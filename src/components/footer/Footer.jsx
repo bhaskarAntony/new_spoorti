@@ -5,77 +5,46 @@ import logo from  '../../assets/images/logoDark.svg'
 function Footer() {
  
   return (
-    <>
+    <footer>
     <div className="footer-wave ">
     </div>
     <section className="footer_container d-flex flex-column justify-content-between container-fluid bg-texture" id="footer">
     <div className="row">
-        <div className="col-12 cl-md-12 col-lg-3 ">
+        <div className="col-12 col-md-4">
            <div className="left">
-           <img src={logo} alt="logo" data-aos="fade-up"/>
-            <p>
-                Since its establishment in 2012, Be Practical Tech Solutions is training predominantly in IT courses. It has pioneered as a diversified entrepreneurship tapping into the necessities of the internet market in India, with its in-depth understanding of customers and companies
+          <h1 className="fs-2">Disclaimer</h1>
+               <p>
+            SPORTI events are accessible for police sector of karnataka designated ACP and above higher Officials. General public has no access for the mentioned services
             </p>
            </div>
 
         </div>
-        <div className="col-12 cl-md-12 col-lg-6 ">
-           <div className="row">
-                <div className="col-lg-4 col-md -12">
-                    <div className="m1">
-                        <h2 className='fs-4'>category</h2>
-                      
-                    </div>
-
-                </div>
-                <div className="col-lg-4 col-md -12">
-                    <div className="m1">
-                        <h2 className='fs-4'>Quick Search</h2>
-                        <ul>
-                            <li><a href="/">About Us</a></li>
-                            <li><a href="/food">Order Food</a></li>
-                            <li><a href="/room">Book a room</a></li>
-                            <li><a href="/">Contact Us</a></li>
-                            <li><a href="/">Gallery</a></li>
-                            <li><a href="/event">Events</a></li>
-                            
-                        </ul>
-                    </div>
-
-
-                </div>
-                <div className="col-lg-4 col-md -12">
-                    <div className="m1">
-                        <h2 className='fs-4'>More</h2>
-                        <ul>
-                            <li><a href="/room">Room Bookings</a></li>
-                            <li><a href="/food">Food Ordering</a></li>
-                            <li><a href="/event">Event Booking</a></li>
-                            <li><a href="/event">Live Stream</a></li>
-                        
-                            
-                        </ul>
-                    </div>
-
-                </div>
-           </div>
-            
+        <div className="col-12 col-md-4">
+            <h1 className="fs-2">Quick links</h1>
+            <ul>
+                <li><Link to='/privacy_policy'>Privacy Policy</Link></li>
+                <li><Link to='/terms_and-conditions'>Terms and Conditions</Link></li>
+                <li><Link to='site_map'>Site map</Link></li>
+                <li><Link to='/help'>Help</Link></li>
+            </ul>
         </div>
-        <div className="col-12 cl-md-12 col-lg-3 ">
+
+        <div className="col-12 col-md-4">
 
             <div className="right">
-                <h2 className='fs-4 text-left'>
+                <h2 className='fs-2 text-left'>
                     Get in Touch
                 </h2>
                <ul>
-                   <li><a>spoort@gmail.com</a></li>
-                   <li><a>+91-9242079779</a></li>
-                   <li><a>
-                   <address>#737C,1stFloor,1st cross 3rd Stage,4th Block Basaveshwara nagar Bengaluru-560079</address></a></li>
+                   <li><a href=''>sportikarnataka@gmail.com</a></li>
+                   <li><a href=''>+91 8277945903</a></li>
+                   <li><a href=''>+91 8277945903</a></li>
+                   <li><a href=''>
+                   <address>#01, Prim Rose Road, Ashok Nagar, Bengaluru - 560025 Karnataka</address></a></li>
                   
                </ul> 
             </div>
-            <div className="icons">
+            <div className="icons d-flex gap-2 fs-4">
                 <div>
                 <Link to='https://www.facebook.com/BangaloreBepractical/'>   <i class="bi bi-facebook text-white"></i></Link>
                  
@@ -105,7 +74,7 @@ function Footer() {
         <span className="fs-6">Copyrights@2024</span>
     </div>
 </section>
-</>
+</footer>
 
 // cc 
   )

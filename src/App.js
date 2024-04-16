@@ -16,6 +16,12 @@ import RoomView from './pages/Rooms/RoomView';
 import LiveStream from './pages/Events/LiveStream';
 import Login from './pages/Login';
 import About from './pages/about/About';
+import Faqs from './pages/faqs/Faqs';
+import Tems_and_conditions from './pages/terms/Tems_and_conditions';
+import Privacy from './pages/privacy/Privacy';
+import Help from './pages/Help/Help';
+import SiteMap from './pages/sitemap/SiteMap';
+import Contact from './pages/contact/Contact';
 
 function App() {
  
@@ -34,6 +40,12 @@ function App() {
       <Route path='/event' element={<Event/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/stream' element={<LiveStream/>}/>
+      <Route path='/faqs' element={<Faqs/>}/>
+      <Route path='/help' element={<Help/>}/>
+      <Route path='/site_map' element={<SiteMap/>}/>
+      <Route path='/contact' element={<Contact/>}/>
+      <Route path='/terms_and-conditions' element={<Tems_and_conditions/>}/>
+      <Route path='/privacy_policy' element={<Privacy/>}/>
       <Route path='/eventView/:id' element={<EventView/>}/>
       <Route path='/food/order/:id' element={<ViewFood/>}/>
       <Route path='/login' element={<Login/>}/>

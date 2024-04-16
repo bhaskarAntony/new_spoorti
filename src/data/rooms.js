@@ -36,7 +36,7 @@ const roomsdata = [
     },
     {
         id:3,
-        title:'Luxury',
+        title:'VIP',
         image:'https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/80/2024/03/14115247/28.Club-Mill%C3%A9sime-Executive-Lounge-1170x780.jpg',
         goundfloor: {
             rooms:[101, 102, 103, 104, 105, 106, 107, 108, 109, 110],

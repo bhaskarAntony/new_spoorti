@@ -31,10 +31,11 @@ function Header() {
           >
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/about">About us</Nav.Link>
-            <Nav.Link href="/">Contact us</Nav.Link>
+            <Nav.Link href="/contact">Contact us</Nav.Link>
             <Nav.Link href="/food">Order Food</Nav.Link>
             <Nav.Link href="/room">Rooms</Nav.Link>
             <Nav.Link href="/event">Events</Nav.Link>
+            <Nav.Link href="/faqs">Faqs</Nav.Link>
             <Nav.Link href="/">Gallery</Nav.Link>
 
           
@@ -62,8 +63,9 @@ function Header() {
             <li><a href="/food"><i class="bi bi-basket"></i> Order food</a></li>
             <li><a href="/room"><i class="bi bi-building"></i> Book Rooms</a></li>
             <li><a href="/event"><i class="bi bi-stars"></i> Events</a></li>
+            <li><a href="/faqs"><i class="bi bi-stars"></i> Faqs</a></li>
             <li><a href=""><i class="bi bi-images"></i> Gallery</a></li>
-            <li><a href="/login" className='btn btn-light w-100 p-3'><i class="bi bi-images"></i> Login</a></li>
+            <li><a href="/login" className='btn btn-light w-100 p-3'>Login</a></li>
          </ul>
         </Offcanvas.Body>
       </Offcanvas>
