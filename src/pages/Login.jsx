@@ -14,8 +14,15 @@ function Login() {
                 <label htmlFor="">password</label>
                 <input type="password" placeholder='password' className="p-3 form-control" />
             </div>
-            <span className="fs-6 mt-3">You Dont Have Any Account? <a href="">Create Account</a></span>
+            <div class="form-check mt-3">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+            <label class="form-check-label" for="flexCheckDefault">
+               Accept Sporti privacy policy
+            </label>
+            </div>
+           
             <Link to={'/'} className="btn btn-primary mt-3 p-3">Login</Link>
+            <span className="fs-6 mt-3">You Dont Have Any Account? <a href="/signup">Create Account</a></span>
         </div>
     </div>
   )

@@ -5,7 +5,8 @@ const eventData = [
         date:'Sat 23 july',
         Price:7630,
         paymentMode:'CASH',
-        image:'https://4.imimg.com/data4/IO/SN/FUSIONI-27591638/prod-image-500x500.jpg'
+        image:'./images/facilities/Event_MiniTheatre_Inaguration_107.jpg',
+       
 
     },
     {
@@ -14,7 +15,7 @@ const eventData = [
         date:'Mon 25 july',
         Price:3830,
         paymentMode:'CASH',
-        image:'https://3.imimg.com/data3/KS/TN/MY-11893605/5-500x500.jpg',
+        image:'./images/facilities/Event_Conference_corosel_2.jpg'
 
     }
 ]

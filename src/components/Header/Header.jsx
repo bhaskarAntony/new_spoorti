@@ -36,7 +36,7 @@ function Header() {
             <Nav.Link href="/room">Rooms</Nav.Link>
             <Nav.Link href="/event">Events</Nav.Link>
             <Nav.Link href="/faqs">Faqs</Nav.Link>
-            <Nav.Link href="/">Gallery</Nav.Link>
+            <Nav.Link href="/gallery">Gallery</Nav.Link>
 
           
           </Nav>
@@ -64,7 +64,7 @@ function Header() {
             <li><a href="/room"><i class="bi bi-building"></i> Book Rooms</a></li>
             <li><a href="/event"><i class="bi bi-stars"></i> Events</a></li>
             <li><a href="/faqs"><i class="bi bi-stars"></i> Faqs</a></li>
-            <li><a href=""><i class="bi bi-images"></i> Gallery</a></li>
+            <li><a href="/galley"><i class="bi bi-images"></i> Gallery</a></li>
             <li><a href="/login" className='btn btn-light w-100 p-3'>Login</a></li>
          </ul>
         </Offcanvas.Body>

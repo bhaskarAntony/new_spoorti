@@ -22,6 +22,8 @@ import Privacy from './pages/privacy/Privacy';
 import Help from './pages/Help/Help';
 import SiteMap from './pages/sitemap/SiteMap';
 import Contact from './pages/contact/Contact';
+import Gallery from './pages/gallery/Gallery';
+import Signup from './pages/signup/Signup';
 
 function App() {
  
@@ -42,6 +44,7 @@ function App() {
       <Route path='/stream' element={<LiveStream/>}/>
       <Route path='/faqs' element={<Faqs/>}/>
       <Route path='/help' element={<Help/>}/>
+      <Route path='/gallery' element={<Gallery/>}/>
       <Route path='/site_map' element={<SiteMap/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/terms_and-conditions' element={<Tems_and_conditions/>}/>
@@ -49,6 +52,7 @@ function App() {
       <Route path='/eventView/:id' element={<EventView/>}/>
       <Route path='/food/order/:id' element={<ViewFood/>}/>
       <Route path='/login' element={<Login/>}/>
+      <Route path='/signup' element={<Signup/>}/>
     </Routes>
     <Footer/>
     </BrowserRouter>
