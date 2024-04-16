@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from '../../assets/images/spoori_logo.jpg'
+import logo from '../../assets/images/images/spoori_logo.jpg'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useState } from 'react';
 
