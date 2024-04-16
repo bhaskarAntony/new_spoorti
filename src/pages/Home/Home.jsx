@@ -281,7 +281,7 @@ function Home() {
                 </div>
             </div>
             <hr />
-            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d62201.18256434718!2d77.51956637356142!3d12.999082292404488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scommissioner%20office%20bangalore!5e0!3m2!1sen!2sin!4v1713148407278!5m2!1sen!2sin" width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className='w-100 rounded-5'></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.0273609615388!2d77.612095!3d12.970101!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1715a47fbf91%3A0x105bdbe2d51128a2!2sSenior%20Police%20Officer&#39;s%20Research%20and%20Training%20Institute%20(SPORTI)!5e0!3m2!1sen!2sbe!4v1713247899969!5m2!1sen!2sbe" width="600" height="500" className='rounded-3 w-100' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
            </div>
         </div>
 
