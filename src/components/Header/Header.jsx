@@ -59,7 +59,7 @@ function Header() {
          <ul >
             <li><a href="/"><i class="bi bi-house-door-fill"></i> Home</a></li>
             <li><a href="/about"><i class="bi bi-file-person-fill"></i> About us</a></li>
-            <li><a href=""><i class="bi bi-person-lines-fill"></i> Contact us</a></li>
+            <li><a href="/contact"><i class="bi bi-person-lines-fill"></i> Contact us</a></li>
             <li><a href="/food"><i class="bi bi-basket"></i> Order food</a></li>
             <li><a href="/room"><i class="bi bi-building"></i> Book Rooms</a></li>
             <li><a href="/event"><i class="bi bi-stars"></i> Events</a></li>
