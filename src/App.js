@@ -24,6 +24,7 @@ import SiteMap from './pages/sitemap/SiteMap';
 import Contact from './pages/contact/Contact';
 import Gallery from './pages/gallery/Gallery';
 import Signup from './pages/signup/Signup';
+import Services from './pages/services/Services';
 
 function App() {
  
@@ -53,6 +54,7 @@ function App() {
       <Route path='/food/order/:id' element={<ViewFood/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Signup/>}/>
+      <Route path='/services' element={<Services/>}/>
     </Routes>
     <Footer/>
     </BrowserRouter>

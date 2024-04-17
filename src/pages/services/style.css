@@ -1,0 +1,14 @@
+.services{
+    background-color: aliceblue;
+}
+.all-services{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+.service-card{
+    min-width: 300px;
+    padding: 20px;
+}
