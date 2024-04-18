@@ -44,7 +44,7 @@ function Login() {
                     </label>
                 </div>
                 <button className="btn btn-primary mt-3 p-3" onClick={handleLogin}>Login</button>
-                <button className="btn btn-primary mt-3 p-3" onClick={handleRegister}>Register</button>
+                {/* <button className="btn btn-primary mt-3 p-3" onClick={handleRegister}>Register</button> */}
                 <span className="fs-6 mt-3">Don't have an account? <a href="/signup">Create Account</a></span>
             </div>
         </div>
