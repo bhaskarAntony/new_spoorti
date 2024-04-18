@@ -312,34 +312,30 @@ function Home() {
         <Events/>
         <Recents/>
         <div className="faqs p-3 p-md-5 bg-light">
-            <h1 className="fs-1 fw-bold text-center">Faqs</h1>
+  <h1 className="fs-1 fw-bold text-center">Faqs</h1>
 
-            <div className="row">
-            <div class="accordion" id="accordionExample">
-
-         <div className="row">
-         {
-                faqs.map((item, index)=>(
-                    <div className="col-12 col-md-6">
-                    <div class="accordion-item  mb-3">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={`key${index+1}`} aria-expanded="true" aria-controls="collapseOne">
-                       {item.query_en}
-                      </button>
-                    </h2>
-                    <div id={`key${index+1}`} class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                       {item.answer_en}
-                      </div>
-                    </div>
-                  </div>
-                   </div>
-                ))
-            }
-         </div>
-</div>
+  <div className="accordion" id="accordionExample">
+    <div className="row">
+      {faqs.map((item, index) => (
+        <div className="col-12 col-md-6" key={index}>
+          <div className="accordion-item mb-3">
+            <h2 className="accordion-header">
+              <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={`#collapse${index + 1}`} aria-expanded="true" aria-controls={`collapse${index + 1}`}>
+                {item.query_en}
+              </button>
+            </h2>
+            <div id={`collapse${index + 1}`} className="accordion-collapse collapse" aria-labelledby={`heading${index + 1}`} data-bs-parent="#accordionExample">
+              <div className="accordion-body">
+                {item.answer_en}
+              </div>
             </div>
+          </div>
         </div>
+      ))}
+    </div>
+  </div>
+</div>
+
     </div>
   )
 }
