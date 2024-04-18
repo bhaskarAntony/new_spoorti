@@ -1,6 +1,6 @@
 import  profile1 from '../assets/images/contacts/contact_1.jpg'
 import  profile2 from '../assets/images/contacts/contact_2.jpg'
-import  profile3 from '../assets/images/contacts/contact_3.jpg'
+import  profile3 from '../assets/images/contacts/deepan.jpg'
 import  profile4 from '../assets/images/contacts/contact_4.jpg'
 
 const team = [
@@ -18,7 +18,7 @@ const team = [
     },
     {
         profile:profile3,
-        name:'Sri Ramakrishna Prasad.',
+        name:'Sri Deepen M N ',
         role:'Secretary',
         contact:'+91 4567891230'
     },
