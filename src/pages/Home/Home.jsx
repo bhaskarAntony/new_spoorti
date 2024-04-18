@@ -6,6 +6,13 @@ import i3  from '../../assets/images/gallery_1_2x.png'
 import i4  from '../../assets/images/gallery_1_2x.png'
 import i5 from '../../assets/images/download_mobile.png'
 import './style.css'
+import Services from '../../components/services/Services'
+import About from '../../components/about/About'
+import Room from '../../components/room/Room'
+import Food from '../../components/food/Food'
+import Events from '../../components/events/Events'
+import faqs from '../../data/faqs'
+import Recents from '../../components/recent/Recents'
 
 const roomBookingFAQs = [
     {
@@ -55,7 +62,8 @@ function Home() {
   return (
     <div>
         <Hero/>
-        <div className="start p-3 p-md-5">
+      <div className="p-3 p-md-5">
+      <div className="start p-3 p-md-5 rounded-4">
             <div className="row">
                 <div className="col-12 col-md-6">
                     <div className="start-left">
@@ -66,73 +74,19 @@ function Home() {
                     <div className="start-right">
                         <p className="fs-5">Discover a wide range of rooms and venues for your next stay or event.</p>
                         <div className="btns mt-4 d-flex gap-3">
-                            <a href='/login' className='btn btn-dark btn rounded-1 fs-4'>Book</a>
-                            <a href='/login' className='btn  btn btn-outline-dark rounded-1 fs-4 '>Sign up</a>
+                            <a href='/login' className='main-btn'>Book</a>
+                            <a href='/login' className=' btn-outline text-white '>Sign up</a>
                            </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div className="container-fluid s1 p-3 p-md-5 py-5 overflow-hidden">
-            <div className="row align-items-center">
-                <div className="col-12 col-md-6 mb-4">
-                    <h1 className="fs-1 fw-bold">Discover Exclusive Benefits of Booking Rooms for Police Officers</h1>
-                    <p className="fs-4 text-secondary">Experience top-notch accommodations tailored to the unique needs of police officers and their families.</p>
-                    <ul>
-                        <li><i class="bi bi-check2 text-success"></i> Secure and Convenient Booking Process</li>
-                        <li><i class="bi bi-check2 text-success"></i>  Special Discounts for Police Officers</li>
-                        <li><i class="bi bi-check2 text-success"></i> Enhanced Safety and Security Measures</li>
-                    </ul>
-                    <div className="d-flex gap-2 mt-4">
-                        <button className="btn btn-dark p-2 px-5">Sign up</button>
-                        <button className="btn btn-outline-dark p-2">Learn more</button>
-                    </div>
-                </div>
-                <div className="col-12 col-md-6">
-                    <img src={i1} alt="" className="w-100" />
-                </div>
-            </div>
-        </div>
+      </div>
+        
 
-        <div className="steps container-fluid bg-black text-white p-2 p-md-4">
-            <div className="row">
-                <div className="col-12 col-md-4 mb-3">
-                    <div className="step-card text-center border h-100 p-3">
-                    <i class="bi bi-box-seam-fill display-1"></i>
-                        <h1 className="fs-2 fw-bold">Step-by-Step Guide</h1>
-                        <p className="fs-6 text-secondary">Searching for available rooms, selecting dates, and completing the booking process is quick and easy.</p>
-                        <div className="d-flex gap-2 mt-4 justify-content-center">
-                        <button className="btn btn-light p-2 px-5">Search</button>
-                        <button className="btn btn-outline-light p-2">Book now</button>
-                    </div>
-                    </div>
-                </div>
-                <div className="col-12 col-md-4 mb-3">
-                    <div className="step-card text-center p-3 border h-100">
-                    <i class="bi bi-box-seam-fill display-1"></i>
-                        <h1 className="fs-2 fw-bold">Choose Your Dates</h1>
-                        <p className="fs-6 text-secondary">Searching for available rooms, selecting dates, and completing the booking process is quick and easy.</p>
-                        <div className="d-flex gap-2 mt-4 justify-content-center">
-                        <button className="btn btn-light p-2 px-5">Check Availability</button>
-                        <button className="btn btn-outline-light p-2">Book now</button>
-                    </div>
-                    </div>
-                </div>
-                <div className="col-12 col-md-4 mb-3">
-                    <div className="step-card text-center border h-100 p-3">
-                    <i class="bi bi-box-seam-fill display-1"></i>
-                        <h1 className="fs-2 fw-bold">Complete Your Booking</h1>
-                        <p className="fs-6 text-secondary">Searching for available rooms, selecting dates, and completing the booking process is quick and easy.</p>
-                        <div className="d-flex gap-2 mt-4 justify-content-center">
-                        <button className="btn btn-light p-2 px-5">Confirm</button>
-                        <button className="btn btn-outline-light p-2 px-5">Book now</button>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      
 
-        <div className="services p-3 p-md-5 bg-light ">
+        {/* <div className="services p-3 p-md-5 bg-light ">
             <h1 className="fs-1 fw-bold py-5 text-center">Discover Our Additional Services</h1>
             <div className="row">
                <div className="col-12 col-md-4">
@@ -283,9 +237,81 @@ function Home() {
             <hr />
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.0273609615388!2d77.612095!3d12.970101!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1715a47fbf91%3A0x105bdbe2d51128a2!2sSenior%20Police%20Officer&#39;s%20Research%20and%20Training%20Institute%20(SPORTI)!5e0!3m2!1sen!2sbe!4v1713247899969!5m2!1sen!2sbe" width="600" height="500" className='rounded-3 w-100' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
            </div>
+        </div> */}
+
+      
+
+        <Services/>
+        <About/>
+
+        <div className="container-fluid s1 p-3 p-md-5 py-5 overflow-hidden">
+            <div className="row align-items-center">
+                <div className="col-12 col-md-6 mb-4">
+                    <h1 className="fs-1 fw-bold">Discover Exclusive Benefits of Booking Rooms for Police Officers</h1>
+                    <p className="fs-4 text-secondary">Experience top-notch accommodations tailored to the unique needs of police officers and their families.</p>
+                    <ul>
+                        <li><i class="bi bi-check2 text-success"></i> Secure and Convenient Booking Process</li>
+                        <li><i class="bi bi-check2 text-success"></i>  Special Discounts for Police Officers</li>
+                        <li><i class="bi bi-check2 text-success"></i> Enhanced Safety and Security Measures</li>
+                    </ul>
+                    <div className="d-flex gap-2 mt-4">
+                        <button className="main-btn p-2 px-5">Sign up</button>
+                        <button className="btn-outline p-2">Learn more</button>
+                    </div>
+                </div>
+                <div className="col-12 col-md-6">
+                    <img src={i1} alt="" className="w-100" />
+                </div>
+            </div>
         </div>
 
-        <div className="faqs p-3 p-md-5">
+
+        <div className="book-now p-3 p-md-5">
+           <h1 className="display-4 fw-bold"> Why You are Still <br /> Waiting Explore Our Services</h1>
+           <button className="btn p-2 btn-light mt-4 px-5">Explore</button>
+        </div>
+            <div className="steps container-fluid  p-2 p-md-4">
+            <div className="row">
+                <div className="col-12 col-md-4 mb-3">
+                    <div className="step-card text-center h-100 p-3 bg-white rounded-4">
+                    <i class="bi bi-box-seam-fill display-1"></i>
+                        <h1 className="fs-2 fw-bold">Step-by-Step Guide</h1>
+                        <p className="fs-6 text-secondary">Searching for available rooms, selecting dates, and completing the booking process is quick and easy.</p>
+                        <div className="d-flex gap-2 mt-4 justify-content-center">
+                        <button className=" main-btn p-2 px-5">Search</button>
+                        <button className="btn-outline p-2">Book now</button>
+                    </div>
+                    </div>
+                </div>
+                <div className="col-12 col-md-4 mb-3">
+                    <div className="step-card text-center p-3 bg-white rounded-4 h-100">
+                    <i class="bi bi-box-seam-fill display-1"></i>
+                        <h1 className="fs-2 fw-bold">Choose Your Dates</h1>
+                        <p className="fs-6 text-secondary">Searching for available rooms, selecting dates, and completing the booking process is quick and easy.</p>
+                        <div className="d-flex gap-2 mt-4 justify-content-center">
+                        <button className="  main-btn p-2 px-5">Check</button>
+                        <button className=" btn-outline p-2">Book now</button>
+                    </div>
+                    </div>
+                </div>
+                <div className="col-12 col-md-4 mb-3">
+                    <div className="step-card text-center bg-white rounded-4 h-100 p-3">
+                    <i class="bi bi-box-seam-fill display-1"></i>
+                        <h1 className="fs-2 fw-bold">Complete Your Booking</h1>
+                        <p className="fs-6 text-secondary">Searching for available rooms, selecting dates, and completing the booking process is quick and easy.</p>
+                        <div className="d-flex gap-2 mt-4 justify-content-center">
+                        <button className="  main-btn p-2 px-5">Confirm</button>
+                        <button className=" btn-outline p-2 px-5">Book now</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <Room/>
+        <Food/>
+        <Events/>
+        <Recents/>
+        <div className="faqs p-3 p-md-5 bg-light">
             <h1 className="fs-1 fw-bold text-center">Faqs</h1>
 
             <div className="row">
@@ -293,17 +319,17 @@ function Home() {
 
          <div className="row">
          {
-                roomBookingFAQs.map((item, index)=>(
+                faqs.map((item, index)=>(
                     <div className="col-12 col-md-6">
                     <div class="accordion-item  mb-3">
                     <h2 class="accordion-header">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                       {item.question}
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={`key${index+1}`} aria-expanded="true" aria-controls="collapseOne">
+                       {item.query_en}
                       </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id={`key${index+1}`} class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
-                       {item.answer}
+                       {item.answer_en}
                       </div>
                     </div>
                   </div>

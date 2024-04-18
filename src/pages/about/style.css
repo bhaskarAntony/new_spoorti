@@ -18,3 +18,21 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     margin-bottom: 20px;
 }
+.wall-frames{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow: auto;
+}
+.frame-card{
+    width: 300px;
+}
+.frame-card img{
+    height: 200px;
+    object-fit: cover;
+}
+.frame-card img:hover{
+    transform: scale(1.1);
+    transition: 0.8s;
+    cursor: pointer;
+}

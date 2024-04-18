@@ -1,0 +1,11 @@
+.services-card{
+    border:2px solid #ccc;
+    border-radius: 10px;
+
+}
+.services-container{
+    background-color: rgb(241, 246, 250);
+}
+.services-card i{
+    color: #f3841d;
+}

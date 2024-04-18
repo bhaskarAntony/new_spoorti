@@ -41,7 +41,7 @@ function Header() {
           </Nav>
          </div>
         <div className="d-flex gap-2  d-none d-lg-block">
-            <a href='/login' className="btn btn-light">Login</a>
+            <a href='/login' className="main-btn  px-4">Login</a>
             {/* <button className="btn btn-danger">Create account</button> */}
         </div>
         </Navbar.Collapse>
@@ -65,7 +65,8 @@ function Header() {
             <li><a href="/services"><i class="bi bi-stars"></i> Services</a></li>
             <li><a href="/faqs"><i class="bi bi-stars"></i> Faqs</a></li>
             <li><a href="/gallery"><i class="bi bi-images"></i> Gallery</a></li>
-            <li><a href="/login" className='btn btn-light w-100 p-3'>Login</a></li>
+            <li><a href="/login" className='main-btn w-100 p-3'>Login</a></li>
+            <li><a href="/signup" className='main-btn w-100 p-3 mt-3'>Create account</a></li>
          </ul>
         </Offcanvas.Body>
       </Offcanvas>

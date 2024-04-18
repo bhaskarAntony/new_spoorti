@@ -6,6 +6,10 @@
     margin-bottom: 10px;
     font-size: 1.2rem;
 }
+.start{
+    background-color: #251910;
+    color: #fff;
+}
 
 .service-card{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -18,19 +22,29 @@
     margin-bottom: 20px;
     border-radius: 10px;
 }
-.step-card{
-    background: linear-gradient(45deg, #b5b5b53a, #2d2d2dc2);
-    border-radius: 20px;
-}
-.accordion-button{
+
+
+.faqs .accordion-button{
     background-color: transparent !important;
-    padding: 20px;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
-.accordion-item{
+.faqs .accordion-item{
     background-color: #fff !important;
     border-radius: 20px !important;
+    border: 2px solid #feba76;
 }
-.faqs, .start{
-    background-color: #feeace;
+
+.book-now{
+    background-color: #251910;
+    color: #fff;
+    text-align: center;
 }
+.steps{
+    background-color: aliceblue !important;
+}
+.step-card{
+    padding: 10px;
+}   
 

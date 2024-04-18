@@ -3,6 +3,7 @@ import './style.css'
 import i1 from '../../assets/images/aboutus/smwaus_2.jpg'
 import i2 from '../../assets/images/aboutus/smwaus_3.jpg'
 import team from '../../data/team'
+import aboutbanners from '../../data/aboutus'
 
 function About() {
   return (
@@ -56,6 +57,17 @@ function About() {
                     ))
                    }
                 </div>
+           </div>
+
+                   <h1 className="fs-1 fw-bold p-3 p-md-5 py-2">Wall of frames</h1>
+           <div className="wall-frames p-3 p-md-5">
+            {
+                aboutbanners.map((item, index)=>(
+                    <div className="frame-card">
+                        <img src={item.image_url} alt="" className="w-100" />
+                    </div>
+                ))
+            }
            </div>
     </div>
   )

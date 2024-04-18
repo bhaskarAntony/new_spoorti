@@ -5,8 +5,8 @@ import './style.css'
 
 function Hero() {
   return (
-    <div className='p-2'>
-      <Carousel className='rounded-5  overflow-hidden'>
+    <div className=''>
+      <Carousel className=' overflow-hidden'>
     {
       heroImages.map((item, index)=>(
         <Carousel.Item>

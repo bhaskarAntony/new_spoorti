@@ -45,7 +45,7 @@ function App() {
       <Route path='/stream' element={<LiveStream/>}/>
       <Route path='/faqs' element={<Faqs/>}/>
       <Route path='/help' element={<Help/>}/>
-      <Route path='/gallery' element={<Gallery/>}/>
+      <Route path='/gallery/:id' element={<Gallery/>}/>
       <Route path='/site_map' element={<SiteMap/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/terms_and-conditions' element={<Tems_and_conditions/>}/>
