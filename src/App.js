@@ -26,6 +26,7 @@ import Gallery from './pages/gallery/Gallery';
 import Signup from './pages/signup/Signup';
 import Services from './pages/services/Services';
 import Events from './components/events/Events';
+import View from './pages/view/View';
 
 function App() {
  
@@ -57,6 +58,7 @@ function App() {
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/services' element={<Services/>}/>
+      <Route path='/view/:id' element={<View/>}/>
     </Routes>
     <Footer/>
     </BrowserRouter>
