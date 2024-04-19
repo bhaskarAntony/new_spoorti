@@ -88,17 +88,18 @@ function Home() {
         <div className="row">
             <div className="col-12 col-md-3">
                 <div className="main-left">
-               <div className="main-card shadow p-3 bg-warning">
+               <div className="main-card shadow p-3 bg-warning ">
                <img src='./images/image.png' alt="" className='w-100' /> 
-               <h1 className="fs-3">Shri. B Dayanand, IPS</h1>
-               <p className="fs-5">Commisioner of Police Bangalore City</p>
+             
+               <h1 className="fs-3 fw-bold">Shri. Alok Mohan, IPS</h1>
+                <p className="fs-5">Director General & Inspector General of Police</p>
                </div>
                 </div>
             </div>
             <div className="col-12 col-md-6">
                 <div className="main-middle h-100">
                     <h1 className="fs-2">Recent Events</h1>
-                    <div className="card w-100 h-100 shadow bg-light">
+                    <div className="card w-100 h-100 shadow bg-light ">
                         {
                             gallerydata.map((item, index)=>(
                                 <div className="mb-3">
@@ -114,8 +115,8 @@ function Home() {
                 <div className="main-right">
              <div className="main-card shadow p-3 bg-warning">
              <img src={p2} alt="" className='w-100' /> 
-                <h1 className="fs-3">Shri. Alok Mohan, IPS</h1>
-                <p className="fs-5">Director General & Inspector General of Police</p>
+             <h1 className="fs-3 fw-bold">Shri. B Dayanand, IPS</h1>
+               <p className="fs-5">Commisioner of Police Bangalore City</p>
              </div>
                 </div>
             </div>
@@ -305,7 +306,7 @@ function Home() {
         </div>
 
 
-        <div className="book-now p-3 p-md-5">
+        {/* <div className="book-now p-3 p-md-5">
            <h1 className="display-4 fw-bold"> Why You are Still <br /> Waiting Explore Our Services</h1>
            <button className="btn p-2 btn-light mt-4 px-5">Explore</button>
         </div>
@@ -350,7 +351,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
         {/* <Room/>
         <Food/>
         <Events/>
