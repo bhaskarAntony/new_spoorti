@@ -2,7 +2,7 @@ const servicesData = [
     {
         id:1,
         title:'Conference Hall',
-        desc:'The Conference Hall at SPORTI is a spacious and well-designed room, tailored to accommodate large gatherings. Upon entering, you are greeted by an expansive area with high ceilings, allowing ample room for guests to move around comfortably. The walls are adorned with tasteful décor, perhaps featuring elegant artwork or muted colours that evoke a sense of sophistication. It is the perfect choice for hosting government conferences and discussions, providing a professional and accommodating space for all your event needs.',
+        desc:'The Conference Hall at SPORTI is a spacious and well-designed room, tailored to accommodate large gatherings. Upon entering, you are greeted by an expansive area with high ceilings, allowing ample room for guests to move around comfortably. The walls are adorned with tasteful décor, perhaps featuring elegant artwork or muted colours that evoke a sense of sophistication. It is the perfect choice for hosting government conferences and discussions, providing a professional and accommodating space for all your event needs',
         image:'/images/facilities/smmch_carousal_2.jpg' 
     },
     {
