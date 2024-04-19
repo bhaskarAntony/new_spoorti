@@ -30,7 +30,7 @@ function Header() {
     <NavDropdown title="Services" id="basic-nav-dropdown">
         <NavDropdown.Item href="/food">Dining</NavDropdown.Item>
         <NavDropdown.Item href="/room">Accomodation</NavDropdown.Item>
-        <NavDropdown.Item href="/events">Events</NavDropdown.Item>
+        {/* <NavDropdown.Item href="/events">Events</NavDropdown.Item> */}
         <NavDropdown.Item href="/view/1">Conference Hall</NavDropdown.Item>
         <NavDropdown.Item href="/view/2">Main Event Hall</NavDropdown.Item>
         <NavDropdown.Item href="/view/3">Mini Theatre</NavDropdown.Item>
@@ -42,9 +42,9 @@ function Header() {
         <NavDropdown.Item href="/view/11">Parking</NavDropdown.Item>
         <NavDropdown.Item href="/services text-primary">View All Services</NavDropdown.Item>
     </NavDropdown>
-    <Nav.Link href="/events&gallery">Events</Nav.Link>
+    <Nav.Link href="/gallery/2">Events</Nav.Link>
     <Nav.Link href="/faqs">Faqs</Nav.Link>
-    <Nav.Link href="/gallery/1">Gallery</Nav.Link>
+    <Nav.Link href="/events&gallery">Gallery</Nav.Link>
     <Nav.Link href="/contact">Contact us</Nav.Link>
 </Nav>
          </div>
@@ -74,7 +74,7 @@ function Header() {
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices">
     <li><a class="dropdown-item text-dark" href="/food">Order Food</a></li>
     <li><a class="dropdown-item text-dark" href="/room">Room Booking</a></li>
-    <li><a class="dropdown-item text-dark" href="/events">Events</a></li>
+    {/* <li><a class="dropdown-item text-dark" href="/events">Events</a></li> */}
     <li><a class="dropdown-item text-dark" href="/view/1">Conference Hall</a></li>
     <li><a class="dropdown-item text-dark" href="/view/2">Main Event Hall</a></li>
     <li><a class="dropdown-item text-dark" href="/view/3">Mini Theatre</a></li>

@@ -23,7 +23,7 @@ function Events() {
                                 <span className="fw-bold fs-3">{eventItem.title}</span>
                             </div>
                             <div className="event card-footer d-flex justify-content-between">
-                                <Link to={`/gallery/${eventItem.id}`} className="btn btn-primary rounded-pill">Book Now</Link>
+                                <Link to={`/gallery/${eventItem.id}`} className="btn btn-primary rounded-pill">View Images</Link>
                             </div>
                         </div>
                     </div>
