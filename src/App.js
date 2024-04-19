@@ -25,6 +25,7 @@ import Contact from './pages/contact/Contact';
 import Gallery from './pages/gallery/Gallery';
 import Signup from './pages/signup/Signup';
 import Services from './pages/services/Services';
+import Events from './components/events/Events';
 
 function App() {
  
@@ -46,6 +47,7 @@ function App() {
       <Route path='/faqs' element={<Faqs/>}/>
       <Route path='/help' element={<Help/>}/>
       <Route path='/gallery/:id' element={<Gallery/>}/>
+      <Route path='/events&gallery' element={<Events/>}/>
       <Route path='/site_map' element={<SiteMap/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/terms_and-conditions' element={<Tems_and_conditions/>}/>

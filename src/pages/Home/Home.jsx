@@ -13,6 +13,8 @@ import Food from '../../components/food/Food'
 import Events from '../../components/events/Events'
 import faqs from '../../data/faqs'
 import Recents from '../../components/recent/Recents'
+import p2 from '../../assets/images/user_image_4.png'
+import gallerydata from '../../data/gallery'
 
 const roomBookingFAQs = [
     {
@@ -62,7 +64,7 @@ function Home() {
   return (
     <div>
         <Hero/>
-      <div className="p-3 p-md-5">
+      {/* <div className="p-3 p-md-5">
       <div className="start p-3 p-md-5 rounded-4">
             <div className="row">
                 <div className="col-12 col-md-6">
@@ -78,6 +80,43 @@ function Home() {
                             <a href='/login' className=' btn-outline text-white '>Sign up</a>
                            </div>
                     </div>
+                </div>
+            </div>
+        </div>
+      </div> */}
+      <div className="main  p-3 p-md-5 mx-auto">
+        <div className="row">
+            <div className="col-12 col-md-3">
+                <div className="main-left">
+               <div className="main-card shadow p-3 bg-warning">
+               <img src='./images/image.png' alt="" className='w-100' /> 
+               <h1 className="fs-3">Shri. B Dayanand, IPS</h1>
+               <p className="fs-5">Commisioner of Police Bangalore City</p>
+               </div>
+                </div>
+            </div>
+            <div className="col-12 col-md-6">
+                <div className="main-middle h-100">
+                    <h1 className="fs-2">Recent Events</h1>
+                    <div className="card w-100 h-100 shadow bg-light">
+                        {
+                            gallerydata.map((item, index)=>(
+                                <div className="mb-3">
+                                <i className='bi bi-calandar'></i>
+                                <a href={`/gallery/${item.id}`} className="fs-5">{item.title}</a>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>
+            <div className="col-12 col-md-3">
+                <div className="main-right">
+             <div className="main-card shadow p-3 bg-warning">
+             <img src={p2} alt="" className='w-100' /> 
+                <h1 className="fs-3">Shri. Alok Mohan, IPS</h1>
+                <p className="fs-5">Director General & Inspector General of Police</p>
+             </div>
                 </div>
             </div>
         </div>
@@ -255,8 +294,8 @@ function Home() {
                         <li><i class="bi bi-check2 text-success"></i> Enhanced Safety and Security Measures</li>
                     </ul>
                     <div className="d-flex gap-2 mt-4">
-                        <button className="main-btn p-2 px-5">Sign up</button>
-                        <button className="btn-outline p-2">Learn more</button>
+                        <a href='/signup' className="main-btn p-2 px-5">Sign up</a>
+                        <a href='/services' className="btn-outline p-2 text-dark">Learn more</a>
                     </div>
                 </div>
                 <div className="col-12 col-md-6">
@@ -271,7 +310,12 @@ function Home() {
            <button className="btn p-2 btn-light mt-4 px-5">Explore</button>
         </div>
             <div className="steps container-fluid  p-2 p-md-4">
-            <div className="row">
+            <div className="text-center">
+      <div className="btn-tag">steps</div>
+      </div>
+      <h1 className="banner-heading display-3 fw-bold text-center">Easyto access sporti</h1>
+
+            <div className="row mt-4">
                 <div className="col-12 col-md-4 mb-3">
                     <div className="step-card text-center h-100 p-3 bg-white rounded-4">
                     <i class="bi bi-box-seam-fill display-1"></i>
@@ -307,11 +351,11 @@ function Home() {
                 </div>
             </div>
         </div>
-        <Room/>
+        {/* <Room/>
         <Food/>
         <Events/>
-        <Recents/>
-        <div className="faqs p-3 p-md-5 bg-light">
+        <Recents/> */}
+        {/* <div className="faqs p-3 p-md-5 bg-light">
   <h1 className="fs-1 fw-bold text-center">Faqs</h1>
 
   <div className="accordion" id="accordionExample">
@@ -334,7 +378,7 @@ function Home() {
       ))}
     </div>
   </div>
-</div>
+</div> */}
 
     </div>
   )

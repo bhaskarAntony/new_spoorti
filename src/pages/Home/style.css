@@ -47,4 +47,8 @@
 .step-card{
     padding: 10px;
 }   
+.main-card img{
+    height: 200px;
+    object-fit: cover;
+}
 
