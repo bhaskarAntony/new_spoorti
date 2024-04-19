@@ -31,7 +31,7 @@ import View from './pages/view/View';
 function App() {
  
   return (
-    <div className="App">
+    <div className="App overflow-hidden">
    
     <TranslationHOC>
     <BrowserRouter>

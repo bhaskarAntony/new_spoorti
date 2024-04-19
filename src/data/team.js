@@ -24,7 +24,7 @@ const team = [
     },
     {
         profile:profile4,
-        name:'Sri N S Prakash.',
+        name:'Sri Mufid Khan',
         role:'Mess Officer',
         contact:'+91 9480805826'
     }

@@ -59,7 +59,7 @@ function About() {
                 </div>
            </div>
 
-                   <h1 className="fs-1 fw-bold p-3 p-md-5 py-2">Wall of frames</h1>
+                   <h1 className="fs-1 fw-bold p-3 p-md-5 py-2">Wall Of Fame</h1>
            <div className="wall-frames p-3 p-md-5">
             {
                 aboutbanners.map((item, index)=>(
