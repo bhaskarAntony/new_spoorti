@@ -40,7 +40,7 @@ function Header() {
         <NavDropdown.Item href="/view/9">Table Tennis</NavDropdown.Item>
         <NavDropdown.Item href="/view/10">Billiards</NavDropdown.Item>
         <NavDropdown.Item href="/view/11">Parking</NavDropdown.Item>
-        <NavDropdown.Item href="/services text-primary">View All Services</NavDropdown.Item>
+        <NavDropdown.Item href="/services" className='text-primary'>View All Services</NavDropdown.Item>
     </NavDropdown>
     <Nav.Link href="/gallery/2">Events</Nav.Link>
     <Nav.Link href="/faqs">Faqs</Nav.Link>

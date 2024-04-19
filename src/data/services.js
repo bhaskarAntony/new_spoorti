@@ -2,7 +2,7 @@ const servicesData = [
     {
         id:1,
         title:'Conference Hall',
-        desc:'The  Conference Hall at Sporti serves as a versatile venue, ideal for both private and public events. With a capacity ranging from 200 to 300 people, it is the perfect choice for hosting government conferences and discussions, providing a professional and accommodating space for all your event needs',
+        desc:'Equipped with modern amenities and flexible seating arrangements, our conference hall provides a professional environment conducive to productive meetings and engaging discussions. Whether you are planning a large-scale event or an intimate gathering, our versatile spaces can be tailored to meet your specific requirements.',
         image:'/images/facilities/Event_Conference_corosel_2.jpg'
     },
     {
