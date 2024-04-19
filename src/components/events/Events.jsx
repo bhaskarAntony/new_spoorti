@@ -8,7 +8,7 @@ function Events() {
         <div className="text-center">
       <div className="btn-tag">events</div>
       </div>
-      <h1 className="banner-heading display-3 fw-bold text-center">Explore our <br />Event booking services</h1>
+      <h1 className="banner-heading display-3 fw-bold text-center">SPORTI  Events</h1>
 
       <div className="event-categories p-3 p-md-4">
                 <div className="row">

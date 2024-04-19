@@ -39,6 +39,7 @@ function Header() {
          </div>
         <div className="d-flex gap-2  d-none d-lg-block">
             <a href='/login' className="main-btn  px-4">Login</a>
+            {/* <a href='/signup' className="btn-outline  px-4">New Member signup</a> */}
             {/* <button className="btn btn-danger">Create account</button> */}
         </div>
         </Navbar.Collapse>
