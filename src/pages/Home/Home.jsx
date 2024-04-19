@@ -300,7 +300,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="col-12 col-md-6">
-                    <img src={i1} alt="" className="w-100" />
+                    <img src="./images/home-image.jpg" alt="" className="w-100" />
                 </div>
             </div>
         </div>

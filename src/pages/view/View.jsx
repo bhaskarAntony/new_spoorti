@@ -15,7 +15,7 @@ function View() {
             item.id == id ? (
                 <div key={index}>
                     <div className="event-view-banner bg-primary text-center d-flex align-items-center justify-content-center flex-column" style={{ backgroundImage: `url(${item.image})`, backgroundRepeat: 'no-repeat center bottom', backgroundSize: 'cover' }}>
-                        <h1 className='display-3 fw-bold'>Event: {item.title}</h1>
+                        <h1 className='display-3 fw-bold'>{item.title}</h1>
                     </div>
                     <div className="room-book-card">
                         <div className="row align-items-center">
@@ -32,7 +32,7 @@ function View() {
                             </div>
                             <div className="col-12 col-md-3">
                                 <div className="form-group">
-                                    <label htmlFor="eventDate" className="form-label">Event Date</label>
+                                    <label htmlFor="eventDate" className="form-label">Date</label>
                                     <div className="input-group mt-2">
                                         <span className="input-group-text" id="basic-addon1">
                                             <i className="bi bi-calendar2-week fs-4 text-primary"></i>

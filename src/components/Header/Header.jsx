@@ -33,13 +33,13 @@ function Header() {
             {/* <NavDropdown.Item href="/events">Events</NavDropdown.Item> */}
             <NavDropdown.Item href="/view/1">Conference Hall</NavDropdown.Item>
             <NavDropdown.Item href="/view/2">Main Event Hall</NavDropdown.Item>
-            <NavDropdown.Item href="/view/3">Mini Theatre</NavDropdown.Item>
+            <NavDropdown.Item href="/services">Mini Theatre</NavDropdown.Item>
             <NavDropdown.Item href="/view/6">Barbeque</NavDropdown.Item>
-            <NavDropdown.Item href="/view/7">GYM</NavDropdown.Item>
-            <NavDropdown.Item href="/view/8">Badminton</NavDropdown.Item>
-            <NavDropdown.Item href="/view/9">Table Tennis</NavDropdown.Item>
-            <NavDropdown.Item href="/view/10">Billiards</NavDropdown.Item>
-            <NavDropdown.Item href="/view/11">Parking</NavDropdown.Item>
+            <NavDropdown.Item href="/services">GYM</NavDropdown.Item>
+            <NavDropdown.Item href="/services">Badminton</NavDropdown.Item>
+            <NavDropdown.Item href="/services">Table Tennis</NavDropdown.Item>
+            <NavDropdown.Item href="/services">Billiards</NavDropdown.Item>
+            <NavDropdown.Item href="/services">Parking</NavDropdown.Item>
             <NavDropdown.Item href="/services" className='text-primary'>View All Services</NavDropdown.Item>
           </NavDropdown>
           <Nav.Link href="/gallery/2">Events</Nav.Link>
@@ -81,13 +81,13 @@ function Header() {
     {/* <li><a class="dropdown-item text-dark" href="/events">Events</a></li> */}
     <li><a class="dropdown-item text-dark" href="/view/1">Conference Hall</a></li>
     <li><a class="dropdown-item text-dark" href="/view/2">Main Event Hall</a></li>
-    <li><a class="dropdown-item text-dark" href="/view/3">Mini Theatre</a></li>
+    <li><a class="dropdown-item text-dark" href="/services">Mini Theatre</a></li>
     <li><a class="dropdown-item text-dark" href="/view/6">Barbeque</a></li>
-    <li><a class="dropdown-item text-dark" href="/view/7">GYM</a></li>
-    <li><a class="dropdown-item text-dark" href="/view/8">Badminton</a></li>
-    <li><a class="dropdown-item text-dark" href="/view/9">Table Tennis</a></li>
-    <li><a class="dropdown-item text-dark" href="/view/10">Billiards</a></li>
-    <li><a class="dropdown-item text-dark" href="/view/11">Parking</a></li>
+    <li><a class="dropdown-item text-dark" href="/services">GYM</a></li>
+    <li><a class="dropdown-item text-dark" href="/services">Badminton</a></li>
+    <li><a class="dropdown-item text-dark" href="/services">Table Tennis</a></li>
+    <li><a class="dropdown-item text-dark" href="/services">Billiards</a></li>
+    <li><a class="dropdown-item text-dark" href="/services">Parking</a></li>
     <li><a class="dropdown-item text-primary" href="/services">View All Services</a></li>
     {/* <!-- Add more services as needed --> */}
 </ul>
