@@ -19,7 +19,7 @@ function Header() {
    <header>
     <Navbar expand="lg" className="navbar">
       <Container fluid>
-        <Navbar.Brand href="/" ><div className='d-flex gap-2 align-items-center logo'><img src={logo} alt="logo" /> <h1 className="fs-3 fw-bold text-white">Sporti</h1></div></Navbar.Brand>
+        <Navbar.Brand href="/" ><div className='d-flex gap-2 align-items-center logo'><img src={logo} alt="logo" /> <h1 className="fs-3 fw-bold text-white">SPORTI</h1></div></Navbar.Brand>
       
         <button className='btn p-0 bg-transparent text-white  d-block d-md-none' onClick={handleShow}><i className='bi bi-list fs-1'></i></button>
         <Navbar.Collapse id="navbarScroll">
