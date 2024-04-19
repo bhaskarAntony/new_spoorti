@@ -42,6 +42,13 @@ function Signup() {
                 <input type="password" placeholder='confirm password' className="p-3 form-control" />
             </div>
             <div className="form-group mt-3">
+                <label htmlFor="">Working Status</label>
+                <select name="" id="" className="form-control p-3">
+                <option value="A" selected>Presently Employed </option>
+                <option value="A+">Retired </option>
+              </select>
+            </div>
+            <div className="form-group mt-3">
                 <label htmlFor="">KGID NO</label>
                 <input type="password" placeholder='Enter KGID NO' className="p-3 form-control" />
             </div>
