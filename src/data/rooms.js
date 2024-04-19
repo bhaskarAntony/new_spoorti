@@ -1,7 +1,7 @@
 const roomsdata = [
     {
         id:1,
-        title:'Delux',
+        title:'Executive',
         image:'./images/events/SportiGallery/15.JPG',
         goundfloor: {
             rooms:[101, 102, 103, 104, 105, 106, 107, 108, 109, 110],
@@ -16,7 +16,7 @@ const roomsdata = [
     },
     {
         id:2,
-        title:'Standard',
+        title:'Family ',
         image:'./images/events/SportiGallery/16.JPG',
         foor:[
             {
@@ -34,7 +34,7 @@ const roomsdata = [
     },
     {
         id:3,
-        title:'VIP',
+        title:'Suite',
         image:'./images/events/SportiGallery/17.JPG',
         goundfloor: {
             rooms:[101, 102, 103, 104, 105, 106, 107, 108, 109, 110],
