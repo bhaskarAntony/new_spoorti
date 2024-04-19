@@ -1,7 +1,7 @@
 import  profile1 from '../assets/images/contacts/contact_1.jpg'
 import  profile2 from '../assets/images/contacts/contact_2.jpg'
 import  profile3 from '../assets/images/contacts/deepan.jpg'
-import  profile4 from '../assets/images/contacts/contact_4.jpg'
+import  profile4 from '../assets/images/contacts/mufid.jpg'
 
 const team = [
     {
