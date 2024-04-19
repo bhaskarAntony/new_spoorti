@@ -37,3 +37,9 @@
     transition: 0.8s;
     cursor: pointer;
 }
+
+@media (max-width:768px){
+    .profile-card img{
+        height: fit-content !important;
+    }
+}

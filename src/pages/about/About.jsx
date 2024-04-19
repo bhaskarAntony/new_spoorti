@@ -46,7 +46,7 @@ function About() {
                 <div className="row">
                    {
                     team.map((item, index)=>(
-                        <div className="col-12 col-md-3">
+                        <div className="col-12 col-md-3 mb-4">
                         <div className="profile-card p-2 rounded-3 h-100 d-flex flex-column justify-content-between">
                             <img src={item.profile} alt={item.name} className="w-100 mb-2 rounded-3" />
                            <div>
