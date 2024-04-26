@@ -14,6 +14,7 @@ function Header() {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const [showDropdown, setShowDropdown] = useState(false);
     
   return (
    <header>
@@ -31,7 +32,13 @@ function Header() {
         <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
           <Nav.Link href="/services">Home</Nav.Link>
           <Nav.Link href="/about">About Us</Nav.Link>
-          <NavDropdown title="Services" id="basic-nav-dropdown">
+          <NavDropdown
+          title="Services"
+          id="basic-nav-dropdown"
+          show={showDropdown}
+          onMouseEnter={() => setShowDropdown(true)}
+          onMouseLeave={() => setShowDropdown(false)}
+        >
             <NavDropdown.Item href="/food">Dining</NavDropdown.Item>
             <NavDropdown.Item href="/room">Accomodation</NavDropdown.Item>
             {/* <NavDropdown.Item href="/events">Events</NavDropdown.Item> */}

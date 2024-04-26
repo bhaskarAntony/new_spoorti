@@ -1,15 +1,15 @@
-/* header{
-    position: sticky;
-    top: 0px;
+header{
+    position: sticky !important;
+    top: 0px !important;
     z-index: 1020;
-} */
+}
 .navbar{
     background: #8843a3
 }
 .nav-link{
     font-size: 1.1rem !important;
     color: #ffffff !important;
-    font-weight: 700 !important;
+    font-weight: 500 !important;
     position: relative;
     overflow: hidden;
     
