@@ -8,16 +8,24 @@ import aboutbanners from '../../data/aboutus'
 function About() {
   return (
     <div>
-        <div className="about-banner">
-            <h1 className='fs-1 fw-bold text-center'>About us</h1>
+        <div className="contact-banner about-banner">
+            {/* <h1 className='fs-1 fw-bold text-center'>About us</h1>
             <p className="fs-6 text-center">
             SPORTI consists of a team of Senior Officers from various units of the Police Department. It also has a Working Committee who conduct various Conferences and Workshops to discuss the operations and functioning of the Institute. The team hosts periodic meetings every last Friday of the month for effective improvements of the Institute.
-            </p>
+            </p> */}
+             <div className="skew-container">
+        <div className="skew-left">
+            <h1 className="fs-2 fw-bold">ABOUT US</h1>
+        </div>
+        <div className="skew-right d-flex align-items-center">
+        <h1 className="fs-2 fw-bold"></h1>
+        </div>
+    </div>
 
            
         </div>
 
-        <div className="about-card container py-5 p-3">
+        {/* <div className="about-card container py-5 p-3">
            <div className="row">
                 <div className="col-12 col-md-6">
                     <img src={i1} alt="" className='w-100 rounded-4 h-100' />
@@ -39,10 +47,45 @@ function About() {
                  
                 </div>
                 </div>
+           </div> */}
+          <div className="container py-5">
+          <div className="text-center">
+                <i class="bi bi-stars fs-2 text-warning"></i>
+                <h1 className="fs-2 fw-bold title">Senior Police Officers Research and Training Institute</h1>
+                <span className="fs-6 subtitle d-block">Senior Police Officers Research and Training Institute </span>
+                </div>
+          <div className="row align-items-center">
+            <div className="col-12 col-md-9 mb-3">
+                <div className="about-left">
+              
+                <p className="fs-6 text-secondary mt-4">
+                SPORTI - Senior Police Officers Research and Training Institute was established in the year 1973 and has been successfully catering to the needs of Police department. It was prior known as Senior Police Officer Mess and renamed to SPORTI in 2019 to enhance the quality of services being provided. Similarly to expand scope of services and offerings to more officers, KSRP Research and Training Institute was established in 2014 and was renamed as SPORTI 2 subsequently. This evolution reflects the institute's dedication to advancing knowledge and expertise in its field while adapting to meet the evolving needs of its stakeholders. Both SPORTI 1 and SPORTI 2 are an all exclusive facility for serving and retired senior police officials only.
+                </p>
+
+                <p className="fs-6 text-secondary mt-4">
+                <p className="fs-6 text-secondary mt-4">
+                SPORTI - Senior Police Officers Research and Training Institute was established in the year 1973 and has been successfully catering to the needs of Police department. It was prior known as Senior Police Officer Mess and renamed to SPORTI in 2019 to enhance the quality of services being provided. Similarly to expand scope of services and offerings to more officers, KSRP Research and Training Institute was established in 2014 and was renamed as SPORTI 2 subsequently. This evolution reflects the institute's dedication to advancing knowledge and expertise in its field while adapting to meet the evolving needs of its stakeholders. Both SPORTI 1 and SPORTI 2 are an all exclusive facility for serving and retired senior police officials only.
+                </p>
+                </p>
+                </div>
+            </div>
+            <div className="col-12 col-md-3 mb-3">
+                <div className="about-left">
+                <img src={i1} alt="" className="w-100 mt-3" />
+                    <img src={i2} alt="" className="w-100 mt-3" />
+                </div>
+            </div>
            </div>
 
+          </div>
 
-           <div className="ourteam container">
+          <div className="bg-light p-3">
+          <div className="ourteam container">
+           <div className="text-center">
+                <i class="bi bi-stars fs-2 text-warning"></i>
+                <h1 className="fs-2 fw-bold title">Working Committee of SPORTI</h1>
+                <span className="fs-6 subtitle d-block">SPORTI has a working committee comprising of senior officers from various units of Karnataka State Police. They strive to provide quality facilities and services to all senior members of Karnataka State Police. The team hold meetings on the last Friday of every month to discuss various activities at SPORTI , assess feedbacks and take measures to enhance the services. The committee consists of :</span>
+                </div>
                 <div className="row">
                    {
                     team.map((item, index)=>(
@@ -50,8 +93,8 @@ function About() {
                         <div className="profile-card p-2 rounded-3 h-100 d-flex flex-column justify-content-between">
                             <img src={item.profile} alt={item.name} className="w-100 mb-2 rounded-3" />
                            <div>
-                           <h1 className="fs-5 fw-bold">{item.name}</h1>
-                            <h1 className="fs-6">{item.role}</h1>
+                           <h1 className="fs-5 fw-bold title">{item.name}</h1>
+                            <h1 className="fs-6 title text-muted">{item.role}</h1>
                             <small className='text-muted'><i>{item.contact}</i></small>
                            </div>
                         </div>
@@ -60,6 +103,7 @@ function About() {
                    }
                 </div>
            </div>
+          </div>
 
                    <h1 className="fs-1 fw-bold p-3 p-md-5 py-2">Wall Of Fame</h1>
            <div className="wall-frames p-3 p-md-5">

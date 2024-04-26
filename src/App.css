@@ -69,6 +69,11 @@ text-align: center;
 .subtitle{
   position: relative;
   color: gray;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.title{
+  text-transform: uppercase;
 }
 
 .subtitle::before{
