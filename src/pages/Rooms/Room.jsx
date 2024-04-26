@@ -9,7 +9,7 @@ function Room() {
             <h1 className='display-3 fw-bold'>Stay with us</h1>
             
         </div>
-        <div className="room-book-card">
+        {/* <div className="room-book-card">
             <div className="row align-item-center">
                 <div className="col-12 col-md-3">
                    <div className="form-group">
@@ -44,7 +44,7 @@ function Room() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
 
 
         <div className="rooms-categories p-3 p-md-4">

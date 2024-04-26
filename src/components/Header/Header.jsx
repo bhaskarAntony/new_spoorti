@@ -19,14 +19,18 @@ function Header() {
    <header>
   <Navbar expand="lg" className="navbar">
   <Container fluid>
-    <Navbar.Brand href="/"><div className='d-flex gap-2 align-items-center logo'><img src={logo} alt="logo" /> <h1 className="fs-3 fw-bold text-white">SPORTI</h1></div></Navbar.Brand>
+    <div className="logo-container d-flex align-items-center">
+    <Navbar.Brand href="/"><div className='d-flex gap-2 align-items-center logo'>
+      {/* <img src={logo} alt="logo" />  */}
+      <h1 className="fs-3 fw-bold m-0">SPORTI</h1></div></Navbar.Brand>
+    </div>
 
     <button className='btn p-0 bg-transparent text-white d-block d-md-none' onClick={handleShow}><i className='bi bi-list fs-1'></i></button>
     <Navbar.Collapse id="navbarScroll">
       <div className="d-none d-md-block w-100">
         <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
           <Nav.Link href="/services">Home</Nav.Link>
-          <Nav.Link href="/about">About us</Nav.Link>
+          <Nav.Link href="/about">About Us</Nav.Link>
           <NavDropdown title="Services" id="basic-nav-dropdown">
             <NavDropdown.Item href="/food">Dining</NavDropdown.Item>
             <NavDropdown.Item href="/room">Accomodation</NavDropdown.Item>
@@ -46,9 +50,11 @@ function Header() {
           <Nav.Link href="/faqs">Faqs</Nav.Link>
           <Nav.Link href="/events&gallery">Gallery</Nav.Link>
           <Nav.Link href="/contact">Contact us</Nav.Link>
-          <a href='/login' className="main-btn px-4 mx-3">Login</a>
+          <Nav.Link href="/login">Login</Nav.Link>
+          <Nav.Link href="/signup">New Member signup</Nav.Link>
+          {/* <a href='/login' className=" px-4 mx-3">Login</a>
 
-          <a href='/signup' className="btn-outline px-4 mx-3 text-white">New Member signup</a>
+          <a href='/signup' className=" px-4 mx-3 text-white">New Member signup</a> */}
 
 
         </Nav>
@@ -70,12 +76,12 @@ function Header() {
         <Offcanvas.Body>
          <ul >
             <li><a href="/"><i class="bi bi-house-door-fill"></i> Home</a></li>
-            <li><a href="/about"><i class="bi bi-file-person-fill"></i> About us</a></li>
+            <li><a href="/about"><i class="bi bi-file-person-fill"></i> About Us</a></li>
             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-stars"></i> Services
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices">
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices">
     <li><a class="dropdown-item text-dark" href="/food">Order Food</a></li>
     <li><a class="dropdown-item text-dark" href="/room">Room Booking</a></li>
     {/* <li><a class="dropdown-item text-dark" href="/events">Events</a></li> */}

@@ -1,16 +1,42 @@
-.contact{
-    background-color: aliceblue;
+.contact-banner{
+    background: url(https://cprpune.org/wp-content/uploads/2020/01/cpr-pune-banner-bg-1.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 50vh;
+    background-attachment: fixed;
 }
-.contact .form-control{
-    padding: 15px;
+.contact-card{
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
-
-.contact .form-control:focus, .contact .form-control:active{
-    box-shadow: none !important;
+.contact-main-card:nth-child(1) .contact-card{
+    background-color: #FFA447;
+}
+.contact-main-card:nth-child(2) .contact-card{
+    background-color: #FF6868;
+}
+.contact-main-card:nth-child(3) .contact-card{
+    background-color: #3468C0;
+}
+.contact-from input,  .contact-from textarea{
+    width: 100%;
+    padding: 10px;
     border: none;
+    outline: none;
+    border: 1px solid lightgray;
 }
+/* .contact-from input:hover, .contact-from textarea:hover{
+    border: 1px solid #005eff;
+    background-color: #72a6ff0b;
+} */
 
-.contact .form-control:hover{
-    background-color: rgba(65, 105, 225, 0.139);
-    border: 1px solid royalblue;
+.contact-card:hover{
+    background-color: #fff !important;
+    box-shadow: 0px 0px 18px #ccc;
+    color: #000 !important;
+    cursor: pointer;
+    transition: 0.8s;
 }

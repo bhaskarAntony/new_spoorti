@@ -84,7 +84,7 @@ function Home() {
             </div>
         </div>
       </div> */}
-      <div className="main  p-3 p-md-5 mx-auto">
+      {/* <div className="main  p-3 p-md-5 mx-auto">
         <div className="row">
             <div className="col-12 col-md-3">
                 <div className="main-left">
@@ -121,7 +121,7 @@ function Home() {
                 </div>
             </div>
         </div>
-      </div>
+      </div> */}
         
 
       

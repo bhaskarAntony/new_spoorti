@@ -27,6 +27,10 @@ import Signup from './pages/signup/Signup';
 import Services from './pages/services/Services';
 import Events from './components/events/Events';
 import View from './pages/view/View';
+import Registration from './pages/registration/Registration';
+import AdditionalDetailsForm from './pages/membership/AdditionalDetailsForm';
+import Admin from './pages/membership/Admin';
+import MainContact from './pages/contact/MainContact';
 
 function App() {
  
@@ -50,7 +54,7 @@ function App() {
       <Route path='/gallery/:id' element={<Gallery/>}/>
       <Route path='/events&gallery' element={<Events/>}/>
       <Route path='/site_map' element={<SiteMap/>}/>
-      <Route path='/contact' element={<Contact/>}/>
+      <Route path='/contact' element={<MainContact/>}/>
       <Route path='/terms_and-conditions' element={<Tems_and_conditions/>}/>
       <Route path='/privacy_policy' element={<Privacy/>}/>
       <Route path='/eventView/:id' element={<EventView/>}/>
@@ -58,6 +62,9 @@ function App() {
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/services' element={<Services/>}/>
+      <Route path='/registration' element={<Registration/>}/>
+      <Route path='/additional-details/:id' element={<AdditionalDetailsForm/>}/>
+      <Route path='/admin/:id' element={<Admin/>}/>
       <Route path='/view/:id' element={<View/>}/>
     </Routes>
     <Footer/>
