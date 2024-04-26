@@ -278,6 +278,12 @@ function Home() {
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.0273609615388!2d77.612095!3d12.970101!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1715a47fbf91%3A0x105bdbe2d51128a2!2sSenior%20Police%20Officer&#39;s%20Research%20and%20Training%20Institute%20(SPORTI)!5e0!3m2!1sen!2sbe!4v1713247899969!5m2!1sen!2sbe" width="600" height="500" className='rounded-3 w-100' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
            </div>
         </div> */}
+        <div className="text-center p-3 p-md-5 login-banner bg-light">
+             <i class="bi bi-stars fs-2 text-warning"></i>
+            <h1 className="fs-2 fw-bold title">Login for room booking </h1>
+            <p className="subtitle fs-6 text-secondary">Login to SPoorti to access all sporti services</p>
+            <button className="blue-btn">Login Now</button>
+        </div>
 
       
 
@@ -287,8 +293,8 @@ function Home() {
         <div className="container-fluid s1 p-3 p-md-5 py-5 overflow-hidden">
             <div className="row align-items-center">
                 <div className="col-12 col-md-6 mb-4">
-                    <h1 className="fs-1 fw-bold">Discover Exclusive Benefits of Booking Rooms for Police Officers</h1>
-                    <p className="fs-4 text-secondary">Experience top-notch accommodations tailored to the unique needs of police officers and their families.</p>
+                    <h1 className="fs-3 fw-bold title">Discover Exclusive Benefits of Booking Rooms for Police Officers</h1>
+                    <p className="fs-6 text-secondary title">Experience top-notch accommodations tailored to the unique needs of police officers and their families.</p>
                     <ul>
                         <li><i class="bi bi-check2 text-success"></i> Secure and Convenient Booking Process</li>
                         <li><i class="bi bi-check2 text-success"></i>  Special Discounts for Police Officers</li>
@@ -299,8 +305,8 @@ function Home() {
                         <a href='/services' className="btn-outline p-2 text-dark">Learn more</a>
                     </div>
                 </div>
-                <div className="col-12 col-md-6">
-                    <img src="./images/home-image.jpg" alt="" className="w-100" />
+                <div className="col-12 col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="./images/home-image.jpg" alt="" className="w-75 m-auto" />
                 </div>
             </div>
         </div>

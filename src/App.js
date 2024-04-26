@@ -32,6 +32,7 @@ import AdditionalDetailsForm from './pages/membership/AdditionalDetailsForm';
 import Admin from './pages/membership/Admin';
 import MainContact from './pages/contact/MainContact';
 import MainservicePage from './pages/services/MainservicePage';
+import MainFaqPage from './pages/faqs/MainFaqPage';
 
 function App() {
  
@@ -50,7 +51,7 @@ function App() {
       <Route path='/event' element={<Event/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/stream' element={<LiveStream/>}/>
-      <Route path='/faqs' element={<Faqs/>}/>
+      <Route path='/faqs' element={<MainFaqPage/>}/>
       <Route path='/help' element={<Help/>}/>
       <Route path='/gallery/:id' element={<Gallery/>}/>
       <Route path='/events&gallery' element={<Events/>}/>

@@ -21,19 +21,20 @@ const data = [
 function Services() {
   return (
     <div className='services-container container-fluid p-3 p-md-5 '>
-      <div className="text-center">
-      <div className="btn-tag">Services</div>
-      </div>
-      <h1 className="banner-heading display-3 fw-bold text-center">Explore <br />Sporti Services</h1>
+      <div className="feedback text-center p-3">
+   <i class="bi bi-stars fs-2 text-warning"></i>
+   <h1 className="fs-2 fw-bold title">SERVICES</h1>
+   <span className="fs-6 subtitle d-block">Explore sporti services</span>
+   </div>
 
-      <div className="row mt-5">
+      <div className="row">
         {
             data.map((item, index)=>(
                 <div className="col-12 col-md-4 mb-3">
                     <div className="services-card text-center p-2 bg-white mb-4 h-100">
-                       <i className={`bi bi-${item.image} display-1 mb-3 d-block`}></i>
-                        <h1 className="fs-3">{item.title}</h1>
-                        <p className="fs-5 text-secondary">{item.desc}</p>
+                       <i className={`bi bi-${item.image} display-2 mb-3 d-block`}></i>
+                        <h1 className="fs-4 title fw-bold">{item.title}</h1>
+                        <p className="fs-6 text-secondary">{item.desc}</p>
                     </div>
                 </div>
             ))

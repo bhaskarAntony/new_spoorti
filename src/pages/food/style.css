@@ -3,8 +3,8 @@
     border: none !important;
 }
 .food-tabs .active{
-    border-bottom: 3px solid #f21329 !important;
-    color: #f21329 !important;
+    border-bottom: 3px solid #8843a3 !important;
+    color: #8843a3 !important;
 }
 .food-categories{
     display: flex;
