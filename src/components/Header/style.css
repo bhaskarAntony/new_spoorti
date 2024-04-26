@@ -42,18 +42,22 @@ header .nav-link:before{
     display: block;
   }
   .dropdown-menu{
-    background-color: #5F5D9C !important;
+    background-color: #fff !important;
     border-radius: 0px !important;
     min-width: 200px !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px !important;
+    border: none !important;
     
   }
    .dropdown-menu .dropdown-item{
-    color: #fff !important;
+    color: #000000 !important;
     padding: 10px !important;
+    
   }
    .dropdown-menu  .dropdown-item:hover{
-    color: #000 !important;
-    transition: 0.5s;
+    color: #ffffff !important;
+    transition: 0.2s;
+    background-color: #8843a3;
    
   }
 /* .logo-container{

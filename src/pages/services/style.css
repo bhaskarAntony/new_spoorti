@@ -1,14 +1,30 @@
-.services{
-    background-color: aliceblue;
-}
-.all-services{
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 20px;
-    overflow: auto;
-  scroll-snap-type: x mandatory;
+.all-services img{
+    height: 150px !important;
+    object-fit: cover;
 }
 .service-card{
-    min-width: 300px;
-    padding: 20px;
+    position: relative;
+    box-shadow: none;
+}
+.service-info{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(1px);
+    cursor: pointer;
+}
+
+.service-info:hover{
+    backdrop-filter: blur(0px);
+    transition: 0.6s;
+}
+.service-info:hover span{
+    opacity: 0;
+    transition: 0.6s;
 }

@@ -31,6 +31,7 @@ import Registration from './pages/registration/Registration';
 import AdditionalDetailsForm from './pages/membership/AdditionalDetailsForm';
 import Admin from './pages/membership/Admin';
 import MainContact from './pages/contact/MainContact';
+import MainservicePage from './pages/services/MainservicePage';
 
 function App() {
  
@@ -61,7 +62,7 @@ function App() {
       <Route path='/food/order/:id' element={<ViewFood/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Signup/>}/>
-      <Route path='/services' element={<Services/>}/>
+      <Route path='/services' element={<MainservicePage/>}/>
       <Route path='/registration' element={<Registration/>}/>
       <Route path='/additional-details/:id' element={<AdditionalDetailsForm/>}/>
       <Route path='/admin/:id' element={<Admin/>}/>
