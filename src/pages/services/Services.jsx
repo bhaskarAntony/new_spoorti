@@ -48,7 +48,7 @@ function Services({data}) {
                   <div className="service-card">
                     <img src={item.image} alt="" className="w-100 h-100" />
                       <div className="service-info text-center">
-                        <span className="fs-5 text-white">{item.title}</span>
+                        <span className="fs-6 text-white">{item.title}</span>
                       </div>
                 </div>
                 </div>
