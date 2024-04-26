@@ -110,8 +110,8 @@ function Header() {
             <li><a href="/faqs"><i class="bi bi-stars"></i> Faqs</a></li>
             <li><a href="/events&gallery"><i class="bi bi-images"></i> Gallery</a></li>
             <li><a href="/contact"><i class="bi bi-person-lines-fill"></i> Contact us</a></li>
-            <li><a href="/login" className='btn btn-light w-100 p-3'>Login</a></li>
-            <li><a href="/signup" className='btn btn-light w-100 p-3 mt-3'>New Member Signup</a></li>
+            <li><a href="/login" className='btn btn-success w-100 p-3'>Login</a></li>
+            <li><a href="/signup" className='btn btn-warning w-100 p-3 mt-3'>New Member Signup</a></li>
          </ul>
         </Offcanvas.Body>
       </Offcanvas>

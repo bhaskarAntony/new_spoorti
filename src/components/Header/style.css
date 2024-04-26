@@ -70,7 +70,7 @@ header .nav-link:before{
 
 
 .mobile-nav{
-    background-color: #114232 !important;
+    background-color: #8843a3 !important;
 }
 .mobile-nav ul li{
     font-size: 1.2rem;
@@ -83,12 +83,9 @@ header .nav-link:before{
     text-decoration: none;
     color: #fff;
     padding: 10px;
-    background-color: #7cc9af19;
     width: 100%;
     display: block;
     margin-bottom: 10px;
-    border-radius: 10px;
 }
 .mobile-nav ul li a:hover{
-    background-color: #7cc9af63;
 }
