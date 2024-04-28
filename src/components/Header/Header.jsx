@@ -18,16 +18,16 @@ function Header() {
     
   return (
    <header>
-  <Navbar expand="lg" className="navbar">
-  <Container fluid>
-    <div className="logo-container d-flex align-items-center">
+  <Navbar expand="lg" className="navbar p-0">
+  <Container fluid className='p-0'>
+    <div className="logo-container d-flex align-items-center bg-white">
     <Navbar.Brand href="/"><div className='d-flex gap-2 align-items-center logo'>
-      {/* <img src={logo} alt="logo" />  */}
-      <h1 className="fs-3 fw-bold m-0">SPORTI</h1></div></Navbar.Brand>
+      <img src='./images/logo.svg' alt="logo" /> 
+      <h1 className="fs-3 fw-bold m-0 text-black">SPORTI</h1></div></Navbar.Brand>
     </div>
 
     <button className='btn p-0 bg-transparent text-white d-block d-md-none' onClick={handleShow}><i className='bi bi-list fs-1'></i></button>
-    <Navbar.Collapse id="navbarScroll">
+    <Navbar.Collapse id="navbarScroll" className='p-0'>
       <div className="d-none d-md-block w-100">
         <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
           <Nav.Link href="/services">Home</Nav.Link>
@@ -42,7 +42,7 @@ function Header() {
             <NavDropdown.Item href="/food">Dining</NavDropdown.Item>
             <NavDropdown.Item href="/room">Accomodation</NavDropdown.Item>
             {/* <NavDropdown.Item href="/events">Events</NavDropdown.Item> */}
-            <NavDropdown.Item href="/view/1">Conference Hall</NavDropdown.Item>
+            <NavDropdown.Item href="/conference-hall">Conference Hall</NavDropdown.Item>
             <NavDropdown.Item href="/view/2">Main Event Hall</NavDropdown.Item>
             <NavDropdown.Item href="/services">Mini Theatre</NavDropdown.Item>
             <NavDropdown.Item href="/view/6">Barbeque</NavDropdown.Item>
@@ -53,12 +53,11 @@ function Header() {
             <NavDropdown.Item href="/services">Parking</NavDropdown.Item>
             <NavDropdown.Item href="/services" className='text-primary'>View All Services</NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link href="/gallery/2">Events</Nav.Link>
+          <Nav.Link href="/events&gallery">Events & Gallery</Nav.Link>
           <Nav.Link href="/faqs">Faqs</Nav.Link>
-          <Nav.Link href="/events&gallery">Gallery</Nav.Link>
           <Nav.Link href="/contact">Contact us</Nav.Link>
           <Nav.Link href="/login">Login</Nav.Link>
-          <Nav.Link href="/signup">New Member signup</Nav.Link>
+          <Nav.Link href="/registration">New Member signup</Nav.Link>
           {/* <a href='/login' className=" px-4 mx-3">Login</a>
 
           <a href='/signup' className=" px-4 mx-3 text-white">New Member signup</a> */}
@@ -106,9 +105,8 @@ function Header() {
 </ul>
 
         </li>
-            <li><a href="/gallery/2"><i class="bi bi-stars"></i> Events</a></li>
+            <li><a href="/events&gallery"><i class="bi bi-images"></i> Events & Gallery</a></li>
             <li><a href="/faqs"><i class="bi bi-stars"></i> Faqs</a></li>
-            <li><a href="/events&gallery"><i class="bi bi-images"></i> Gallery</a></li>
             <li><a href="/contact"><i class="bi bi-person-lines-fill"></i> Contact us</a></li>
             <li><a href="/login" className='btn btn-success w-100 p-3'>Login</a></li>
             <li><a href="/signup" className='btn btn-warning w-100 p-3 mt-3'>New Member Signup</a></li>

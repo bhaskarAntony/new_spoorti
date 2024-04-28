@@ -1,20 +1,21 @@
 .carousel-item{
-    max-height: 60vh;
+    max-height: 80vh;
     overflow: hidden;
 }
 .carousel-item img{
     object-fit: cover;
-    max-height: 60vh;
+    max-height: 80vh;
 }
 .carousel-caption{
-    background: linear-gradient(#23232344, #32323244);
+    background: #000000bc;
     width: 100%;
-    height: 100%;
+    height: fit-content;
     left: 0px !important;
-    top: 0px !important;
+    bottom: 0px !important;
     display: flex;
     flex-direction: column;
     justify-content: end;
+    backdrop-filter: blur(2px);
 }
 .carousel-control-next-icon, .carousel-control-prev-icon{
     background-color: blueviolet;

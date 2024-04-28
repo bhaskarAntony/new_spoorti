@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css'
+import servicesData from '../../data/services'
 
 const data = [
     {
@@ -40,6 +41,8 @@ function Services() {
             ))
         }
       </div>
+
+    
     </div>
   )
 }

@@ -2,56 +2,32 @@ import React from 'react'
 import './style.css'
 import roomsdata from '../../data/rooms'
 
-function Room() {
+function Room({data}) {
   return (
     <div className='room-container'>
-        <div className="room-banner text-center d-flex align-items-center justify-content-center flex-column">
-            <h1 className='display-3 fw-bold'>Stay with us</h1>
-            
+          <div className="contact-banner about-banner">
+            {/* <h1 className='fs-1 fw-bold text-center'>About us</h1>
+            <p className="fs-6 text-center">
+            SPORTI consists of a team of Senior Officers from various units of the Police Department. It also has a Working Committee who conduct various Conferences and Workshops to discuss the operations and functioning of the Institute. The team hosts periodic meetings every last Friday of the month for effective improvements of the Institute.
+            </p> */}
+             <div className="skew-container">
+        <div className="skew-left">
+            <h1 className="fs-2 fw-bold">Room Booking</h1>
         </div>
-        {/* <div className="room-book-card">
-            <div className="row align-item-center">
-                <div className="col-12 col-md-3">
-                   <div className="form-group">
-                   <label htmlFor="check" className="form-label">Check in</label>
-                   <div className="input-group mt-2">
-                        <span class="input-group-text" id="basic-addon1">  <i class="bi bi-calendar2-week fs-4 text-primary"></i></span>
-                  <input type="date"  className="form-control" id='check' />
-                    </div>
-                   </div>
-                </div>
-                <div className="col-12 col-md-3">
-                <div className="form-group">
-                   <label htmlFor="check" className="form-label">Check out</label>
-                   <div className="input-group mt-2">
-                        <span class="input-group-text" id="basic-addon1">  <i class="bi bi-calendar2-week fs-4 text-primary"></i></span>
-                  <input type="date"  className="form-control" id='check' />
-                    </div>
-                   </div>
-                </div>
-                <div className="col-12 col-md-3">
-                <div className="form-group">
-                   <label htmlFor="check" className="form-label">No.Of Guests</label>
-                   <div className="input-group mt-2">
-                        <span class="input-group-text" id="basic-addon1">  <i class="bi-people-fill fs-4 text-primary"></i></span>
-                  <input type="number"  className="form-control" id='check' min={1} />
-                    </div>
-                   </div>
-                </div>
-                <div className="col-12 col-md-3">
-                    <div className="form-group">
-                        <button className="btn btn-primary w-100 d-flex align-items-center justify-content-between">Check Availability <i class="bi bi-arrow-right"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div> */}
+        <div className="skew-right d-flex align-items-center">
+        <h1 className="fs-2 fw-bold text-black">{data.title}</h1>
+        </div>
+    </div>
+
+           
+        </div>
 
 
         <div className="rooms-categories p-3 p-md-4">
             <h1 className="fs-1 fw-bold py-4">Room Sections</h1>
             <div className="rooms-inner">
                 {
-                    roomsdata.map((item, index)=>(
+                    data.rooms.map((item, index)=>(
                         <div className="room-card">
                             <img src={item.image} alt="" className="w-100" />
                             <div className="room-info">
