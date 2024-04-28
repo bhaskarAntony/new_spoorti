@@ -109,6 +109,11 @@ button:hover{
   box-shadow: none !important;
 }
 
+.carousel-indicators [data-bs-target]{
+  width: 30px !important;
+  display: none;
+}
+
 
 
 
