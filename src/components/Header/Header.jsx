@@ -4,11 +4,12 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from '../../assets/images/images/spoori_logo.jpg'
+import logo from '../../assets/images/main_logo.svg'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useState } from 'react';
 
 function Header() {
+  
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -21,7 +22,7 @@ function Header() {
   <Container fluid className='p-0'>
     <div className="logo-container d-flex align-items-center bg-white">
     <Navbar.Brand href="/"><div className='d-flex gap-2 align-items-center logo'>
-      <img src='./images/logo.svg' alt="logo" /> 
+      <img src={logo} alt="logo" /> 
       <h1 className="fs-3 fw-bold m-0 text-black">SPORTI</h1></div></Navbar.Brand>
     </div>
 

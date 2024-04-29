@@ -8,25 +8,25 @@ const team = [
         profile:profile1,
         name:'Sri Alok Mohan, IPS.',
         role:'Honorable President',
-        contact:'+91 1234567890'
+        contact:'+91 8277945903'
     },
     {
         profile:profile2,
         name:'Sri B Dayanand, IPS.',
         role:'President',
-        contact:'+91 9876543210'
+        contact:'+91 8277945903'
     },
     {
         profile:profile3,
         name:'Sri Deepen M N ',
         role:'Secretary',
-        contact:'+91 4567891230'
+        contact:'+91 8277945903'
     },
     {
         profile:profile4,
         name:'Sri Mufid Khan',
         role:'Mess Officer',
-        contact:'+91 9480805826'
+        contact:'+91 8277945903'
     }
 ]
 export default team;
