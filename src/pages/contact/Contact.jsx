@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css'
+import Feedback from '../../components/feedback/Feedback'
 
 function Contact({data}) {
   return (
@@ -41,7 +42,7 @@ function Contact({data}) {
    </div>
 
 
-   <div className="row mt-4">
+   {/* <div className="row mt-4">
         <div className="col-md-8 offset-md-2">
         <div className="contact-from p-3">
         <div className="row">
@@ -80,8 +81,9 @@ function Contact({data}) {
      </div>
   
         </div>
-      </div>
+      </div> */}
   
+  <Feedback/>
     </div>
   )
 }

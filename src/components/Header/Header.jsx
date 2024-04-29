@@ -61,18 +61,18 @@ function Header() {
                                     onMouseEnter={() => setShowDropdown2(true)}
                                     onMouseLeave={() => setShowDropdown2(false)}
                                 >
-            <NavDropdown.Item href="/food">Dining</NavDropdown.Item>
-            <NavDropdown.Item href="/room">Accomodation</NavDropdown.Item>
+            <NavDropdown.Item href="/food">Accommodation </NavDropdown.Item>
+            <NavDropdown.Item href="/room">Central lawn</NavDropdown.Item>
             {/* <NavDropdown.Item href="/events">Events</NavDropdown.Item> */}
-            <NavDropdown.Item href="/conference-hall">Conference Hall</NavDropdown.Item>
-            <NavDropdown.Item href="/view/2">Main Event Hall</NavDropdown.Item>
-            <NavDropdown.Item href="/services">Mini Theatre</NavDropdown.Item>
-            <NavDropdown.Item href="/view/6">Barbeque</NavDropdown.Item>
-            <NavDropdown.Item href="/services">GYM</NavDropdown.Item>
-            <NavDropdown.Item href="/services">Badminton</NavDropdown.Item>
+            <NavDropdown.Item href="/conference-hall">Expansive lounge</NavDropdown.Item>
+            <NavDropdown.Item href="/view/2">Conference room</NavDropdown.Item>
+            <NavDropdown.Item href="/services">In-house Restaurant</NavDropdown.Item>
+            <NavDropdown.Item href="/view/6">Training room</NavDropdown.Item>
+            <NavDropdown.Item href="/services">Sullivan Police Hockey ground- </NavDropdown.Item>
+            {/* <NavDropdown.Item href="/services">Badminton</NavDropdown.Item>
             <NavDropdown.Item href="/services">Table Tennis</NavDropdown.Item>
             <NavDropdown.Item href="/services">Billiards</NavDropdown.Item>
-            <NavDropdown.Item href="/services">Parking</NavDropdown.Item>
+            <NavDropdown.Item href="/services">Parking</NavDropdown.Item> */}
             <NavDropdown.Item href="/services" className='text-primary'>View All Services</NavDropdown.Item>
           </NavDropdown>
           <Nav.Link href="/events&gallery">Events & Gallery</Nav.Link>
@@ -133,19 +133,19 @@ function Header() {
                 <i class="bi bi-stars"></i> Sporti2
             </a>
     <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices2">
-    <li><a class="dropdown-item text-dark" href="/food">Order Food</a></li>
-    <li><a class="dropdown-item text-dark" href="/room">Room Booking</a></li>
+    <li><a class="dropdown-item text-dark" href="/food">Accommodation </a></li>
+    <li><a class="dropdown-item text-dark" href="/room">Central lawn</a></li>
     {/* <li><a class="dropdown-item text-dark" href="/events">Events</a></li> */}
-    <li><a class="dropdown-item text-dark" href="/view/1">Conference Hall</a></li>
-    <li><a class="dropdown-item text-dark" href="/view/2">Main Event Hall</a></li>
-    <li><a class="dropdown-item text-dark" href="/services">Mini Theatre</a></li>
-    <li><a class="dropdown-item text-dark" href="/view/6">Barbeque</a></li>
-    <li><a class="dropdown-item text-dark" href="/services">GYM</a></li>
-    <li><a class="dropdown-item text-dark" href="/services">Badminton</a></li>
+    <li><a class="dropdown-item text-dark" href="/view/1">Expansive lounge</a></li>
+    <li><a class="dropdown-item text-dark" href="/view/2">Conference room</a></li>
+    <li><a class="dropdown-item text-dark" href="/services">In-house Restaurant</a></li>
+    <li><a class="dropdown-item text-dark" href="/view/6">Training room</a></li>
+    <li><a class="dropdown-item text-dark" href="/services">Sullivan Police Hockey ground</a></li>
+    {/* <li><a class="dropdown-item text-dark" href="/services">Badminton</a></li>
     <li><a class="dropdown-item text-dark" href="/services">Table Tennis</a></li>
     <li><a class="dropdown-item text-dark" href="/services">Billiards</a></li>
     <li><a class="dropdown-item text-dark" href="/services">Parking</a></li>
-    <li><a class="dropdown-item text-primary" href="/services">View All Services</a></li>
+    <li><a class="dropdown-item text-primary" href="/services">View All Services</a></li> */}
     {/* <!-- Add more services as needed --> */}
 </ul>
 

@@ -1,5 +1,6 @@
 const roomsdata = {
     sporti1:{
+        id:1,
         title:'SPORTI 1',
         rooms:[
             {
@@ -54,6 +55,7 @@ const roomsdata = {
         ]
     },
     sporti2:{
+        id:2,
         title:'SPORTI 2',
         rooms:[
             {

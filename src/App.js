@@ -53,7 +53,7 @@ function App() {
       <Route path='/food' element={<Food/>}/>
       <Route path='/cart' element={<FoodCart/>}/>
       <Route path='/room' element={<MainRoomBookingPage/>}/>
-      <Route path='/roomview/:id' element={<RoomView/>}/>
+      <Route path='/roomview/:id/:sportiId' element={<RoomView/>}/>
       <Route path='/event' element={<Event/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/stream' element={<LiveStream/>}/>
