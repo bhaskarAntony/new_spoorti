@@ -10,11 +10,12 @@ import { useState } from 'react';
 
 function Header() {
   
-    const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
+  const [showDropdown1, setShowDropdown1] = useState(false);
+  const [showDropdown2, setShowDropdown2] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-    const [showDropdown, setShowDropdown] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
     
   return (
    <header>
@@ -33,12 +34,33 @@ function Header() {
           <Nav.Link href="/services">Home</Nav.Link>
           <Nav.Link href="/about">About Us</Nav.Link>
           <NavDropdown
-          title="Services"
-          id="basic-nav-dropdown"
-          show={showDropdown}
-          onMouseEnter={() => setShowDropdown(true)}
-          onMouseLeave={() => setShowDropdown(false)}
-        >
+                                    title="Sporti1"
+                                    id="basic-nav-dropdown1"
+                                    show={showDropdown1}
+                                    onMouseEnter={() => setShowDropdown1(true)}
+                                    onMouseLeave={() => setShowDropdown1(false)}
+                                >
+            <NavDropdown.Item href="/food">Dining</NavDropdown.Item>
+            <NavDropdown.Item href="/room">Accomodation</NavDropdown.Item>
+            {/* <NavDropdown.Item href="/events">Events</NavDropdown.Item> */}
+            <NavDropdown.Item href="/conference-hall">Conference Hall</NavDropdown.Item>
+            <NavDropdown.Item href="/view/2">Main Event Hall</NavDropdown.Item>
+            <NavDropdown.Item href="/services">Mini Theatre</NavDropdown.Item>
+            <NavDropdown.Item href="/view/6">Barbeque</NavDropdown.Item>
+            <NavDropdown.Item href="/services">GYM</NavDropdown.Item>
+            <NavDropdown.Item href="/services">Badminton</NavDropdown.Item>
+            <NavDropdown.Item href="/services">Table Tennis</NavDropdown.Item>
+            <NavDropdown.Item href="/services">Billiards</NavDropdown.Item>
+            <NavDropdown.Item href="/services">Parking</NavDropdown.Item>
+            <NavDropdown.Item href="/services" className='text-primary'>View All Services</NavDropdown.Item>
+          </NavDropdown>
+          <NavDropdown
+                                    title="Sporti2"
+                                    id="basic-nav-dropdown2"
+                                    show={showDropdown2}
+                                    onMouseEnter={() => setShowDropdown2(true)}
+                                    onMouseLeave={() => setShowDropdown2(false)}
+                                >
             <NavDropdown.Item href="/food">Dining</NavDropdown.Item>
             <NavDropdown.Item href="/room">Accomodation</NavDropdown.Item>
             {/* <NavDropdown.Item href="/events">Events</NavDropdown.Item> */}
@@ -84,10 +106,33 @@ function Header() {
             <li><a href="/"><i class="bi bi-house-door-fill"></i> Home</a></li>
             <li><a href="/about"><i class="bi bi-file-person-fill"></i> About Us</a></li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-stars"></i> Services
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServices1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-stars"></i> Sporti1
             </a>
-    <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices">
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices1">
+    <li><a class="dropdown-item text-dark" href="/food">Order Food</a></li>
+    <li><a class="dropdown-item text-dark" href="/room">Room Booking</a></li>
+    {/* <li><a class="dropdown-item text-dark" href="/events">Events</a></li> */}
+    <li><a class="dropdown-item text-dark" href="/view/1">Conference Hall</a></li>
+    <li><a class="dropdown-item text-dark" href="/view/2">Main Event Hall</a></li>
+    <li><a class="dropdown-item text-dark" href="/services">Mini Theatre</a></li>
+    <li><a class="dropdown-item text-dark" href="/view/6">Barbeque</a></li>
+    <li><a class="dropdown-item text-dark" href="/services">GYM</a></li>
+    <li><a class="dropdown-item text-dark" href="/services">Badminton</a></li>
+    <li><a class="dropdown-item text-dark" href="/services">Table Tennis</a></li>
+    <li><a class="dropdown-item text-dark" href="/services">Billiards</a></li>
+    <li><a class="dropdown-item text-dark" href="/services">Parking</a></li>
+    <li><a class="dropdown-item text-primary" href="/services">View All Services</a></li>
+    {/* <!-- Add more services as needed --> */}
+</ul>
+
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServices2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-stars"></i> Sporti2
+            </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices2">
     <li><a class="dropdown-item text-dark" href="/food">Order Food</a></li>
     <li><a class="dropdown-item text-dark" href="/room">Room Booking</a></li>
     {/* <li><a class="dropdown-item text-dark" href="/events">Events</a></li> */}

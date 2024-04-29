@@ -3,14 +3,30 @@ import './style.css'
 
 function Tems_and_conditions() {
   return (
-    <div className='p-2 p-md-5 terms'>
-        <h1 className="fs-1 fw-bold">Terms and Conditions</h1>
-        <hr />
-        <p className="lead">The following terms and conditions govern the access and use of the facilities of the SPORTI (the Institute). By accessing and using the Institute's facilities, you agree to be bound by these terms and conditions. If you do not agree to these terms and conditions, you may not use the Institute's facilities.</p>
+    <div className=' terms'>
+       <div className="contact-banner about-banner">
+            {/* <h1 className='fs-1 fw-bold text-center'>About us</h1>
+            <p className="fs-6 text-center">
+            SPORTI consists of a team of Senior Officers from various units of the Police Department. It also has a Working Committee who conduct various Conferences and Workshops to discuss the operations and functioning of the Institute. The team hosts periodic meetings every last Friday of the month for effective improvements of the Institute.
+            </p> */}
+             <div className="skew-container">
+        <div className="skew-left">
+            <h1 className="fs-2 fw-bold more">Terms and Conditions</h1>
+        </div>
+        <div className="skew-right d-flex align-items-center">
+        <h1 className="fs-2 fw-bold"></h1>
+        </div>
+    </div>
+
+           
+        </div>
+      <div className="p-3 p-md-5">
+      
+        <p className="fs-6 text-secondary">The following terms and conditions govern the access and use of the facilities of the SPORTI (the Institute). By accessing and using the Institute's facilities, you agree to be bound by these terms and conditions. If you do not agree to these terms and conditions, you may not use the Institute's facilities.</p>
         <br /><br />
-          <h2 className="fs-3 fw-bold">Access and Use of Facilities</h2>
+          <h2 className="fs-4 fw-bold">Access and Use of Facilities</h2>
           <hr />
-          <p className='lead'>
+          <p className='fs-6'>
 
             1.1 Access to the Institute's facilities is restricted to authorized individuals only. <br />
 
@@ -35,8 +51,8 @@ function Tems_and_conditions() {
             <br />
           </p>
           <br /><br />
-          <h2 className='fs-3 fw-bold'>Liability and Indemnification</h2>
-          <p className="lead">2.1 The Institute is not responsible for any injury, loss, or damage to any person or property resulting from the use of the Institute's facilities. <br />
+          <h2 className='fs-4 fw-bold'>Liability and Indemnification</h2>
+          <p className="fs-6 text-secondary">2.1 The Institute is not responsible for any injury, loss, or damage to any person or property resulting from the use of the Institute's facilities. <br />
 
 2.2 You agree to indemnify and hold the Institute and its officers, directors, employees, agents, and affiliates harmless from any claim, demand, or damage, including reasonable attorneys' fees, arising out of your use of the Institute's facilities, your violation of these terms and conditions, or your violation of any applicable law or regulation. <br />
 
@@ -44,9 +60,9 @@ function Tems_and_conditions() {
 
 <br />
 <br />
-<h2 className="fs-3 fw-bold">Intellectual Property</h2>
+<h2 className="fs-4 fw-bold">Intellectual Property</h2>
 <hr />
-<p className="lead">3.1 All intellectual property rights in the Institute's facilities, including but not limited to trademarks, copyrights, patents, and trade secrets, are owned by the Institute or its licensors.
+<p className="fs-6 text-secondary">3.1 All intellectual property rights in the Institute's facilities, including but not limited to trademarks, copyrights, patents, and trade secrets, are owned by the Institute or its licensors.
  <br />
 3.2 You may not use the Institute's facilities or any content therein for any commercial purpose without the express written permission of the Institute. <br />
 
@@ -56,25 +72,26 @@ function Tems_and_conditions() {
 
 <br />
 <br />
-<h2 className="fs-3 fw-bold">Termination</h2>
+<h2 className="fs-4 fw-bold">Termination</h2>
 <hr />
-<p className="lead">4.1 The Institute may terminate your access to the facilities at any time, without notice and for any reason. <br />
+<p className="fs-6 text-secondary">4.1 The Institute may terminate your access to the facilities at any time, without notice and for any reason. <br />
 
 4.2 Upon termination, you must immediately cease all use of the Institute's facilities and return any materials belonging to the Institute.</p>
 
 <br />
 <br />
-<h2 className="fs-3 fw-bold">Governing Law and Jurisdiction</h2>
+<h2 className="fs-4 fw-bold">Governing Law and Jurisdiction</h2>
 <hr />
-<p className="lead">5.1 These terms and conditions shall be governed by and construed in accordance with the laws of the jurisdiction in which the Institute is located. <br />
+<p className="fs-6 text-secondary">5.1 These terms and conditions shall be governed by and construed in accordance with the laws of the jurisdiction in which the Institute is located. <br />
 
 5.2 Any dispute arising out of or in connection with these terms and conditions shall be resolved exclusively in the courts of the jurisdiction in which the Institute is located.</p>
 
 <br />
 <br />
-<h2 className="fs-3 fw-bold">Entire Agreement</h2>
+<h2 className="fs-4 fw-bold">Entire Agreement</h2>
 <hr />
-<p className="lead">6.1 These terms and conditions constitute the entire agreement between you and the Institute with respect to the access and use of the Institute's facilities</p>
+<p className="fs-6 text-secondary">6.1 These terms and conditions constitute the entire agreement between you and the Institute with respect to the access and use of the Institute's facilities</p>
+      </div>
     </div>
     
   )

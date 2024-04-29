@@ -64,7 +64,7 @@ function About() {
 
                 <p className="fs-6 text-secondary mt-4">
                 <p className="fs-6 text-secondary mt-4">
-                SPORTI - Senior Police Officers Research and Training Institute was established in the year 1973 and has been successfully catering to the needs of Police department. It was prior known as Senior Police Officer Mess and renamed to SPORTI in 2019 to enhance the quality of services being provided. Similarly to expand scope of services and offerings to more officers, KSRP Research and Training Institute was established in 2014 and was renamed as SPORTI 2 subsequently. This evolution reflects the institute's dedication to advancing knowledge and expertise in its field while adapting to meet the evolving needs of its stakeholders. Both SPORTI 1 and SPORTI 2 are an all exclusive facility for serving and retired senior police officials only.
+                SPORTI fulfils the requirement of organising conferences and training, accommodation, host private and public events, celebrations and dining. It also boasts superior and quality infrastructure featuring elegant Conference rooms, Training room, extensive Event hall, state of art Mini Theatre for screening of movies and documentaries, luxurious accommodation - VIP, Family and Executive rooms, impressive indoor Dining hall and outdoor Barbecue, well equipped Gym for maintaining fitness, sporting avenues like Badminton, Table Tennis and Billiards and also a vast Hockey ground. SPORTI’s central location enables our guests to reach important official destinations with reduced travel time and also experience Bengaluru’s cosmopolitan culture post work hours. Both institutes are committed to providing high-quality experience and impeccable service to enhance the living experience.
                 </p>
                 </p>
                 </div>
@@ -95,6 +95,7 @@ function About() {
                            <div>
                            <h1 className="fs-5 fw-bold title">{item.name}</h1>
                             <h1 className="fs-6 title text-muted">{item.role}</h1>
+                            <small className='small'>{item.desc}</small>
                             <small className='text-muted'><i>{item.contact}</i></small>
                            </div>
                         </div>
