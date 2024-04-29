@@ -21,20 +21,27 @@ function Login() {
     };
 
     return (
-        <div>
-            <h2>Login</h2>
+        <div className='p-3 p-md-5'>
+          
             {errorMessage && <div className="error">{errorMessage}</div>}
-            <form onSubmit={handleLogin}>
-                <div>
-                    <label>Username:</label>
-                    <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+           <div className="row">
+            <div className="col-md-6 offset-md-4">
+                <div className="card shadow p-3">
+                <h2>Login</h2>
+                <form onSubmit={handleLogin}>
+                <div  className='form-group mt-3'>
+                    <label className='form-label'>Username</label>
+                    <input type="text" className='form-control' value={username} onChange={(e) => setUsername(e.target.value)} />
                 </div>
-                <div>
-                    <label>Password:</label>
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <div className='form-group mt-3'>
+                    <label className='form-label'>Password</label>
+                    <input type="password" className='form-control' value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
-                <button type="submit">Login</button>
+                <button type="submit" className='w-100 p-3 btn btn-primary mt-4'>Login</button>
             </form>
+                </div>
+            </div>
+           </div>
         </div>
     );
 }

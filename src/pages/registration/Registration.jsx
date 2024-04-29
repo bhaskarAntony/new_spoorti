@@ -56,7 +56,7 @@ const Registration = () => {
                                 <label className="form-label">Email:</label>
                                 <input type="email" className="form-control" name="email" value={formData.email} onChange={handleChange} />
                             </div>
-                            <button type="submit" className="btn btn-primary btn-block">Register</button>
+                            <button type="submit" className="btn btn-primary btn-block p-3 w-100">Register</button>
                         </form>
                     </div>
                 </div>
