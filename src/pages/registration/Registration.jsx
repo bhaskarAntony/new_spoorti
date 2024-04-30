@@ -19,17 +19,19 @@ const Registration = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
        
-        try {
-            const response = await axios.post('http://localhost:5000/api/auth/register', formData);
-            console.log(response.data);
-            // Redirect or show success message
-            alert('success')
-            navigate(`/additional-details/${response.data.userId}`)
-        } catch (error) {
-            console.error('Registration error:', error);
-            // Show error message to user
-            alert('error')
-        }
+        // try {
+        //     const response = await axios.post('http://localhost:5000/api/auth/register', formData);
+        //     console.log(response.data);
+        //     // Redirect or show success message
+        //     alert('success')
+        //     navigate(`/additional-details/${response.data.userId}`)
+        // } catch (error) {
+        //     console.error('Registration error:', error);
+        //     // Show error message to user
+        //     alert('error')
+        // }
+        alert('success')
+        navigate(`/additional-details/6667`)
     };
 
     return (
