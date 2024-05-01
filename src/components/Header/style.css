@@ -5,7 +5,7 @@ header{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .navbar{
-    background: #8843a3
+    background: #282972
 }
 .nav-link{
     font-size: 1.1rem !important;
@@ -20,7 +20,7 @@ header .nav-link:before{
     position: absolute;
     width: 80%;
     height: 3px;
-    background-color: #f7ac17;
+    background-color: #ad2224;
     bottom: 2px;
     transform: translateX(-150%);
 }
@@ -58,7 +58,7 @@ header .nav-link:before{
    .dropdown-menu  .dropdown-item:hover{
     color: #ffffff !important;
     transition: 0.2s;
-    background-color: #8843a3;
+    background-color: #2d007b;
    
   }
 /* .logo-container{
@@ -71,7 +71,7 @@ header .nav-link:before{
 
 
 .mobile-nav{
-    background-color: #8843a3 !important;
+    background-color: #2d007b !important;
 }
 .mobile-nav ul li{
     font-size: 1.2rem;

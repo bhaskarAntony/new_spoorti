@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function Login() {
     const [username, setUsername] = useState('');
@@ -37,6 +38,7 @@ function Login() {
                     <label className='form-label'>Password</label>
                     <input type="password" className='form-control' value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
+                <span className="span">don't have an membership account <Link to='/registration'>Create membership account</Link></span>
                 <button type="submit" className='w-100 p-3 btn btn-primary mt-4'>Login</button>
             </form>
                 </div>

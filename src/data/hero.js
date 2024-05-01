@@ -1,7 +1,7 @@
-import image1 from '../assets/images/home_banner.png'
-import image2 from '../assets/images/about_banner.png'
-import image3 from '../assets/images/gallery_banner.png'
-import image4 from '../assets/images/event_banner.png'
+import image1 from '../assets/images/banner1.jpg'
+import image2 from '../assets/images/banner2.jpg'
+import image3 from '../assets/images/banner3.jpg'
+import image4 from '../assets/images/banner4.jpg'
 const heroImages = [
   {
     url: image1,
@@ -18,14 +18,14 @@ const heroImages = [
     caption_ka: "SPORTI ಗೆ ಸುಸ್ವಾಗತ"
   },
   {
-    url: image3,
+    url: image4,
     description_en: "Well-organized and neatly maintained meeting hall at SPORTI",
     description_ka: "SPORTI ನಲ್ಲಿ ಸುಸಂಘಟಿತ ಮತ್ತು ಅಚ್ಚುಕಟ್ಟಾಗಿ ನಿರ್ವಹಿಸಲಾದ ಮೀಟಿಂಗ್ ಹಾಲ್",
     caption_en: "Welcome to SPORTI",
     caption_ka: "SPORTI ಗೆ ಸುಸ್ವಾಗತ"
   },
   {
-    url:image4,
+    url:image3,
     description_en: "Mini Theatre facility at SPORTI along with other amenities.",
     description_ka: "ಇತರ ಸೌಕರ್ಯಗಳ ಜೊತೆಗೆ SPORTI ನಲ್ಲಿ ನೈರ್ಮಲ್ಯ ಮತ್ತು ಆರಾಮದಾಯಕ ವಸತಿ ಸೌಲಭ್ಯ",
     caption_en: "Welcome to SPORTI",

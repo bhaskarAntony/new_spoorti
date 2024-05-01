@@ -15,6 +15,7 @@ import faqs from '../../data/faqs'
 import Recents from '../../components/recent/Recents'
 import p2 from '../../assets/images/user_image_4.png'
 import gallerydata from '../../data/gallery'
+import { Link } from 'react-router-dom'
 
 const roomBookingFAQs = [
     {
@@ -280,9 +281,9 @@ function Home() {
         </div> */}
         <div className="text-center p-3 p-md-5 login-banner bg-light">
              <i class="bi bi-stars fs-2 text-warning"></i>
-            <h1 className="fs-2 fw-bold title">Login for room booking </h1>
+            <h1 className="fs-2 fw-bold title">Login for room booking/Event Booking </h1>
             <p className="subtitle fs-6 text-secondary">Login to SPoorti to access all sporti services</p>
-            <button className="blue-btn">Login Now</button>
+            <Link to='/login' className="blue-btn">Login Now</Link>
         </div>
 
       

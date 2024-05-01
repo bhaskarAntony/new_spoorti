@@ -35,15 +35,14 @@ const AdditionalDetailsForm = () => {
     const navigate = useNavigate()
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // try {
-        //     await axios.post(`http://localhost:5000/api/membership/submit-application/${id}`, formData);
-        //     alert('Membership application submitted successfully');
-        //     // navigate(`/admin/${id}`)
-        // } catch (error) {
-        //     console.error('Application submission error:', error);
-        //     alert('Error submitting membership application');
-        // }
-        alert('your application is submitted after verification you can access the sporti services.')
+        try {
+            await axios.post(`http://localhost:5000/api/membership/submit-application/${id}`, formData);
+            alert('Membership application submitted successfully');
+            // navigate(`/admin/${id}`)
+        } catch (error) {
+            console.error('Application submission error:', error);
+            alert('Error submitting membership application');
+        }
     };
 
     return (

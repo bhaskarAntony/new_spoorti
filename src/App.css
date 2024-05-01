@@ -39,7 +39,7 @@ text-align: center;
 }
 .skew-left{
   flex: 1;
-  background-color: #8843a3;
+  background-color: #ad2224;
   transform: skew(45deg) translateX(-100px);
   min-height: 100px;
   display: flex;
@@ -53,7 +53,7 @@ text-align: center;
 }
 .skew-right{
   flex: 2;
-  background-color: #F6D776;
+  background-color: #225c45;
   transform: skew(45deg) translateX(-80px);
   min-height: 60px;
   width: 100%;
@@ -98,6 +98,7 @@ text-align: center;
   border-bottom: 3px solid #003f79;
   border-radius: 10px;
   color: #fff;
+  text-decoration: none;
 }
 
 button:hover{

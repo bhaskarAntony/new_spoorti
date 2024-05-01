@@ -32,7 +32,7 @@ const team = [
         profile:profile3,
         name:'Sri Deepen M N ',
         role:'Secretary SPORTI',
-        desc:'/C DIGP & Commandant 1st Battalion KSRP',
+        desc:'I/C DIGP & Commandant 1st Battalion KSRP',
         contact:'9480805801'
     },
     {

@@ -69,7 +69,7 @@ function App() {
       <Route path='/food/order/:id' element={<ViewFood/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Registration/>}/>
-      <Route path='/services' element={<MainservicePage/>}/>
+      <Route path='/services/:sporti' element={<Services/>}/>
       <Route path='/registration' element={<Registration/>}/>
       <Route path='/additional-details/:id' element={<AdditionalDetailsForm/>}/>
       <Route path='/admin/:id' element={<Admin/>}/>

@@ -95,8 +95,8 @@ function About() {
                            <div>
                            <h1 className="fs-5 fw-bold title">{item.name}</h1>
                             <h1 className="fs-6 title text-muted">{item.role}</h1>
-                            <small className='small'>{item.desc}</small>
-                            <small className='text-muted'><i>{item.contact}</i></small>
+                            <small className='small d-block'>{item.desc}</small>
+                            <small className='text-muted d-block'><i>{item.contact}</i></small>
                            </div>
                         </div>
                     </div>

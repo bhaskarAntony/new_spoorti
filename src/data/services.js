@@ -1,5 +1,6 @@
 const servicesData = {
     sporti1:{
+        id:1,
         title:"SPORTI 1",
         services:[
             {
@@ -73,6 +74,7 @@ const servicesData = {
     },
     
         sporti2:{
+            id:2,
             title:"SPORTI 2",
             services:[
                 {

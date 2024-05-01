@@ -1,5 +1,4 @@
 .about-banner{
-    background:linear-gradient(#00000000, #ffffff), url('../../assets//images/about_banner.png') no-repeat left top !important;
     background-size: cover;
     /* min-height: 40vh; */
     color: #fff;
