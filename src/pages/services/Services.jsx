@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import servicesData from '../../data/services';
 import './style.css';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import ImagePopup from '../../components/popups/ImagePopup';
 
 function Services() {
   const { sporti } = useParams(); // Destructure sporti from useParams()
   const [service, setService] = useState(null); // Initialize service state with null
+  const [showmodal, setShowModal] = useState(false)
+  const [image, setImage] = useState(null)
+  const [title, setTitle] = useState(null)
 
   useEffect(() => {
     // Fetch and set service based on sporti parameter
@@ -14,6 +18,16 @@ function Services() {
 
   if (!service) {
     return <div>Loading...</div>; // Render loading indicator while data is being fetched
+  }
+
+
+  const handleClose = ()=>{
+    setShowModal(false)
+  }
+  const openModal = (url, name)=>{
+    setShowModal(true)
+    setImage(url)
+    setTitle(name)
   }
 
   return (
@@ -40,12 +54,21 @@ function Services() {
             {service.services.map((item, index) => (
               <div className={`row p-3 rounded-3 mb-4 align-items-center ${index % 2 === 0 ? 'order-1' : 'order-2'}`} key={index}>
                 <div className="col-12 col-md-3">
-                  <img src={item.image} alt="" className="w-100 mb-3" />
+                  <img src={item.image} alt="" className="w-100 mb-3" onClick={()=>openModal(item.image, item.title)} />
                 </div>
                 <div className="col-12 col-md-9">
                   <h1 className="fs-4 title fw-bold">{item.title}</h1>
                   <p className="mt-2 fs-6 text-secondary">{item.desc}</p>
+                  {
+                    item.isBook ? (
+                      <Link to={`/services/book/${item.title.trim('-')}`} className='blue-btn rounded-5'>
+                      Book Now
+                    </Link>
+                    ):(null)
+                  }
+                   <hr />
                 </div>
+               
               </div>
             ))}
           </div>
@@ -55,7 +78,7 @@ function Services() {
                 {service.services.map((item, index) => (
                   <div className="col-6" key={index}>
                     <div className="service-card">
-                      <img src={item.image} alt="" className="w-100 h-100" />
+                      <img src={item.image} alt="" className="w-100 h-100" onClick={()=>openModal(item.image, item.title)} />
                       <div className="service-info text-center">
                         <span className="fs-6 text-white">{item.title}</span>
                       </div>
@@ -67,6 +90,7 @@ function Services() {
           </div>
         </div>
       </div>
+      <ImagePopup show={showmodal} close={handleClose} url={image} title={title}/>
     </div>
   );
 }

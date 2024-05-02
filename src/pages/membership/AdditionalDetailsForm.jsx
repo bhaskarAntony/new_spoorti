@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Dropdown } from 'react-bootstrap';
+import SuccessPopup from '../../components/popups/SuccessPopup';
 
 const AdditionalDetailsForm = () => {
     const { id } = useParams();
@@ -25,6 +26,10 @@ const AdditionalDetailsForm = () => {
         requestLetter: '',
         isMembershipAgreed: false
     });
+    const [showmodal, setShowModal] = useState(false)
+    const [desc, setDesc] = useState(null)
+    const [title, setTitle] = useState(null)
+  
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -35,19 +40,30 @@ const AdditionalDetailsForm = () => {
     const navigate = useNavigate()
     const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
-            await axios.post(`http://localhost:5000/api/membership/submit-application/${id}`, formData);
-            alert('Membership application submitted successfully');
-            // navigate(`/admin/${id}`)
-        } catch (error) {
-            console.error('Application submission error:', error);
-            alert('Error submitting membership application');
-        }
+        // try {
+        //     await axios.post(`http://localhost:5000/api/membership/submit-application/${id}`, formData);
+        //     alert('Membership application submitted successfully');
+        //     // navigate(`/admin/${id}`)
+          
+        // } catch (error) {
+        //     console.error('Application submission error:', error);
+        //     alert('Error submitting membership application');
+        // }
+        openModal('Your application has Submitted', 'verification is pending once verfication is done you will get confirmation  to registered email. The verification of application may take around 48 to 72 hours. Once membership is verified you will receive an email with the payment link. (application number must be generated for this) ')
     };
+
+    const handleClose = ()=>{
+      setShowModal(false)
+    }
+    const openModal = (title, desc)=>{
+      setShowModal(true)
+      setDesc(desc)
+      setTitle(title)
+    }
 
     return (
         <div className="container p-2 p-md-5">
-            <h2>Additional Details Form</h2>
+            <h2>Personal Details Form</h2>
             <form onSubmit={handleSubmit}>
                 <div className="row">
                     <div className="col-md-6">
@@ -175,6 +191,27 @@ const AdditionalDetailsForm = () => {
 
                     </div>
                 </div>
+                <div className="form-group mt-3">
+                    <p className="fs-6">
+                    <b>Membership policy:</b>
+                    <ul>
+                  <li>Lifetime Membership charges are Rs.10000 which is non-refundable.</li>
+                <li>Membership is non-transferable.</li>
+                <li>Only members and their guests have access to SPORTI facilities.</li>	
+               <li>Membership is confirmed only after completion of the verification of application by SPORTI personnel, followed by the payment. Members are eligible to use the services and facilities of SPORTI only after this process.</li>
+                <li>Membership is subject to the terms and conditions outlined in the policy, and SPORTI reserves the right to modify these terms at its discretion.</li>
+               <li>Membership can be terminated at any point of time if SPORTI rules are violated.</li>
+                    </ul>
+
+              
+
+             <div className="alert alert-warning">
+                <h1 className="alert-heading">Note</h1>
+             The verification of application may take around 48 to 72 hours. Once membership is verified you will receive an email with the payment link. (application number must be generated for this) 
+             </div>
+
+                    </p>
+                </div>
                 <div className="mb-3 form-check form-switch">
                 <input type="checkbox" className='form-check-input' name="isMembershipAgreed" checked={formData.isMembershipAgreed} onChange={handleChange} />
                     <label className='form-check-label'>
@@ -184,6 +221,8 @@ const AdditionalDetailsForm = () => {
                 </div>
                 <button type="submit" className="btn btn-primary">Submit Application</button>
             </form>
+
+            <SuccessPopup show={showmodal} close={handleClose} title={title} desc={desc}/>
         </div>
     );
 };

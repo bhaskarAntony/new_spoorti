@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function Feedback() {
+function Feedback({sporti}) {
   const [formData, setFormData] = useState({
     fullName: '',
     emailAddress: '',
-    sport: 'SPORTI',
+    sport: sporti,
     subject: '',
     message: ''
   });
@@ -59,12 +59,21 @@ function Feedback() {
               </div>
               <div className="col-12 col-md-6">
                 <div className="from-group mt-3">
-                  <input
+                  {/* <input
                     type="text"
                     placeholder="SPORTI"
                     value={formData.sport}
                     readOnly
-                  />
+                  /> */}
+
+                  <select
+                   name="sport"
+                   value={formData.sport}
+                   onChange={handleChange}
+                   className='form-select' id="">
+                    <option value="sporti1">SPORTI1</option>
+                    <option value="sporti2">SPORTI2</option>
+                   </select>
                 </div>
               </div>
               <div className="col-12 col-md-6">

@@ -39,7 +39,7 @@ text-align: center;
 }
 .skew-left{
   flex: 1;
-  background-color: #ad2224;
+  background-color: #f80408;
   transform: skew(45deg) translateX(-100px);
   min-height: 100px;
   display: flex;
@@ -53,10 +53,11 @@ text-align: center;
 }
 .skew-right{
   flex: 2;
-  background-color: #225c45;
+  background-color: #282972;
   transform: skew(45deg) translateX(-80px);
   min-height: 60px;
   width: 100%;
+  color: #fff !important;
 
 }
 .skew-right h1{
@@ -73,7 +74,7 @@ text-align: center;
   position: relative;
   color: gray;
   margin-bottom: 30px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .title{
   text-transform: uppercase;
@@ -116,6 +117,9 @@ button:hover{
 .carousel-indicators [data-bs-target]{
   width: 30px !important;
   display: none;
+}
+.fs-6{
+  text-align: justify !important;
 }
 
 

@@ -51,8 +51,9 @@ function About() {
           <div className="container py-5">
           <div className="text-center">
                 <i class="bi bi-stars fs-2 text-warning"></i>
+                <span className="fs-6 subtitle d-block text-center">SPORTI</span>
                 <h1 className="fs-2 fw-bold title">Senior Police Officers Research and Training Institute</h1>
-                <span className="fs-6 subtitle d-block">Senior Police Officers Research and Training Institute </span>
+               
                 </div>
           <div className="row align-items-center">
             <div className="col-12 col-md-9 mb-3">
@@ -83,15 +84,15 @@ function About() {
           <div className="ourteam container">
            <div className="text-center">
                 <i class="bi bi-stars fs-2 text-warning"></i>
-                <h1 className="fs-2 fw-bold title">Working Committee of SPORTI</h1>
+                <h1 className="fs-2 fw-bold title">executive COMMITTEE  of SPORTI</h1>
                 <span className="fs-6 subtitle d-block">SPORTI has a working committee comprising of senior officers from various units of Karnataka State Police. They strive to provide quality facilities and services to all senior members of Karnataka State Police. The team hold meetings on the last Friday of every month to discuss various activities at SPORTI , assess feedbacks and take measures to enhance the services. The committee consists of :</span>
                 </div>
                 <div className="row">
                    {
                     team.map((item, index)=>(
                         <div className="col-12 col-md-3 mb-4">
-                        <div className="profile-card p-2 rounded-3 h-100 d-flex flex-column justify-content-between">
-                            <img src={item.profile} alt={item.name} className="w-100 mb-2 rounded-3" />
+                        <div className="profile-card p-2 rounded-3 h-100 ">
+                            <img src={item.profile} alt={item.name} className="w-100 mb-3 rounded-3" />
                            <div>
                            <h1 className="fs-5 fw-bold title">{item.name}</h1>
                             <h1 className="fs-6 title text-muted">{item.role}</h1>

@@ -36,6 +36,7 @@ import MainFaqPage from './pages/faqs/MainFaqPage';
 import Aos from 'aos';
 import ConferenceHallBook from './pages/Conferencehall/ConferenceHallBook';
 import MainRoomBookingPage from './pages/Rooms/MainRoomBookingPage';
+import ServiceBook from './pages/Booking/ServiceBook';
 
 function App() {
   useEffect(()=>{
@@ -62,7 +63,7 @@ function App() {
       <Route path='/gallery/:id' element={<Gallery/>}/>
       <Route path='/events&gallery' element={<Events/>}/>
       <Route path='/site_map' element={<SiteMap/>}/>
-      <Route path='/contact' element={<MainContact/>}/>
+      <Route path='/contact/:sporti' element={<Contact/>}/>
       <Route path='/terms_and-conditions' element={<Tems_and_conditions/>}/>
       <Route path='/privacy_policy' element={<Privacy/>}/>
       <Route path='/eventView/:id' element={<EventView/>}/>
@@ -74,6 +75,7 @@ function App() {
       <Route path='/additional-details/:id' element={<AdditionalDetailsForm/>}/>
       <Route path='/admin/:id' element={<Admin/>}/>
       <Route path='/view/:id' element={<View/>}/>
+      <Route path='/services/book/:services' element={<ServiceBook/>}/>
       <Route path='/conference-hall' element={<ConferenceHallBook/>}/>
     </Routes>
     <Footer/>

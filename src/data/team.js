@@ -6,7 +6,7 @@ import  profile4 from '../assets/images/contacts/mufid.jpg'
 const team = [
     {
         profile:profile1,
-        name:'Sri Alok Mohan, IPS.',
+        name:'Sri Alok Mohan, IPS',
         role:'President, SPORTI ',
         desc:'DG & IGP, Karnataka State Police ',
     },
@@ -30,7 +30,7 @@ const team = [
     },
     {
         profile:profile3,
-        name:'Sri Deepen M N ',
+        name:'Sri Deepan M N ',
         role:'Secretary SPORTI',
         desc:'I/C DIGP & Commandant 1st Battalion KSRP',
         contact:'9480805801'

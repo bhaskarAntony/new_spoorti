@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './style.css'
 import servicesData from '../../data/services'
 
@@ -20,6 +20,7 @@ const data = [
     }
 ]
 function Services() {
+  
   return (
     <div className='services-container container-fluid p-3 p-md-5 '>
       <div className="feedback text-center p-3">

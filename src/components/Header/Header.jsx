@@ -38,7 +38,19 @@ function Header() {
          
           <Nav.Link href="/events&gallery">Events & Gallery</Nav.Link>
           <Nav.Link href="/faqs">Faqs</Nav.Link>
-          <Nav.Link href="/contact">Contact us</Nav.Link>
+          <NavDropdown
+                                    title="Contact us"
+                                    id="basic-nav-dropdown2"
+                                    show={showDropdown2}
+                                    onMouseEnter={() => setShowDropdown2(true)}
+                                    onMouseLeave={() => setShowDropdown2(false)}
+                                >
+            <NavDropdown.Item href="/contact/sporti1">SPORTI 1 </NavDropdown.Item>
+            <NavDropdown.Item href="/contact/sporti2">SPORTI 2</NavDropdown.Item>
+          
+          </NavDropdown>
+
+          
           <Nav.Link href="/login">Login</Nav.Link>
           <Nav.Link href="/registration">New Member signup</Nav.Link>
           {/* <a href='/login' className=" px-4 mx-3">Login</a>
@@ -73,7 +85,17 @@ function Header() {
      
             <li><a href="/events&gallery"><i class="bi bi-images"></i> Events & Gallery</a></li>
             <li><a href="/faqs"><i class="bi bi-stars"></i> Faqs</a></li>
-            <li><a href="/contact"><i class="bi bi-person-lines-fill"></i> Contact us</a></li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServices2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-stars"></i> Contact us
+            </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices2">
+    <li><a class="dropdown-item text-dark" href="/contact/sporti1">SPORTI 1 </a></li>
+    <li><a class="dropdown-item text-dark" href="/contact/sporti2">SPORTI 2</a></li>
+   
+ 
+</ul>
+</li>
             <li><a href="/login" className='btn btn-success w-100 p-3'>Login</a></li>
             <li><a href="/signup" className='btn btn-warning w-100 p-3 mt-3'>New Member Signup</a></li>
          </ul>

@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './style.css'
 import Feedback from '../../components/feedback/Feedback'
+import { useParams } from 'react-router-dom';
+import contactInfo from '../../data/contactinfo';
 
 function Contact({data}) {
+  const { sporti } = useParams(); // Destructure sporti from useParams()
+  const [contact, setContact] = useState(null); // Initialize service state with null
+
+  useEffect(() => {
+    // Fetch and set service based on sporti parameter
+    setContact(contactInfo[sporti]);
+  }, [sporti]); // Trigger effect whenever sporti changes
+
+  if (!contact) {
+    return <div>Loading...</div>; // Render loading indicator while data is being fetched
+  }
+
   return (
     <div className='contact'>
    <div className="contact-banner">
@@ -11,7 +25,7 @@ function Contact({data}) {
             <h1 className="fs-2 fw-bold">CONTACT US</h1>
         </div>
         <div className="skew-right d-flex align-items-center">
-        <h1 className="fs-2 fw-bold">{data.title}</h1>
+        <h1 className="fs-2 fw-bold">{contact.title}</h1>
         </div>
     </div>
    </div>
@@ -19,7 +33,7 @@ function Contact({data}) {
    <div className="contact-info p-4">
     <div className="row">
       {
-        data.info.map((item, index)=>(
+        contact.info.map((item, index)=>(
           <div className={`col-12 col-md-4 contact-main-card mb-3  `}>
             <div className="contact-card text-white p-3 h-100 rounded-2">
               <i className={`bi bi-${item.icon} display-2 mb-3`}></i>
@@ -38,7 +52,7 @@ function Contact({data}) {
    <div className="feedback text-center p-3">
    <i class="bi bi-stars fs-2 text-warning"></i>
    <h1 className="fs-2 fw-bold">WRITE TO US</h1>
-   <span className="fs-6 subtitle d-block">FEEL FREE TO SEND US A MESSAGE</span>
+   <span className="fs-6 subtitle d-block text-center">FEEL FREE TO SEND US A MESSAGE</span>
    </div>
 
 
@@ -83,7 +97,7 @@ function Contact({data}) {
         </div>
       </div> */}
   
-  <Feedback/>
+  <Feedback sporti={contact.title}/>
     </div>
   )
 }
