@@ -80,14 +80,39 @@ const AdditionalDetailsForm = () => {
                             <input type="text" className="form-control" name="unit" value={formData.unit} onChange={handleChange} />
                         </div>
                         <div className="mb-3">
+                            <label className="form-label">Cadre:</label>
+                            <input type="text" className="form-control" name="unit" value={formData.unit} onChange={handleChange} />
+                        </div>
+                        <div className="mb-3">
                         <label className="form-label">KGID No:</label>
                         <input type="text" className="form-control" name="kgidNo" value={formData.kgidNo} onChange={handleChange} />
                     </div>
 
                     <div className="mb-3">
                         <label className="form-label">Working Status:</label>
-                        <input type="text" className="form-control" name="workingStatus" value={formData.workingStatus} onChange={handleChange} />
+                       
+
+                        <Dropdown>
+                            <Dropdown.Toggle  className='bg-light text-dark border-secondary'>
+                                {formData.workingStatus ? formData.workingStatus : 'Select Working Status'}
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                                <Dropdown.Item onClick={() => handleChange({ target: { name: 'workingStatus', value: 'Serving' } })}>Serving</Dropdown.Item>
+                                <Dropdown.Item onClick={() => handleChange({ target: { name: 'workingStatus', value: 'Retired' } })}>Retired</Dropdown.Item>
+                              
+                            </Dropdown.Menu>
+                        </Dropdown>
                     </div>
+                    <div className="mb-3">
+                            <label className="form-label">Contact Number:</label>
+                            <input type="text" className="form-control" name="officialNumber" value={formData.officialNumber} onChange={handleChange} />
+                        </div>
+
+
+                        <div className="mb-3">
+                            <label className="form-label">Email:</label>
+                            <input type="email" className="form-control" name="email" value={formData.email} onChange={handleChange} />
+                        </div>
 
 
 
@@ -102,20 +127,7 @@ const AdditionalDetailsForm = () => {
                        
                         <div className="">
                    <div className="row">
-                    <div className="col-12 col-md-6">
-                    <div className="mb-3">
-                            <label className="form-label">Contact Number:</label>
-                            <input type="text" className="form-control" name="officialNumber" value={formData.officialNumber} onChange={handleChange} />
-                        </div>
-                    </div>
-
-
-                    <div className="col-12 col-md-6">
-                    <div className="mb-3">
-                            <label className="form-label">Email:</label>
-                            <input type="email" className="form-control" name="email" value={formData.email} onChange={handleChange} />
-                        </div>
-                    </div>
+                    
                     <div className="mb-3">
                         <label className="form-label">Gender:</label>
                         <Dropdown>

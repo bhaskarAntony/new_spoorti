@@ -4,8 +4,8 @@
         title:"SPORTI 1",
         allfaqs:  [
             {
-                "query_en": "How do I book a hotel room or event space using the app ?",
-                "answer_en": "To book a hotel room or event space using the app, simply log in or create an account, select your desired dates and location,  choose your room or event space, and enter your payment and contact information.",
+                "query_en": "How do I book a  room or event space using the app ?",
+                "answer_en": "To book a  room or event space using the app, simply log in or create an account, select your desired dates and location,  choose your room or event space, and enter your payment and contact information.",
                 "query_ka": "ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಬಳಸಿಕೊಂಡು ನಾನು ಹೋಟೆಲ್ ಕೊಠಡಿ ಅಥವಾ ಈವೆಂಟ್ ಸ್ಥಳವನ್ನು ಹೇಗೆ ಬುಕ್ ಮಾಡುವುದು?",
                 "answer": "ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಬಳಸಿಕೊಂಡು ಹೋಟೆಲ್ ಕೊಠಡಿ ಅಥವಾ ಈವೆಂಟ್ ಸ್ಥಳವನ್ನು ಬುಕ್ ಮಾಡಲು, ಲಾಗ್ ಇನ್ ಮಾಡಿ ಅಥವಾ ಖಾತೆಯನ್ನು ರಚಿಸಿ, ನೀವು ಬಯಸಿದ ದಿನಾಂಕಗಳು ಮತ್ತು ಸ್ಥಳವನ್ನು ಆಯ್ಕೆಮಾಡಿ, ನಿಮ್ಮ ಕೊಠಡಿ ಅಥವಾ ಈವೆಂಟ್ ಸ್ಥಳವನ್ನು ಆಯ್ಕೆಮಾಡಿ ಮತ್ತು ನಿಮ್ಮ ಪಾವತಿ ಮತ್ತು ಸಂಪರ್ಕ ಮಾಹಿತಿಯನ್ನು ನಮೂದಿಸಿ."
             },
@@ -28,7 +28,7 @@
                 "answer": "ಹೌದು, ನಿರ್ದಿಷ್ಟ ಸೌಕರ್ಯಗಳು ಅಥವಾ ಕೊಠಡಿ ಪ್ರಕಾರಗಳನ್ನು ವಿನಂತಿಸಲು SPORTI ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ."
             },
             {
-                "query_en": "Can I view photos or reviews of the hotel or event space before booking ?",
+                "query_en": "Can I view photos or reviews of the  or event space before booking ?",
                 "answer_en": "Yes, SPORTI allows you to view photos and read reviews of the event space before booking.",
                 "query_ka": "ನಾನು ನಿರ್ದಿಷ್ಟ ಸೌಕರ್ಯಗಳು ಅಥವಾ ಕೊಠಡಿ ಪ್ರಕಾರಗಳನ್ನು ವಿನಂತಿಸಬಹುದೇ?",
                 "answer": "ಹೌದು, ನಿರ್ದಿಷ್ಟ ಸೌಕರ್ಯಗಳು ಅಥವಾ ಕೊಠಡಿ ಪ್ರಕಾರಗಳನ್ನು ವಿನಂತಿಸಲು SPORTI ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ."
@@ -105,8 +105,8 @@
         title:"SPORTI 2",
         allfaqs:  [
             {
-                "query_en": "How do I book a hotel room or event space using the app ?",
-                "answer_en": "To book a hotel room or event space using the app, simply log in or create an account, select your desired dates and location,  choose your room or event space, and enter your payment and contact information.",
+                "query_en": "How do I book a  room or event space using the app ?",
+                "answer_en": "To book a  room or event space using the app, simply log in or create an account, select your desired dates and location,  choose your room or event space, and enter your payment and contact information.",
                 "query_ka": "ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಬಳಸಿಕೊಂಡು ನಾನು ಹೋಟೆಲ್ ಕೊಠಡಿ ಅಥವಾ ಈವೆಂಟ್ ಸ್ಥಳವನ್ನು ಹೇಗೆ ಬುಕ್ ಮಾಡುವುದು?",
                 "answer": "ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಬಳಸಿಕೊಂಡು ಹೋಟೆಲ್ ಕೊಠಡಿ ಅಥವಾ ಈವೆಂಟ್ ಸ್ಥಳವನ್ನು ಬುಕ್ ಮಾಡಲು, ಲಾಗ್ ಇನ್ ಮಾಡಿ ಅಥವಾ ಖಾತೆಯನ್ನು ರಚಿಸಿ, ನೀವು ಬಯಸಿದ ದಿನಾಂಕಗಳು ಮತ್ತು ಸ್ಥಳವನ್ನು ಆಯ್ಕೆಮಾಡಿ, ನಿಮ್ಮ ಕೊಠಡಿ ಅಥವಾ ಈವೆಂಟ್ ಸ್ಥಳವನ್ನು ಆಯ್ಕೆಮಾಡಿ ಮತ್ತು ನಿಮ್ಮ ಪಾವತಿ ಮತ್ತು ಸಂಪರ್ಕ ಮಾಹಿತಿಯನ್ನು ನಮೂದಿಸಿ."
             },
@@ -129,7 +129,7 @@
                 "answer": "ಹೌದು, ನಿರ್ದಿಷ್ಟ ಸೌಕರ್ಯಗಳು ಅಥವಾ ಕೊಠಡಿ ಪ್ರಕಾರಗಳನ್ನು ವಿನಂತಿಸಲು SPORTI ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ."
             },
             {
-                "query_en": "Can I view photos or reviews of the hotel or event space before booking ?",
+                "query_en": "Can I view photos or reviews of the  or event space before booking ?",
                 "answer_en": "Yes, SPORTI allows you to view photos and read reviews of the event space before booking.",
                 "query_ka": "ನಾನು ನಿರ್ದಿಷ್ಟ ಸೌಕರ್ಯಗಳು ಅಥವಾ ಕೊಠಡಿ ಪ್ರಕಾರಗಳನ್ನು ವಿನಂತಿಸಬಹುದೇ?",
                 "answer": "ಹೌದು, ನಿರ್ದಿಷ್ಟ ಸೌಕರ್ಯಗಳು ಅಥವಾ ಕೊಠಡಿ ಪ್ರಕಾರಗಳನ್ನು ವಿನಂತಿಸಲು SPORTI ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ."

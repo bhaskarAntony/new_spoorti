@@ -35,9 +35,9 @@ function Header() {
           <Nav.Link href="/about">About Us</Nav.Link>
           <Nav.Link href="/services/sporti1">SPORTI 1</Nav.Link>
           <Nav.Link href="/services/sporti2">SPORTI 2</Nav.Link>
-         
+          <Nav.Link href="/registration">New Member signup</Nav.Link>
           <Nav.Link href="/events&gallery">Events & Gallery</Nav.Link>
-          <Nav.Link href="/faqs">Faqs</Nav.Link>
+          <Nav.Link href="/faqs">FAQ's</Nav.Link>
           <NavDropdown
                                     title="Contact us"
                                     id="basic-nav-dropdown2"
@@ -45,14 +45,14 @@ function Header() {
                                     onMouseEnter={() => setShowDropdown2(true)}
                                     onMouseLeave={() => setShowDropdown2(false)}
                                 >
-            <NavDropdown.Item href="/contact/sporti1">SPORTI 1 </NavDropdown.Item>
-            <NavDropdown.Item href="/contact/sporti2">SPORTI 2</NavDropdown.Item>
+            <NavDropdown.Item href="/contact/sporti1">SPORTI-1 </NavDropdown.Item>
+            <NavDropdown.Item href="/contact/sporti2">SPORTI-2</NavDropdown.Item>
           
           </NavDropdown>
 
           
-          <Nav.Link href="/login">Login</Nav.Link>
-          <Nav.Link href="/registration">New Member signup</Nav.Link>
+          {/* <Nav.Link href="/login">Login</Nav.Link> */}
+         
           {/* <a href='/login' className=" px-4 mx-3">Login</a>
 
           <a href='/signup' className=" px-4 mx-3 text-white">New Member signup</a> */}
@@ -78,13 +78,14 @@ function Header() {
          <ul >
             <li><a href="/"><i class="bi bi-house-door-fill"></i> Home</a></li>
             <li><a href="/about"><i class="bi bi-file-person-fill"></i> About Us</a></li>
-            <li><a href="/sevices/sporti1"><i class="bi bi-file-person-fill"></i> SPORTI 1</a></li>
-            <li><a href="/services/sporti2"><i class="bi bi-file-person-fill"></i> SPORTI 2</a></li>
+            <li><a href="/sevices/sporti1">SPORTI-1</a></li>
+            <li><a href="/services/sporti2">SPORTI-2</a></li>
            
 
+            <li><a href="/signup" >New Member Signup</a></li>
      
             <li><a href="/events&gallery"><i class="bi bi-images"></i> Events & Gallery</a></li>
-            <li><a href="/faqs"><i class="bi bi-stars"></i> Faqs</a></li>
+            <li><a href="/faqs"><i class="bi bi-stars"></i> FAQ's</a></li>
             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServices2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-stars"></i> Contact us
@@ -96,8 +97,7 @@ function Header() {
  
 </ul>
 </li>
-            <li><a href="/login" className='btn btn-success w-100 p-3'>Login</a></li>
-            <li><a href="/signup" className='btn btn-warning w-100 p-3 mt-3'>New Member Signup</a></li>
+            {/* <li><a href="/login" className='btn btn-success w-100 p-3'>Login</a></li> */}
          </ul>
         </Offcanvas.Body>
       </Offcanvas>

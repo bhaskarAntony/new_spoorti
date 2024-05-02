@@ -84,7 +84,7 @@ function About() {
           <div className="ourteam container">
            <div className="text-center">
                 <i class="bi bi-stars fs-2 text-warning"></i>
-                <h1 className="fs-2 fw-bold title">executive COMMITTEE  of SPORTI</h1>
+                <h1 className="fs-2 fw-bold title">core COMMITTEE  of SPORTI</h1>
                 <span className="fs-6 subtitle d-block">SPORTI has a working committee comprising of senior officers from various units of Karnataka State Police. They strive to provide quality facilities and services to all senior members of Karnataka State Police. The team hold meetings on the last Friday of every month to discuss various activities at SPORTI , assess feedbacks and take measures to enhance the services. The committee consists of :</span>
                 </div>
                 <div className="row">

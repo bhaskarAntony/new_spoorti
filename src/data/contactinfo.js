@@ -15,7 +15,7 @@ const contactInfo = {
             {
                 icon:'envelope-fill',
                 title:'EMAIL',
-                desc:'sportikarataka@gmail.com'
+                desc:'sportikarnataka@gmail.com'
             }
         ]
     },

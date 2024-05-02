@@ -288,7 +288,7 @@ function Home() {
 
       
 
-        <Services/>
+        {/* <Services/> */}
         <About/>
 
         <div className="container-fluid s1 p-3 p-md-5 py-5 overflow-hidden">
