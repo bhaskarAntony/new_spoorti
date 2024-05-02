@@ -96,32 +96,35 @@ const servicesData = {
                     isBook:true
                 },
                 {
+                   
                     id:2,
                     title:'Central lawn',
                     desc:`This outdoor space hosts manicured grass, flower beds, shrubbery and trees. Its greenery and open expanse offer a refreshing contrast to the indoor facilities, providing a serene and inviting atmosphere for guests to enjoy. Overall, the lawn at SPORTI 2 serves as a dynamic outdoor space that enhances the institute's offerings, providing opportunities for relaxation, recreation, and social interaction amidst its well-appointed facilities.`,
-                   image:'/images/facilities/smmmfh_carousal_2.jpg',
+                   image:'/images/sporti2/CENTRAL_LAWN_SPORTI2.jpg',
                    isBook:true
                 },
                 {
                     id:3,
                     title:'lounge',
                     desc:'A spacious waiting lounge at SPORTI 2 serves as a comfortable and inviting area for individuals to relax, socialize and wait for various purposes. The ambiance of the waiting lounge is designed to be welcoming and calming. Being a central area, the lounge may also serve as a socializing area where individuals can interact with one another while waiting. It could be a place for casual conversations, networking opportunities, or simply a spot to unwind before proceeding with their activities.',
-                    image:'/images/facilities/smmb_banner_1.jpg',
+                    image:'/images/sporti2/LOUNGE_SPORTI2.jpg',
                     isBook:true
+                    
                 },
                 {
                     id:4,
                     title:'Conference room',
                     desc:'This designated area within SPORTI 2 is specifically set up to accommodate meetings, presentations, workshops, and other group gatherings. The layout of the conference room is designed to facilitate interaction and communication among participants. Comfortable seating and climate control are essential aspects of a conference room to ensure that participants can focus on the meeting without distractions. It also provides a professional functional space for collaborative discussions, equipped with the necessary amenities to support productive and engaging interactions among participants.',
-                    image:'/images/facilities/parking.jpg',
+                    image:'/images/sporti2_gallery/image3.jpg',
                     isBook:true
                 },
                 {
                     id:5,
                     title:'In-house Restaurant',
                     desc:'The dining facility at SPORTI 2 provides a welcoming and enjoyable culinary destination where guests can indulge in delicious meals, socialize with others, and experience exceptional service in a comfortable and inviting setting. The restaurant offers a variety of seating options to accommodate different dining preferences and group sizes. Also it offers a diverse menu featuring a mix of local and regional cuisines, as well as options for vegetarians, vegans, and individuals with dietary restrictions or allergies. The in-house chefs’ menu is curated with an emphasis on fresh, high-quality ingredients and flavourful dishes.',
-                    image:'/images/facilities/billiards.jpg',
+                    image:'/images/sporti2/DINING_HALL_SPORTI.jpg',
                     isBook:true
+                   
                 },
                 {
                     id:6,
@@ -134,8 +137,9 @@ const servicesData = {
                     id:7,
                     title:'Sullivan Police Hockey ground',
                     desc:'The ground is typically located within the premises of SPORTI 2, easily accessible to participants and visitors. This open field provides a dedicated outdoor space for sporting activities, fostering physical fitness, teamwork, and camaraderie among participants while promoting a healthy and active lifestyle. The ground is used for a variety of purposes related to hockey and football, including training sessions, friendly matches, competitive tournaments, and recreational games. It serves as a hub for sportsmanship and teamwork among the participants. The ground is spacious and well-maintained, providing ample space for hockey and football games and practice sessions. It features markings and goalposts specific to each sport, ensuring compliance with official regulations and standards.',
-                    image:'/images/facilities/smmch_carousal_2.jpg',
+                    image:'/images/sporti2/SPORTI2_TAB_GROUND.jpg',
                     isBook:true 
+                   
                 },  
             ]
         }

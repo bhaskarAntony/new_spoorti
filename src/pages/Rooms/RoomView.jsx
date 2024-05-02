@@ -4,7 +4,7 @@ import roomsdata from '../../data/rooms';
 import { useParams } from 'react-router-dom';
 
 function RoomView() {
-    const { id } = useParams();
+    const { id, SportiId } = useParams();
     const [room, setRoom] = useState(null);
     const [checkInDate, setCheckInDate] = useState('');
     const [checkOutDate, setCheckOutDate] = useState('');

@@ -72,32 +72,51 @@ const AdditionalDetailsForm = () => {
                             <input type="text" className="form-control" name="name" value={formData.name} onChange={handleChange} />
                         </div>
                         <div className="mb-3">
-                            <label className="form-label">Official Number:</label>
-                            <input type="text" className="form-control" name="officialNumber" value={formData.officialNumber} onChange={handleChange} />
-                        </div>
-                        <div className="mb-3">
-                            <label className="form-label">Email:</label>
-                            <input type="email" className="form-control" name="email" value={formData.email} onChange={handleChange} />
-                        </div>
-                        <div className="mb-3">
-                            <label className="form-label">Official Address:</label>
-                            <input type="text" className="form-control" name="officialAddress" value={formData.officialAddress} onChange={handleChange} />
-                        </div>
-                        <div className="mb-3">
-                            <label className="form-label">Residential Address:</label>
-                            <input type="text" className="form-control" name="residentialAddress" value={formData.residentialAddress} onChange={handleChange} />
-                        </div>
-                        <div className="mb-3">
                             <label className="form-label">Designation:</label>
                             <input type="text" className="form-control" name="designation" value={formData.designation} onChange={handleChange} />
                         </div>
-                    </div>
-                    <div className="col-md-6">
                         <div className="mb-3">
                             <label className="form-label">Unit:</label>
                             <input type="text" className="form-control" name="unit" value={formData.unit} onChange={handleChange} />
                         </div>
                         <div className="mb-3">
+                        <label className="form-label">KGID No:</label>
+                        <input type="text" className="form-control" name="kgidNo" value={formData.kgidNo} onChange={handleChange} />
+                    </div>
+
+                    <div className="mb-3">
+                        <label className="form-label">Working Status:</label>
+                        <input type="text" className="form-control" name="workingStatus" value={formData.workingStatus} onChange={handleChange} />
+                    </div>
+
+
+
+                      
+                      
+                       
+                      
+                      
+                    </div>
+                    <div className="col-md-6">
+                      
+                       
+                        <div className="">
+                   <div className="row">
+                    <div className="col-12 col-md-6">
+                    <div className="mb-3">
+                            <label className="form-label">Contact Number:</label>
+                            <input type="text" className="form-control" name="officialNumber" value={formData.officialNumber} onChange={handleChange} />
+                        </div>
+                    </div>
+
+
+                    <div className="col-12 col-md-6">
+                    <div className="mb-3">
+                            <label className="form-label">Email:</label>
+                            <input type="email" className="form-control" name="email" value={formData.email} onChange={handleChange} />
+                        </div>
+                    </div>
+                    <div className="mb-3">
                         <label className="form-label">Gender:</label>
                         <Dropdown>
                             <Dropdown.Toggle  className='bg-light text-dark border-secondary'>
@@ -109,22 +128,6 @@ const AdditionalDetailsForm = () => {
                                 <Dropdown.Item onClick={() => handleChange({ target: { name: 'gender', value: 'other' } })}>Other</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
-                    </div>
-                        <div className="">
-                   <div className="row">
-                    <div className="col-12 col-md-6">
-                    <div className="mb-3">
-                        <label className="form-label">KGID No:</label>
-                        <input type="text" className="form-control" name="kgidNo" value={formData.kgidNo} onChange={handleChange} />
-                    </div>
-                    </div>
-
-
-                    <div className="col-12 col-md-6">
-                    <div className="mb-3">
-                        <label className="form-label">Working Status:</label>
-                        <input type="text" className="form-control" name="workingStatus" value={formData.workingStatus} onChange={handleChange} />
-                    </div>
                     </div>
 
                     <div className="col-12 col-md-6">
@@ -153,10 +156,35 @@ const AdditionalDetailsForm = () => {
     </Dropdown>
 </div>
                     </div>
+
+                    <div className="mb-3">
+                            <label className="form-label">Official Address:</label>
+                           
+                            <textarea className="form-control w-100" name="officialAddress" value={formData.officialAddress} onChange={handleChange}  cols="30" rows="5"></textarea>
+                        </div>
+
+                        <div className="mb-3">
+                            <label className="form-label">Residential Address:</label>
+                         
+                            <textarea className="form-control w-100"name="residentialAddress" value={formData.residentialAddress} onChange={handleChange} cols="30" rows="5"></textarea>
+                        </div>
                     <div className="col-md-6">
                     <div className="mb-3">
-                        <label className="form-label">Area of Interest (Sports):</label>
-                        <input type="text" className="form-control" name="areaOfInterest" value={formData.areaOfInterest} onChange={handleChange} />
+                       
+
+                    <label className="form-label">Area of Interest (Sports):</label>
+                        <Dropdown>
+                            <Dropdown.Toggle  className='bg-light text-dark border-secondary'>
+                                {formData.gender ? formData.gender : 'Select Interested Sports'}
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                                <Dropdown.Item onClick={() => handleChange({ target: { name: 'areaOfInterest', value: 'Badminton' } })}>Badminton</Dropdown.Item>
+                                <Dropdown.Item onClick={() => handleChange({ target: { name: 'areaOfInterest', value: 'Table Tennis' } })}>Table Tennis</Dropdown.Item>
+                                <Dropdown.Item onClick={() => handleChange({ target: { name: 'areaOfInterest', value: 'Billiards' } })}>Billiards</Dropdown.Item>
+                                <Dropdown.Item onClick={() => handleChange({ target: { name: 'areaOfInterest', value: 'Hockey' } })}>Hockey</Dropdown.Item>
+                              
+                            </Dropdown.Menu>
+                        </Dropdown>
                     </div>
                     </div>
 

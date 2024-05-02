@@ -34,7 +34,7 @@ const Registration = () => {
         //     // Show error message to user
         //     alert('error')
         // }
-        openModal('Your application has Submitted', 'verification is pending once verfication is done you will get confirmation  to registered email')
+        openModal('Success', 'membership account is created please fill personal details')
         // navigate(`/additional-details/123`)
     };
     const handleClose = ()=>{
@@ -47,21 +47,33 @@ const Registration = () => {
       }
 
     return (
-        <div className="container-fluid p-3 p-md-5">
-        <div className=" justify-content-center">
-            <div className="col-md-6 offset-md-4">
-                <div className="card shadow">
+        <div className="container-fluid p-3 p-md-5 bg-light">
+       <div className="row bg-white p-3 shadow-sm">
+        <div className="col-12 col-md-6">
+            <img src="./images/aboutus/smwaus_1.jpg" alt="" className="w-100" />
+        </div>
+        <div className="col-12 col-md-6">
+        <div className="card w-100">
                     <div className="card-body">
-                        <h2 className="text-center mb-4">Registration</h2>
+                        <h2 className="text-center mb-4">New Membership Registration</h2>
                         <form onSubmit={handleSubmit}>
-                            <div className="mb-3">
+                           <div className="row">
+                           <div className="mb-3">
                                 <label className="form-label">Username:</label>
                                 <input type="text" className="form-control" name="username" value={formData.username} onChange={handleChange} />
                             </div>
-                            <div className="mb-3">
-                                <label className="form-label">Password:</label>
+                          <div className="col-12 col-md-6">
+                          <div className="mb-3">
+                                <label className="form-label">Create Password:</label>
                                 <input type="password" className="form-control" name="password" value={formData.password} onChange={handleChange} />
                             </div>
+                          </div>
+                          <div className="col-12 col-md-6">
+                          <div className="mb-3">
+                                <label className="form-label">Confirm Password:</label>
+                                <input type="password" className="form-control" name="password" value={formData.password} onChange={handleChange} />
+                            </div>
+                          </div>
                             <div className="mb-3">
                                 <label className="form-label">Name:</label>
                                 <input type="text" className="form-control" name="name" value={formData.name} onChange={handleChange} />
@@ -71,12 +83,13 @@ const Registration = () => {
                                 <input type="email" className="form-control" name="email" value={formData.email} onChange={handleChange} />
                             </div>
                             <span className="span">Already have an membership account <Link to='/registration'>Login</Link></span>
-                            <button type="submit" className="btn btn-primary btn-block p-3 w-100">Create Account</button>
+                            <button type="submit" className="btn btn-primary btn-block mt-3 p-3 w-100">Create Account</button>
+                           </div>
                         </form>
                     </div>
                 </div>
-            </div>
         </div>
+       </div>
         
         <SuccessPopup show={showmodal} close={handleClose} title={title} desc={desc} next={true}/>
     </div>
