@@ -20,7 +20,7 @@
     color: #282972 !important;
 }
 .recent-tabs{
-    background-color:#282972 !important;
+    background:var(--gradient) !important;
     /* flex-wrap: nowrap !important; */
     /* overflow: auto; */
     align-items:center;
@@ -29,7 +29,7 @@
 }
 
 .upcoming-events{
-    min-height: 80vh;
+    min-height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;

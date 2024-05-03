@@ -1,5 +1,5 @@
 footer{
-    background-color: rgb(2, 25, 46);
+    background: var(--gradient);
     padding: 20px;
     color: #fff;
 }

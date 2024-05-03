@@ -5,7 +5,7 @@ header{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .navbar{
-    background: #282972
+    background: var(--gradient)
 }
 .nav-link{
     font-size: 1.1rem !important;
