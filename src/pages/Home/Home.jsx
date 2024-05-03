@@ -298,7 +298,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="col-12 col-md-6 d-flex align-items-center justify-content-center">
-                    <img src="./images/home-image.jpg" alt="" className="w-75 m-auto" />
+                    <img src="./images/home-image.jpg" alt="" className="w-100 rounded-3 m-auto" />
                 </div>
             </div>
         </div>

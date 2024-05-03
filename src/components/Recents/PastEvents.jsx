@@ -1,24 +1,30 @@
 import React from 'react'
 import gallerydata from '../../data/gallery'
 import './style.css'
+import { Link } from 'react-router-dom'
 
 function PastEvents() {
   return (
-    <div className='upcoming-events'>
+    <div className='upcoming-events p-3 p-md-5'>
        <div className="row">
        {
-         gallerydata.map((item, index)=>(
-            <div className="col-12 col-md-6 mb-3">
-                <div className="pastEvent-card p-3 rounded-5" >
-                    <img src={item.image} alt={item.title} className='w-100 rounded-4' />
-                   <div className="event-info d-flex flex-column align-items-center justify-content-center ">
-                   <h1 className="fs-3 text-white">{item.title}</h1>
-                    <button className="btn btn-warning px-4 rounded-0">View</button>
-                   </div>
-                </div>
-            </div>
-         ))   
-        }
+                    gallerydata.map((eventItem, eventIndex)=>(
+                        <div className="col-12 col-md-4 mb-3" key={eventIndex}>
+                        <div className="event-card rounded-2 h-100 overflow-hidden bg-white">
+                            <div className="event-card-top">
+                                <img src={eventItem.image} alt={eventItem.title} className='w-100 mb-2'/>
+                            </div>
+                            <div className="event-card-body p-3">
+                                <p className=" fs-4">{eventItem.title}</p>
+                                <Link to={`/gallery/${eventItem.id}`} className="blue-btn rounded-1">View Images</Link>
+                            </div>
+                            <div className="event card-footer d-flex justify-content-between">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    ))
+                   }
        </div>
     </div>
   )

@@ -1,6 +1,7 @@
 import React from 'react'
 import gallerydata from '../../data/gallery'
 import { Link } from 'react-router-dom'
+import './style.css'
 
 function Events() {
   return (
@@ -20,20 +21,21 @@ function Events() {
     </div>
     </div>
 
-      <div className="event-categories p-3 p-md-4">
+      <div className="event-categories p-3 p-md-5">
                 <div className="row">
                    {
                     gallerydata.map((eventItem, eventIndex)=>(
                         <div className="col-12 col-md-4 mb-3" key={eventIndex}>
-                        <div className="event-card p-3 rounded-4 h-100">
+                        <div className="event-card rounded-2 h-100 overflow-hidden bg-white">
                             <div className="event-card-top">
-                                <img src={eventItem.image} alt={eventItem.title} className='w-100 mb-2 rounded-4'/>
+                                <img src={eventItem.image} alt={eventItem.title} className='w-100 mb-2'/>
                             </div>
-                            <div className="event-card-body d-flex justify-content-between mb-3">
-                                <span className="fw-bold fs-3">{eventItem.title}</span>
+                            <div className="event-card-body p-3">
+                                <p className=" fs-4">{eventItem.title}</p>
+                                <Link to={`/gallery/${eventItem.id}`} className="blue-btn rounded-1">View Images</Link>
                             </div>
                             <div className="event card-footer d-flex justify-content-between">
-                                <Link to={`/gallery/${eventItem.id}`} className="btn btn-primary rounded-pill">View Images</Link>
+                                
                             </div>
                         </div>
                     </div>
