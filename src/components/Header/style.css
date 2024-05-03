@@ -59,7 +59,7 @@ header .nav-link:before{
    .dropdown-menu  .dropdown-item:hover{
     color: #ffffff !important;
     transition: 0.2s;
-    background-color: #2d007b;
+    background:var(--gradient)
    
   }
 /* .logo-container{
