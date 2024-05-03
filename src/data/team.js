@@ -23,20 +23,20 @@ const team = [
         desc:'IGP, KSRP'
     },
     {
-        profile:'https://t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg',
-        name:'Sri Raman Gupta, IPS ',
-        role:'Supervisory officer, SPORTI 1',
-        desc:'Addl. CP East, Blr city'
+        profile:'./images/aboutus/raman.jpg',
+        name:'Sri Raman Gupta, IPS        ',
+        role:'SUPERVISORY OFFICER, SPORTI-1',
+        desc:'Addl. CP (East), Bengaluru City'
     },
     {
         profile:profile3,
-        name:'Sri Deepan M N ',
-        role:'Secretary SPORTI',
+        name:'Sri Deepan M N        ',
+        role:'SECRETARY, SPORTI',
         desc:'I/C DIGP & Commandant 1st Battalion KSRP',
-        contact:'9480805801'
+        contact:'+919480805801'
     },
     {
-        profile:'https://t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg',
+        profile:'./images/aboutus/suresh.jpg',
         name:'Sri Suresh M G ',
         role:'Mess officer SPORTI 2',
         desc:'Asst. Commandant 1st Battalion KSRP',

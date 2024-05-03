@@ -1,5 +1,8 @@
+
+
 .about-banner{
-    background-size: cover;
+    background: linear-gradient(transparent, #000), url('../../assets//images//main_logo.svg') !important;
+    background-size: 10% !important;
     /* min-height: 40vh; */
     color: #fff;
     min-height: 60vh !important;

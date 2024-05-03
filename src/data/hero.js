@@ -21,14 +21,14 @@ const heroImages = [
     url: image4,
     description_en: "Well organized neatly maintained Training room at SPORTI-2     ",
     description_ka: "SPORTI ನಲ್ಲಿ ಸುಸಂಘಟಿತ ಮತ್ತು ಅಚ್ಚುಕಟ್ಟಾಗಿ ನಿರ್ವಹಿಸಲಾದ ಮೀಟಿಂಗ್ ಹಾಲ್",
-    caption_en: "Welcome to SPORTI",
+    caption_en: "",
     caption_ka: "SPORTI ಗೆ ಸುಸ್ವಾಗತ"
   },
   {
     url:image3,
     description_en: "Well lighted Conference Hall",
     description_ka: "ಇತರ ಸೌಕರ್ಯಗಳ ಜೊತೆಗೆ SPORTI ನಲ್ಲಿ ನೈರ್ಮಲ್ಯ ಮತ್ತು ಆರಾಮದಾಯಕ ವಸತಿ ಸೌಲಭ್ಯ",
-    caption_en: "Welcome to SPORTI",
+    caption_en: "",
     caption_ka: "SPORTI ಗೆ ಸುಸ್ವಾಗತ"
   }
 ];

@@ -32,8 +32,9 @@ function Services() {
 
   return (
     <div className='services'>
-      <div className="contact-banner">
-        <div className="skew-container">
+      <div className={`contact-banner ${service.title=="SPORTI 1"? 'sporti1':'sporti2'}`}>
+
+        <div className="skew-container"> 
           <div className="skew-left">
             <h1 className="fs-2 fw-bold">SERVICES</h1>
           </div>
@@ -61,9 +62,12 @@ function Services() {
                   <p className="mt-2 fs-6 text-secondary">{item.desc}</p>
                   {
                     item.isBook ? (
-                      <Link to={`/services/book/${item.title.trim('-')}`} className='blue-btn rounded-5'>
-                      Book Now
-                    </Link>
+                    //   <Link to={`/services/book/${item.title.trim('-')}`} className='blue-btn rounded-5'>
+                    //   Book Now
+                    // </Link>
+                     <Link to={item.link} className='blue-btn rounded-5'>
+                     Book Now
+                   </Link>
                     ):(null)
                   }
                    <hr />

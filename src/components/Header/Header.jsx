@@ -35,7 +35,7 @@ function Header() {
           <Nav.Link href="/about">About Us</Nav.Link>
           <Nav.Link href="/services/sporti1">SPORTI 1</Nav.Link>
           <Nav.Link href="/services/sporti2">SPORTI 2</Nav.Link>
-          <Nav.Link href="/registration">New Member signup</Nav.Link>
+          <Nav.Link href="/registration">Membership</Nav.Link>
           <Nav.Link href="/events&gallery">Events & Gallery</Nav.Link>
           <Nav.Link href="/faqs">FAQ's</Nav.Link>
           <NavDropdown
@@ -72,7 +72,7 @@ function Header() {
 
       <Offcanvas show={show} onHide={handleClose} className='mobile-nav p-2'>
         <Offcanvas.Header closeButton className='bg-white rounded-3'>
-          <Offcanvas.Title  ><div className='d-flex gap-2 align-items-center logo'><img src={logo} alt="logo" />  <h1 className="fs-3 fw-bold">Sporti</h1></div> </Offcanvas.Title>
+          <Offcanvas.Title  ><div className='d-flex gap-2 align-items-center logo'><img src={logo} alt="logo" />  <h1 className="fs-3 fw-bold">SPORTI</h1></div> </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
          <ul >
@@ -82,7 +82,7 @@ function Header() {
             <li><a href="/services/sporti2">SPORTI-2</a></li>
            
 
-            <li><a href="/signup" >New Member Signup</a></li>
+            <li><a href="/signup" >Membership</a></li>
      
             <li><a href="/events&gallery"><i class="bi bi-images"></i> Events & Gallery</a></li>
             <li><a href="/faqs"><i class="bi bi-stars"></i> FAQ's</a></li>
@@ -91,8 +91,8 @@ function Header() {
                 <i class="bi bi-stars"></i> Contact us
             </a>
     <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices2">
-    <li><a class="dropdown-item text-dark" href="/contact/sporti1">SPORTI 1 </a></li>
-    <li><a class="dropdown-item text-dark" href="/contact/sporti2">SPORTI 2</a></li>
+    <li><a class="dropdown-item text-dark" href="/contact/sporti1">SPORTI-1 </a></li>
+    <li><a class="dropdown-item text-dark" href="/contact/sporti2">SPORTI-2</a></li>
    
  
 </ul>

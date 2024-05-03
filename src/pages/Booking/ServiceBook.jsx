@@ -1,102 +1,183 @@
-import React, { useEffect, useState } from 'react'
-import { Button, Form } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Dropdown } from 'react-bootstrap';
 
-function ServiceBook() {
-    const { services } = useParams();
-  const [formData, setFormData] = useState({
-    guestName: '',
-    selectedService: services,
-    checkIn: '',
-    checkOut: '',
-    message: '',
-    phoneNumber: '',
-    email: ''
-  });
+function MainFunctionHallBooking() {
+    // State variables to track form data
+    const [formData, setFormData] = useState({
+        username: '',
+        email: '',
+        phoneNumber: '',
+        sporti: '',
+        checkIn: '',
+        checkOut: '',
+        serviceName: '',
+        serviceType: ''
+    });
 
-  useEffect(() => {
-    // Update selectedService in formData when services param changes
-    setFormData(prevState => ({
-      ...prevState,
-      selectedService: services
-    }));
-  }, [services]);
-    
-      const handleChange = (e) => {
+    // Function to handle form data change
+    const handleFormChange = (e) => {
         const { name, value } = e.target;
         setFormData({
-          ...formData,
-          [name]: value
+            ...formData,
+            [name]: value
         });
-      };
-    
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(formData); // Display form data in console
-      };
-    
-  return (
-    <div>
-          <div className="contact-banner about-banner">
-            {/* <h1 className='fs-1 fw-bold text-center'>About us</h1>
-            <p className="fs-6 text-center">
-            SPORTI consists of a team of Senior Officers from various units of the Police Department. It also has a Working Committee who conduct various Conferences and Workshops to discuss the operations and functioning of the Institute. The team hosts periodic meetings every last Friday of the month for effective improvements of the Institute.
-            </p> */}
-             <div className="skew-container">
-        <div className="skew-left">
-            <h1 className="fs-2 fw-bold">Services</h1>
-        </div>
-        <div className="skew-right d-flex align-items-center">
-        <h1 className="fs-2 fw-bold"></h1>
-        </div>
-    </div>
+    };
 
-           
+    // Function to calculate total cost
+    const calculateTotalCost = () => {
+        let servicePrice;
+        switch (formData.serviceName) {
+            case 'Main Event Hall Booking':
+                servicePrice = calculateMainEventHallBookingPrice();
+                break;
+            case 'Conference Hall Booking':
+                servicePrice = calculateConferenceHallBookingPrice();
+                break;
+            case 'Barbeque Area Booking':
+                servicePrice = calculateBarbequeAreaBookingPrice();
+                break;
+            default:
+                servicePrice = 0;
+        }
+        return servicePrice;
+    };
+
+    // Function to calculate price for Main Event Hall Booking
+    const calculateMainEventHallBookingPrice = () => {
+        switch (formData.serviceType) {
+            case 'Private Parties':
+                return 45000;
+            case 'Senior Police Officers of Other Govt Department':
+                return 25000;
+            case 'Serving and Senior Police Officers':
+                return 20000;
+            default:
+                return 0;
+        }
+    };
+
+    // Function to calculate price for Conference Hall Booking
+    const calculateConferenceHallBookingPrice = () => {
+        switch (formData.serviceType) {
+            case 'Private Parties':
+                return 15000;
+            case 'Senior Police Officers of Other Govt Department':
+                return 10000;
+            case 'Serving and Senior Police Officers':
+                return 7500;
+            default:
+                return 0;
+        }
+    };
+
+    // Function to calculate price for Barbeque Area Booking
+    const calculateBarbequeAreaBookingPrice = () => {
+        switch (formData.serviceType) {
+            case 'Private Parties':
+                return 10000;
+            case 'Senior Police Officers of Other Govt Department':
+                return 7500;
+            case 'Serving and Senior Police Officers':
+                return 5000;
+            default:
+                return 0;
+        }
+    };
+
+    return (
+        <div className='main-function-hall-booking container-fluid p-3 p-md-5'>
+            <div className="row">
+                <div className="col-md-8">
+                    <h1 className="fs-1">Main Function Hall Booking</h1>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="form-group mt-3">
+                                <label htmlFor="username" className="form-label">Username</label>
+                                <input type="text" className="form-control" name="username" id="username" value={formData.username} onChange={handleFormChange} />
+                            </div>
+                        </div>
+                        <div className="col-md-12">
+                            <div className="form-group mt-3">
+                                <label htmlFor="email" className="form-label">Email</label>
+                                <input type="text" className="form-control" name="email" id="email" value={formData.email} onChange={handleFormChange} />
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="form-group mt-3">
+                                <label htmlFor="phoneNumber" className="form-label">Phone Number</label>
+                                <input type="text" className="form-control" name="phoneNumber" id="phoneNumber" value={formData.phoneNumber} onChange={handleFormChange} />
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="form-group mt-3">
+                                <label htmlFor="sporti" className="form-label">SPORTI</label>
+                                <input type="text" className="form-control" name="sporti" id="sporti" value={formData.sporti} onChange={handleFormChange} />
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="form-group mt-3">
+                                <label htmlFor="checkIn" className="form-label">Check In</label>
+                                <input type="datetime-local" className="form-control" name="checkIn" id="checkIn" value={formData.checkIn} onChange={handleFormChange} />
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="form-group mt-3">
+                                <label htmlFor="checkOut" className="form-label">Check Out</label>
+                                <input type="datetime-local" className="form-control" name="checkOut" id="checkOut" value={formData.checkOut} onChange={handleFormChange} />
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="form-group mt-3">
+                                <label htmlFor="serviceName" className="form-label">Service Name</label>
+                                <Dropdown className='w-100'>
+                                    <Dropdown.Toggle className='bg-light text-dark border-secondary w-100 text-start'>
+                                        {formData.serviceName || 'Select Service Name'}
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceName: 'Main Event Hall Booking' })}>Main Event Hall Booking</Dropdown.Item>
+                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceName: 'Conference Hall Booking' })}>Conference Hall Booking</Dropdown.Item>
+                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceName: 'Barbeque Area Booking' })}>Barbeque Area Booking</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="form-group mt-3">
+                                <label htmlFor="serviceType" className="form-label">Service Type</label>
+                                <Dropdown className='w-100'>
+                                    <Dropdown.Toggle className='bg-light text-dark border-secondary w-100 text-start'>
+                                        {formData.serviceType || 'Select Service Type'}
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceType: 'Private Parties' })}>Private Parties</Dropdown.Item>
+                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceType: 'Senior Police Officers of Other Govt Department' })}>Senior Police Officers of Other Govt Department</Dropdown.Item>
+                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceType: 'Serving and Senior Police Officers' })}>Serving and Senior Police Officers</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-4">
+                    <div className="card">
+                        <ul className="list-group">
+                            <li className='list-group-item'>Username: {formData.username}</li>
+                            <li className='list-group-item'>Email: {formData.email}</li>
+                            <li className='list-group-item'>Phone Number: {formData.phoneNumber}</li>
+                            <li className='list-group-item'>SPORTI: {formData.sporti}</li>
+                            <li className='list-group-item'>Check In: {formData.checkIn}</li>
+                            <li className='list-group-item'>Check Out: {formData.checkOut}</li>
+                            <li className='list-group-item'>Service Name: {formData.serviceName}</li>
+                            <li className='list-group-item'>Service Type: {formData.serviceType}</li>
+                            <li className='list-group-item'>Service Price: {calculateTotalCost()}</li>
+                            <li className='list-group-item'><h1 className='fs-2 fw-bold'>Total: {calculateTotalCost()}</h1> </li>
+                            <button className="btn btn-primary mt-4">Continue</button>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div className="container  p-3 p-md-5">
-      <div className="row justify-content-center">
-        <div className="col-md-6">
-          <h2>Booking Form</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="form-group mt-3">
-              <label>Guest Name</label>
-              <input type="text" className="form-control" name="guestName" value={formData.guestName} onChange={handleChange} />
-            </div>
-            <div className="form-group mt-3">
-              <label>Service</label>
-              <input type="text" className="form-control" name="selectedService" value={formData.selectedService} readOnly />
-            </div>
-            <div className="form-group mt-3">
-              <label>Phone Number</label>
-              <input type="tel" className="form-control" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} />
-            </div>
-            <div className="form-group mt-3">
-              <label>Email</label>
-              <input type="email" className="form-control" name="email" value={formData.email} onChange={handleChange} />
-            </div>
-            <div className="form-group mt-3">
-              <label>Check In</label>
-              <input type="date" className="form-control" name="checkIn" value={formData.checkIn} onChange={handleChange} />
-            </div>
-            <div className="form-group mt-3">
-              <label>Check Out</label>
-              <input type="date" className="form-control" name="checkOut" value={formData.checkOut} onChange={handleChange} />
-            </div>
-            <div className="form-group mt-3">
-              <label>Message</label>
-              <textarea className="form-control" rows="3" name="message" value={formData.message} onChange={handleChange}></textarea>
-            </div>
-          
-        <div className="mt-4 d-flex gap-3">
-        <button type="submit" className="btn btn-primary p-3 w-100">Book Now</button>
-            <button type="button" className="btn btn-danger p-3 w-100" onClick={() => setFormData({})}>Cancel</button>
-        </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    </div>
-  )
+    );
 }
 
-export default ServiceBook
+export default MainFunctionHallBooking;

@@ -37,6 +37,7 @@ import Aos from 'aos';
 import ConferenceHallBook from './pages/Conferencehall/ConferenceHallBook';
 import MainRoomBookingPage from './pages/Rooms/MainRoomBookingPage';
 import ServiceBook from './pages/Booking/ServiceBook';
+import MainRoomBook from './pages/Rooms/MainRoomBook';
 
 function App() {
   useEffect(()=>{
@@ -53,7 +54,7 @@ function App() {
       <Route path='/' element={<Home/>}/>
       <Route path='/food' element={<Food/>}/>
       <Route path='/cart' element={<FoodCart/>}/>
-      <Route path='/room' element={<MainRoomBookingPage/>}/>
+      <Route path='/room' element={<MainRoomBook/>}/>
       <Route path='/roomview/:id/:sportiId' element={<RoomView/>}/>
       <Route path='/event' element={<Event/>}/>
       <Route path='/about' element={<About/>}/>
@@ -75,7 +76,7 @@ function App() {
       <Route path='/additional-details/:id' element={<AdditionalDetailsForm/>}/>
       <Route path='/admin/:id' element={<Admin/>}/>
       <Route path='/view/:id' element={<View/>}/>
-      <Route path='/services/book/:services' element={<ServiceBook/>}/>
+      <Route path='/services/book' element={<ServiceBook/>}/>
       <Route path='/conference-hall' element={<ConferenceHallBook/>}/>
     </Routes>
     <Footer/>

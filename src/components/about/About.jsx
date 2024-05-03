@@ -12,7 +12,7 @@ function About() {
                 </div>
                 <div className="btns d-flex flex-wrap gap-3 mt-3"> 
                     <a href='/about' className="main-btn">Know More</a>
-                    <a href='/services' className="btn-outline text-dark">Our services</a>
+                    {/* <a href='/services' className="btn-outline text-dark">Our services</a> */}
                 </div>
             </div>
             <div className="col-12 col-md-6 mb-3">

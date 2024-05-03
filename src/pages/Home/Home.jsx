@@ -1,21 +1,9 @@
 import React from 'react'
 import Hero from '../../components/carousel/Hero'
-import i1  from '../../assets/images/events_2.png'
-import i2  from '../../assets/images/gallery_1_2x.png'
-import i3  from '../../assets/images/gallery_1_2x.png'
-import i4  from '../../assets/images/gallery_1_2x.png'
-import i5 from '../../assets/images/download_mobile.png'
 import './style.css'
-import Services from '../../components/services/Services'
 import About from '../../components/about/About'
-import Room from '../../components/room/Room'
-import Food from '../../components/food/Food'
-import Events from '../../components/events/Events'
-import faqs from '../../data/faqs'
-import Recents from '../../components/recent/Recents'
-import p2 from '../../assets/images/user_image_4.png'
-import gallerydata from '../../data/gallery'
 import { Link } from 'react-router-dom'
+import Recents from '../../components/Recents/Recents'
 
 const roomBookingFAQs = [
     {
@@ -281,10 +269,14 @@ function Home() {
         </div> */}
         <div className="text-center p-3 p-md-5 login-banner bg-light">
              <i class="bi bi-stars fs-2 text-warning"></i>
+             <p className="subtitle fs-6 text-secondary text-center">SPORTI</p>
             <h1 className="fs-2 fw-bold title">Login for room booking/Event Booking </h1>
-            <p className="subtitle fs-6 text-secondary">Login to SPoorti to access all sporti services</p>
+          
             <Link to='/login' className="blue-btn">Login Now</Link>
         </div>
+        <Recents/>
+
+        
 
       
 
@@ -295,15 +287,14 @@ function Home() {
             <div className="row align-items-center">
                 <div className="col-12 col-md-6 mb-4">
                     <h1 className="fs-3 fw-bold title">Discover Exclusive Benefits of Booking Rooms for Police Officers</h1>
-                    <p className="fs-6 text-secondary title">Experience top-notch accommodations tailored to the unique needs of police officers and their families.</p>
+                    <p className="fs-6 text-secondary title">Police officers can access a variety of facilities tailored to their needs, including accommodation, dining, and event hosting. These services are designed to cater to both professional engagements and personal leisure, offering spaces for meetings, dining experiences, and recreational activities like sports. Additionally, specialized services are available for organizing events and functions, ensuring seamless coordination and execution. Moreover, police officers can also reserve facilities for their peers from other cadres, fostering camaraderie and collaboration across different branches of law enforcement.</p>
                     <ul>
-                        <li><i class="bi bi-check2 text-success"></i> Secure and Convenient Booking Process</li>
-                        <li><i class="bi bi-check2 text-success"></i>  Special Discounts for Police Officers</li>
-                        <li><i class="bi bi-check2 text-success"></i> Enhanced Safety and Security Measures</li>
+                        <li><i class="bi bi-check2 text-success"></i>Police officers can access a range of tailored facilities, including accommodation, dining, and event hosting, designed to meet their professional and personal needs.</li>
+                        <li><i class="bi bi-check2 text-success"></i> encompass spaces for meetings, dining experiences, and recreational activities, promoting both productivity and relaxation.</li>
                     </ul>
                     <div className="d-flex gap-2 mt-4">
                         <a href='/signup' className="main-btn p-2 px-5">Sign up</a>
-                        <a href='/services' className="btn-outline p-2 text-dark">Learn more</a>
+                        {/* <a href='/services' className="btn-outline p-2 text-dark">Learn more</a> */}
                     </div>
                 </div>
                 <div className="col-12 col-md-6 d-flex align-items-center justify-content-center">
