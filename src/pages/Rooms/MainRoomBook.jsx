@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Dropdown } from 'react-bootstrap';
+import SuccessPopup from '../../components/popups/SuccessPopup';
 
 function MainRoomBook() {
     // State variables to track form data
@@ -13,6 +14,22 @@ function MainRoomBook() {
         checkIn: '',
         checkOut: ''
     });
+    const [showmodal, setShowModal] = useState(false)
+    const [desc, setDesc] = useState(null)
+    const [title, setTitle] = useState(null)
+  
+
+
+
+    const handleClose = ()=>{
+      setShowModal(false)
+    }
+    const openModal = (title, desc)=>{
+      setShowModal(true)
+      setDesc(desc)
+      setTitle(title)
+    }
+
 
     // Function to handle form data change
     const handleFormChange = (e) => {
@@ -154,6 +171,7 @@ function MainRoomBook() {
                     </div>
                 </div>
             </div>
+            <SuccessPopup show={showmodal} close={handleClose} title={title} desc={desc}/>
         </div>
     );
 }

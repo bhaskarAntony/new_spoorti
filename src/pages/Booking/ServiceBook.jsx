@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Dropdown } from 'react-bootstrap';
+import SuccessPopup from '../../components/popups/SuccessPopup';
 
 function MainFunctionHallBooking() {
-    // State variables to track form data
     const [formData, setFormData] = useState({
         username: '',
         email: '',
@@ -11,10 +12,27 @@ function MainFunctionHallBooking() {
         checkIn: '',
         checkOut: '',
         serviceName: '',
-        serviceType: ''
+        serviceType: '',
+        totalAmount: 0
     });
+    const [showmodal, setShowModal] = useState(false)
+    const [desc, setDesc] = useState(null)
+    const [title, setTitle] = useState(null)
+  
 
-    // Function to handle form data change
+
+
+    const handleClose = ()=>{
+      setShowModal(false)
+    }
+    const openModal = (title, desc)=>{
+      setShowModal(true)
+      setDesc(desc)
+      setTitle(title)
+    }
+    const [applicationNo, setApplicationNo] = useState('');
+    const [message, setMessage] = useState('');
+
     const handleFormChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -23,65 +41,58 @@ function MainFunctionHallBooking() {
         });
     };
 
-    // Function to calculate total cost
+    useEffect(() => {
+        let amount = 0;
+        switch (formData.serviceType) {
+            case 'Private Parties':
+                amount = 45000;
+                break;
+            case 'Senior Police Officers of Other Govt Department':
+                amount = 25000;
+                break;
+            case 'Serving and Senior Police Officers':
+                amount = 20000;
+                break;
+            default:
+                amount = 0;
+        }
+        setFormData({
+            ...formData,
+            totalAmount: amount
+        });
+    }, [formData.serviceType]);
+
     const calculateTotalCost = () => {
-        let servicePrice;
-        switch (formData.serviceName) {
-            case 'Main Event Hall Booking':
-                servicePrice = calculateMainEventHallBookingPrice();
-                break;
-            case 'Conference Hall Booking':
-                servicePrice = calculateConferenceHallBookingPrice();
-                break;
-            case 'Barbeque Area Booking':
-                servicePrice = calculateBarbequeAreaBookingPrice();
-                break;
-            default:
-                servicePrice = 0;
-        }
-        return servicePrice;
-    };
-
-    // Function to calculate price for Main Event Hall Booking
-    const calculateMainEventHallBookingPrice = () => {
+        let total = 0;
         switch (formData.serviceType) {
             case 'Private Parties':
-                return 45000;
+                total = 45000;
+                break;
             case 'Senior Police Officers of Other Govt Department':
-                return 25000;
+                total = 25000;
+                break;
             case 'Serving and Senior Police Officers':
-                return 20000;
+                total = 20000;
+                break;
             default:
-                return 0;
+                total = 0;
         }
+        return total;
     };
 
-    // Function to calculate price for Conference Hall Booking
-    const calculateConferenceHallBookingPrice = () => {
-        switch (formData.serviceType) {
-            case 'Private Parties':
-                return 15000;
-            case 'Senior Police Officers of Other Govt Department':
-                return 10000;
-            case 'Serving and Senior Police Officers':
-                return 7500;
-            default:
-                return 0;
-        }
-    };
-
-    // Function to calculate price for Barbeque Area Booking
-    const calculateBarbequeAreaBookingPrice = () => {
-        switch (formData.serviceType) {
-            case 'Private Parties':
-                return 10000;
-            case 'Senior Police Officers of Other Govt Department':
-                return 7500;
-            case 'Serving and Senior Police Officers':
-                return 5000;
-            default:
-                return 0;
-        }
+    const submitForm = () => {
+        axios.post('http://localhost:5000/api/submitForm', formData)
+            .then(response => {
+                const { success, applicationNo } = response.data;
+                if (success) {
+                    setApplicationNo(applicationNo);
+                    setMessage(`Booking submitted successfully with application number ${applicationNo}`);
+                    openModal('Success', `Booking submitted successfully with application number ${applicationNo}`)
+                } else {
+                    setMessage('Failed to submit booking');
+                }
+            })
+            .catch(error => console.error('Error submitting form:', error));
     };
 
     return (
@@ -171,11 +182,17 @@ function MainFunctionHallBooking() {
                             <li className='list-group-item'>Service Type: {formData.serviceType}</li>
                             <li className='list-group-item'>Service Price: {calculateTotalCost()}</li>
                             <li className='list-group-item'><h1 className='fs-2 fw-bold'>Total: {calculateTotalCost()}</h1> </li>
-                            <button className="btn btn-primary mt-4">Continue</button>
+                            <button className="btn btn-primary mt-4" onClick={submitForm}>Continue</button>
                         </ul>
                     </div>
                 </div>
             </div>
+            <div className="row">
+                <div className="col-md-12">
+                    {message && <p>{message}</p>}
+                </div>
+            </div>
+            <SuccessPopup show={showmodal} close={handleClose} title={title} desc={desc}/>
         </div>
     );
 }

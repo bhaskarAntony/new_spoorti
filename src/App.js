@@ -45,9 +45,9 @@ function App() {
   }, [])
  
   return (
-    <div className="App overflow-hidden">
+    <div className="App overflow-hidden text-center text-danger">
    
-    <TranslationHOC>
+    {/* <TranslationHOC>
     <BrowserRouter>
     <Header/>
     <Routes>
@@ -81,7 +81,8 @@ function App() {
     </Routes>
     <Footer/>
     </BrowserRouter>
-    </TranslationHOC>
+    </TranslationHOC> */}
+    <h1>SPORTI IS UPDATING PLEASE TRY AGAIN LATER...</h1>
     </div>
   );
 }
