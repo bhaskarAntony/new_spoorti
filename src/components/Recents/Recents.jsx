@@ -9,7 +9,7 @@ import Notifications from './Notifications'
 function Recents() {
   return (
     <Tabs
-    defaultActiveKey="veg"
+    defaultActiveKey="recent"
     id="uncontrolled-tab-example"
     className="mb-3 recent-tabs"
     // Handle tab selection
