@@ -78,7 +78,7 @@ function Header() {
          <ul >
             <li><a href="/"><i class="bi bi-house-door-fill"></i> Home</a></li>
             <li><a href="/about"><i class="bi bi-file-person-fill"></i> About Us</a></li>
-            <li><a href="/sevices/sporti1">SPORTI-1</a></li>
+            <li><a href="/services/sporti1">SPORTI-1</a></li>
             <li><a href="/services/sporti2">SPORTI-2</a></li>
            
 
