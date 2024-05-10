@@ -44,28 +44,6 @@ function Footer() {
                   
                </ul> 
             </div>
-            <div className="icons d-flex gap-2 fs-4">
-                <div>
-                <Link to='https://www.facebook.com/BangaloreBepractical/'>   <i class="bi bi-facebook text-white"></i></Link>
-                 
-                </div>
-                <div>
-                <Link to='https://twitter.com/bepractical_com'>  <i class="bi bi-twitter text-white"></i></Link>
-                  
-                </div>
-                <div>
-                <Link to='https://www.youtube.com/channel/UCXZrCfbP7ZITt5WFjQ5mZbQ'>  <i class="bi bi-youtube text-white"></i></Link>
-                  
-                </div>
-                <div>
-                <Link to='https://www.linkedin.com/company/13338555/admin/'> <i class="bi bi-linkedin  text-white"></i></Link>
-                   
-                </div>
-                <div>
-                <Link to='https://www.instagram.com/bepracticaltraining/'><i class="bi bi-instagram text-white"></i></Link>
-                    
-                </div>
-            </div>
             
         </div>
     </div>

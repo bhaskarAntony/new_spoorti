@@ -2,13 +2,14 @@ import React from 'react'
 import gallerydata from '../../data/gallery'
 import './style.css'
 import { Link } from 'react-router-dom'
+import eventData from '../../data/event'
 
 function PastEvents() {
   return (
-    <div className='upcoming-events p-3 p-md-5'>
+    <div className=' p-3 p-md-5'>
        <div className="row">
        {
-                    gallerydata.map((eventItem, eventIndex)=>(
+                    eventData.map((eventItem, eventIndex)=>(
                         <div className="col-12 col-md-4 mb-3" key={eventIndex}>
                         <div className="event-card rounded-2 h-100 overflow-hidden bg-white">
                             <div className="event-card-top">

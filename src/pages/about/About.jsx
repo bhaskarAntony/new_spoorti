@@ -1,14 +1,15 @@
 import React from 'react'
 import './style.css'
 import i1 from '../../assets/images/aboutus/smwaus_2.jpg'
-import i2 from '../../assets/images/aboutus/smwaus_3.jpg'
+
 import team from '../../data/team'
 import aboutbanners from '../../data/aboutus'
+import membersData from '../../data/members'
 
 function About() {
   return (
     <div>
-        <div className="contact-banner about-banner">
+        <div className="contact-banner ">
             {/* <h1 className='fs-1 fw-bold text-center'>About us</h1>
             <p className="fs-6 text-center">
             SPORTI consists of a team of Senior Officers from various units of the Police Department. It also has a Working Committee who conduct various Conferences and Workshops to discuss the operations and functioning of the Institute. The team hosts periodic meetings every last Friday of the month for effective improvements of the Institute.
@@ -73,7 +74,7 @@ function About() {
             <div className="col-12 col-md-3 mb-3">
                 <div className="about-left">
                 <img src={i1} alt="" className="w-100 mt-3" />
-                    <img src={i2} alt="" className="w-100 mt-3" />
+                    <img src='./images/sporti2/About_Us_SPORTI_2.jpg' alt="" className="w-100 mt-3" />
                 </div>
             </div>
            </div>
@@ -105,6 +106,30 @@ function About() {
                    }
                 </div>
            </div>
+          </div>
+
+
+          <div className="commity-members p-3 p-md-5">
+            <div className="text-center py-4">
+                <h3 className="fs-4 subtitle">SPORTI</h3>
+                <h1 className="title fs-2 fw-bold">Senior police officers Research And Training Institute <br /> committee members Details </h1>
+            </div>
+        <table className='table'>
+            <tr>
+                <th>SI.No</th>
+                <th>Name</th>
+                <th>SPORTI</th>
+            </tr>
+            {
+                membersData.map((item, index)=>(
+                    <tr>
+                        <td className='lead'>{index+1}</td>
+                        <td className='lead'>{item.name} <br /> {item.role}</td>
+                        <td className='lead'>{item.desc}</td>
+                    </tr>
+                ))
+            }
+        </table>
           </div>
 {/* 
                    <h1 className="fs-1 fw-bold p-3 p-md-5 py-2">Wall Of Fame</h1>

@@ -7,14 +7,14 @@ const heroImages = [
     url: image1,
     description_en: "The lush green atmosphere and pleasant ambience     ",
     description_ka: "SPORTI ಕ್ಯಾಂಪಸ್ನಲ್ಲಿಹಚ್ಚ ಹಸಿರಿನ ವಾತಾವರಣ ಮತ್ತುಆಹ್ಲಾದಕರ ವಾತಾವರಣ",
-    caption_en: "Welcome to SPORTI",
+    caption_en: "Welcome to SPORTI-1",
     caption_ka: "SPORTI ಗೆ ಸುಸ್ವಾಗತ"
   },
   {
     url: image2,
     description_en: "SPORTI takes it's pride in being a one-of-a-kind location serving senior police officials",
     description_ka: "SPORTI ಒಂದು ರೀತಿಯ ಸ್ಥಳವಾಗಿ ಸೇವೆ ಸಲ್ಲಿಸುತ್ತಿದೆ ಮತ್ತುಪ್ರಾಥಮಿಕವಾಗಿ ಪೊಲೀಸ್ ಅಧಿಕಾರಿಗಳಿಗೆ ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ ಎಂದು ಹೆಮ್ಮೆಪಡುತ್ತದ",
-    caption_en: "Welcome to SPORTI",
+    caption_en: "Welcome to SPORTI-2",
     caption_ka: "SPORTI ಗೆ ಸುಸ್ವಾಗತ"
   },
   {
