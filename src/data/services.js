@@ -105,7 +105,7 @@ const servicesData = {
                     id:1,
                     title:'Accommodation',
                     desc:'Rooms are spacious and equipped with all amenities to enhance the guest experience, such as a comfortable bed, seating area, work desk, wardrobe, and en-suite bathroom with toiletries and towels. The rooms are well-lit, with large windows allowing plenty of natural light to enter, creating a bright and welcoming ambiance.The VIP rooms are typically larger in size and include a separate living area and provide a serene and comfortable environment for guests to unwind and rejuvenate.',
-                    image:'/images/facilities/smmch_carousal_2.jpg' ,
+                    image:'/images/sporti2_gallery/image9.jpg' ,
                     isBook:true,
                     link:'/room'
                 },
@@ -149,7 +149,7 @@ const servicesData = {
                     id:6,
                     title:'Training room',
                     desc:'The training room at SPORTI 2 provides a professional and functional space for conducting training sessions, workshops, and educational programs, equipped with the necessary technologies to support effective learning and development initiatives. The training room is equipped with modern audio-visual equipment to support presentations, demonstrations, and interactive learning activities. The training room is designed to be versatile and adaptable to accommodate different types of training programs and learning objectives and is easily accessible to participants, with convenient proximity to other facilities such as restrooms, break areas, and refreshment stations.',
-                    image:'/images/facilities/tabletennis.jpg',
+                    image:'/images/sporti2_gallery/image3.jpg',
                     isBook:false,
                     link:'/services/book'
                 },

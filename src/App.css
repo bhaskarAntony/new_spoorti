@@ -18,10 +18,9 @@
 } */
 
 .sporti2{
-  background: url('../public/images/sporti2/sporti2.jpg') no-repeat center !important;
-  background-size: cover;
+  background: url('../public/images/sporti2_gallery/image4.jpg') no-repeat center !important;
+  background-size: cover !important;
   min-height: 70vh !important;
-  box-shadow: inset 0px 10px 50px #fff;
 }
 
 
