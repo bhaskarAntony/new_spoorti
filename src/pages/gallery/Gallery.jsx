@@ -20,7 +20,7 @@ function Gallery() {
             <h1 className="fs-2 fw-bold">Gallery</h1>
         </div>
         <div className="skew-right d-flex align-items-center">
-        <h1 className="fs-2 fw-bold text-black">SPORTI</h1>
+        <h1 className="fs-2 fw-bold text-white">SPORTI</h1>
         </div>
     </div>
 
@@ -39,9 +39,9 @@ function Gallery() {
                                     <div className="col-6 col-md-3 mb-3">
                                        <div className="gallery-card service-card h-100">
                                         <img src={image.original} alt="" className="w-100 h-100" />
-                                        <div className="service-info text-center">
+                                        {/* <div className="service-info text-center">
                                             <span className="fs-6 text-white">{item.title}</span>
-                                        </div>
+                                        </div> */}
                                     </div>
                                     </div>
                                 ))

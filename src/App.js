@@ -58,7 +58,7 @@ function App() {
       <Route path='/event' element={<Event/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/stream' element={<LiveStream/>}/>
-      <Route path='/faqs' element={<MainFaqPage/>}/>
+      <Route path='/faqs' element={<Faqs/>}/>
       <Route path='/help' element={<Help/>}/>
       <Route path='/gallery/:id' element={<Gallery/>}/>
       <Route path='/events&gallery' element={<Events/>}/>

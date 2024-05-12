@@ -4,7 +4,7 @@ import Feedback from '../../components/feedback/Feedback'
 import { useParams } from 'react-router-dom';
 import contactInfo from '../../data/contactinfo';
 
-function Contact({data}) {
+function Contact() {
   const { sporti } = useParams(); // Destructure sporti from useParams()
   const [contact, setContact] = useState(null); // Initialize service state with null
 
@@ -47,7 +47,7 @@ function Contact({data}) {
    </div>
 
    <div className="contact-map">
-   <iframe src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d7776.0547313005745!2d77.6120953!3d12.9701007!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3bae1715a47fbf91%3A0x105bdbe2d51128a2!2sSenior%20Police%20Officer&#39;s%20Research%20and%20Training%20Institute%20(SPORTI)%201%2C%20Primrose%20Rd%2C%20Ashok%20Nagar%20Bengaluru%2C%20Karnataka%20560025%20India!3m2!1d12.9701007!2d77.6120953!5e0!3m2!1sen!2sin!4v1714118352710!5m2!1sen!2sin" width="100%" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   <iframe src={contact.location} width="100%" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
    </div>
    <div className="feedback text-center p-3">
    <i class="bi bi-stars fs-2 text-warning"></i>
