@@ -124,8 +124,8 @@ function About() {
                 membersData.map((item, index)=>(
                     <tr>
                         <td className='lead'>{index+1}</td>
-                        <td className='lead'>{item.name} <br /> {item.role}</td>
-                        <td className='lead'>{item.desc}</td>
+                        <td className='lead' title={`${item.name} , ${item.role}`}>{item.name} <br /> {item.role}</td>
+                        <td className='lead' title={item.desc}>{item.desc}</td>
                     </tr>
                 ))
             }

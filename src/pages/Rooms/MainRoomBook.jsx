@@ -45,13 +45,13 @@ function MainRoomBook() {
         let roomPrice;
         switch (formData.roomType) {
             case 'VIP':
-                roomPrice = 150;
+                roomPrice = 2100;
                 break;
             case 'Family':
-                roomPrice = 200;
+                roomPrice = 1600;
                 break;
             case 'Executive':
-                roomPrice = 250;
+                roomPrice = 1100;
                 break;
             default:
                 roomPrice = 0;

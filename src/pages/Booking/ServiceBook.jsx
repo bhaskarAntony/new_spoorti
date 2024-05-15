@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Dropdown } from 'react-bootstrap';
 import SuccessPopup from '../../components/popups/SuccessPopup';
+import CryptoJS from 'crypto-js';
 
 function MainFunctionHallBooking() {
     const [formData, setFormData] = useState({
@@ -15,20 +14,20 @@ function MainFunctionHallBooking() {
         serviceType: '',
         totalAmount: 0
     });
-    const [showmodal, setShowModal] = useState(false)
-    const [desc, setDesc] = useState(null)
-    const [title, setTitle] = useState(null)
-
-    const handleClose = ()=>{
-      setShowModal(false)
-    }
-    const openModal = (title, desc)=>{
-      setShowModal(true)
-      setDesc(desc)
-      setTitle(title)
-    }
-    const [applicationNo, setApplicationNo] = useState('');
+    const [showmodal, setShowModal] = useState(false);
+    const [desc, setDesc] = useState(null);
+    const [title, setTitle] = useState(null);
     const [message, setMessage] = useState('');
+
+    const handleClose = () => {
+        setShowModal(false);
+    };
+
+    const openModal = (title, desc) => {
+        setShowModal(true);
+        setDesc(desc);
+        setTitle(title);
+    };
 
     const handleFormChange = (e) => {
         const { name, value } = e.target;
@@ -37,27 +36,6 @@ function MainFunctionHallBooking() {
             [name]: value
         });
     };
-
-    useEffect(() => {
-        let amount = 0;
-        switch (formData.serviceType) {
-            case 'Private Parties':
-                amount = 45000;
-                break;
-            case 'Senior Police Officers of Other Govt Department':
-                amount = 25000;
-                break;
-            case 'Serving and Senior Police Officers':
-                amount = 20000;
-                break;
-            default:
-                amount = 0;
-        }
-        setFormData({
-            ...formData,
-            totalAmount: amount
-        });
-    }, [formData.serviceType]);
 
     const calculateTotalCost = () => {
         let total = 0;
@@ -76,21 +54,51 @@ function MainFunctionHallBooking() {
         }
         return total;
     };
-
-    const submitForm = () => {
-        axios.post('http://localhost:5000/api/submitForm', formData)
-            .then(response => {
-                const { success, applicationNo } = response.data;
-                if (success) {
-                    setApplicationNo(applicationNo);
-                    setMessage(`Booking submitted successfully with application number ${applicationNo}`);
-                    openModal('Success', `Booking submitted successfully with application number ${applicationNo}`)
-                } else {
-                    setMessage('Failed to submit booking');
-                }
-            })
-            .catch(error => console.error('Error submitting form:', error));
+    const generateHash512 = (text) => {
+        const hash = CryptoJS.SHA512(text);
+        return hash.toString(CryptoJS.enc.Hex);
     };
+
+    const createPaymentForm = () => {
+        const requestData = {
+            K1USRID: 'K1SPOTIUSER',
+            K1PWD: '39d16932b27ba15a4c77fd09f8817b2dbce0089dfd45b602fdad8881127002560c5249a77c9dce96fc88a035a1393553ca80f1196b2f89a27b701525533fc55c',
+            Name: 'Deepak Hegadihal',
+            AppNo: 'AN0170',
+            Email: 'DEEPAKHEGADIHAL@GMAIL.COM',
+            Phone: '9035040814',
+            ProductInfo: 'Rooom Booking',
+            AmountPaid: 500
+        };
+
+        // Concatenate parameters in the specified order
+        const requestDataString = `K1USRID=${requestData.K1USRID}|K1PWD=${requestData.K1PWD}|Name=${requestData.Name}|AppNo=${requestData.AppNo}|Phone=${requestData.Phone}|Email=${requestData.Email}|ProductInfo=${requestData.ProductInfo}|AmountPaid=${requestData.AmountPaid}`;
+
+        // Generate checksum based on concatenated string
+        const checksum = generateHash512(requestDataString);
+
+        // Append checksum and return URL
+        const formValue = `${requestDataString}|CheckSum=${checksum}|ReturnURL=http://localhost:58851/College/Purenewal.aspx`;
+
+        // Create form element
+        const form = document.createElement('form');
+        form.id = 'FormPost';
+        form.method = 'post';
+        form.action = 'https://koneportal.cmsuat.co.in:1443/SPORTI/Index/UXhBakNVanVwTFRWM3IremdWSjV5dz09';
+
+        // Create and append input for SPORTIFormData
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.id = 'SPORTIFormData';
+        input.name = 'SPORTIFormData';
+        input.value = formValue;
+        form.appendChild(input);
+
+        // Append form to body and submit
+        document.body.appendChild(form);
+        form.submit();
+    };
+    
 
     return (
         <div className='main-function-hall-booking container-fluid p-3 p-md-5'>
@@ -137,33 +145,13 @@ function MainFunctionHallBooking() {
                         <div className="col-md-6">
                             <div className="form-group mt-3">
                                 <label htmlFor="serviceName" className="form-label">Service Name</label>
-                                <Dropdown className='w-100'>
-                                    <Dropdown.Toggle className='bg-light text-dark border-secondary w-100 text-start'>
-                                        {formData.serviceName || 'Select Service Name'}
-                                    </Dropdown.Toggle>
-                                    <Dropdown.Menu>
-                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceName: 'Main Event Hall Booking' })}>Main Event Hall Booking</Dropdown.Item>
-                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceName: 'Conference Hall Booking' })}>Conference Hall Booking</Dropdown.Item>
-                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceName: 'Barbeque Area Booking' })}>Barbeque Area Booking</Dropdown.Item>
-                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceName: 'Barbeque Area Booking' })}>Barbeque Area Booking</Dropdown.Item>
-                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceName: 'mini theatre' })}>MINI THEATRE</Dropdown.Item>
-                                    </Dropdown.Menu>
-                                </Dropdown>
+                                <input type="text" className="form-control" name="serviceName" id="serviceName" value={formData.serviceName} onChange={handleFormChange} />
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="form-group mt-3">
                                 <label htmlFor="serviceType" className="form-label">Service Type</label>
-                                <Dropdown className='w-100'>
-                                    <Dropdown.Toggle className='bg-light text-dark border-secondary w-100 text-start'>
-                                        {formData.serviceType || 'Select Service Type'}
-                                    </Dropdown.Toggle>
-                                    <Dropdown.Menu>
-                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceType: 'Private Parties' })}>Private Parties</Dropdown.Item>
-                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceType: 'Senior Police Officers of Other Govt Department' })}>Senior Police Officers of Other Govt Department</Dropdown.Item>
-                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceType: 'Serving and Senior Police Officers' })}>Serving and Senior Police Officers</Dropdown.Item>
-                                    </Dropdown.Menu>
-                                </Dropdown>
+                                <input type="text" className="form-control" name="serviceType" id="serviceType" value={formData.serviceType} onChange={handleFormChange} />
                             </div>
                         </div>
                     </div>
@@ -181,7 +169,7 @@ function MainFunctionHallBooking() {
                             <li className='list-group-item'>Service Type: {formData.serviceType}</li>
                             <li className='list-group-item'>Service Price: {calculateTotalCost()}</li>
                             <li className='list-group-item'><h1 className='fs-2 fw-bold'>Total: {calculateTotalCost()}</h1> </li>
-                            <button className="btn btn-primary mt-4" onClick={submitForm}>Continue</button>
+                            <button className="btn btn-primary mt-4" onClick={createPaymentForm}>Continue</button>
                         </ul>
                     </div>
                 </div>
