@@ -12,14 +12,14 @@ const team = [
     },
     {
         profile:profile2,
-        name:'Sri B Dayanand, IPS.',
+        name:'Sri B Dayanand, IPS',
         role:'Vice President, SPORTI',
         desc:'Commissioner, Bengaluru City Police'
     },
     {
         profile:'https://t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg',
         name:'Sri Sandeep Patil, IPS',
-        role:'Supervisory officer, SPORTI 2',
+        role:'Supervisory officer, SPORTI-2',
         desc:'IGP, KSRP'
     },
     {
@@ -38,7 +38,7 @@ const team = [
     {
         profile:'./images/aboutus/suresh.jpg',
         name:'Sri Suresh M G',
-        role:'Mess officer SPORTI 2',
+        role:'Mess officer SPORTI-2',
         desc:'Asst. Commandant 1st Battalion KSRP',
         contact:'+91 9480805828'
     },

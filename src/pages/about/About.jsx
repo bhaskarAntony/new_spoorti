@@ -61,7 +61,7 @@ function About() {
                 <div className="about-left">
               
                 <p className="fs-6 text-secondary mt-4">
-                SPORTI - Senior Police Officers Research and Training Institute was established in the year 1973 and has been successfully catering to the needs of Police department. It was prior known as Senior Police Officer Mess and renamed to SPORTI in 2019 to enhance the quality of services being provided. Similarly to expand scope of services and offerings to more officers, KSRP Research and Training Institute was established in 2014 and was renamed as SPORTI 2 subsequently. This evolution reflects the institute's dedication to advancing knowledge and expertise in its field while adapting to meet the evolving needs of its stakeholders. Both SPORTI 1 and SPORTI 2 are an all exclusive facility for serving and retired senior police officials only.
+                SPORTI - Senior Police Officers Research and Training Institute was established in the year 1973 and has been successfully catering to the needs of Police department. It was prior known as Senior Police Officer Mess and renamed to SPORTI in 2019 to enhance the quality of services being provided. Similarly to expand scope of services and offerings to more officers, KSRP Research and Training Institute was established in 2014 and was renamed as SPORTI-2 subsequently. This evolution reflects the institute's dedication to advancing knowledge and expertise in its field while adapting to meet the evolving needs of its stakeholders. Both SPORTI 1 and SPORTI 2 are an all exclusive facility for serving and retired senior police officials only.
                 </p>
 
                 <p className="fs-6 text-secondary mt-4">

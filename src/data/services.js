@@ -1,7 +1,7 @@
 const servicesData = {
     sporti1:{
         id:1,
-        title:"SPORTI 1",
+        title:"SPORTI-1",
         image:'./images/sporti1/sport1_cover.jpg',
         services:[
             {
@@ -99,7 +99,7 @@ const servicesData = {
     
         sporti2:{
             id:2,
-            title:"SPORTI 2",
+            title:"SPORTI-2",
             services:[
                 {
                     id:1,
@@ -150,7 +150,7 @@ const servicesData = {
                     title:'Training room',
                     desc:'The training room at SPORTI 2 provides a professional and functional space for conducting training sessions, workshops, and educational programs, equipped with the necessary technologies to support effective learning and development initiatives. The training room is equipped with modern audio-visual equipment to support presentations, demonstrations, and interactive learning activities. The training room is designed to be versatile and adaptable to accommodate different types of training programs and learning objectives and is easily accessible to participants, with convenient proximity to other facilities such as restrooms, break areas, and refreshment stations.',
                     image:'/images/sporti2_gallery/image3.jpg',
-                    isBook:false,
+                    isBook:true,
                     link:'/services/book'
                 },
                 {

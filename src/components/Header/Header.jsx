@@ -33,8 +33,8 @@ function Header() {
         <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/about">About Us</Nav.Link>
-          <Nav.Link href="/services/sporti1">SPORTI 1</Nav.Link>
-          <Nav.Link href="/services/sporti2">SPORTI 2</Nav.Link>
+          <Nav.Link href="/services/sporti1">SPORTI-1</Nav.Link>
+          <Nav.Link href="/services/sporti2">SPORTI-2</Nav.Link>
           <Nav.Link href="/registration">Membership</Nav.Link>
           <Nav.Link href="/events&gallery">Events & Gallery</Nav.Link>
           <Nav.Link href="/faqs">FAQ's</Nav.Link>
