@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Dropdown } from 'react-bootstrap';
 import SuccessPopup from '../../components/popups/SuccessPopup';
+import CryptoJS from 'crypto-js';
 
 function MainRoomBook() {
     // State variables to track form data
@@ -81,6 +82,50 @@ function MainRoomBook() {
         }
     };
 
+    const generateHash512 = (text) => {
+        const hash = CryptoJS.SHA512(text);
+        return hash.toString(CryptoJS.enc.Hex);
+    };
+
+    const createPaymentForm = (name, email, phonenumber, service, applicationNo) => {
+        const requestData = {
+            K1USRID: 'K1SPOTIUSER',
+            K1PWD: '39d16932b27ba15a4c77fd09f8817b2dbce0089dfd45b602fdad8881127002560c5249a77c9dce96fc88a035a1393553ca80f1196b2f89a27b701525533fc55c',
+            Name: formData.username,
+            AppNo: 'MD89786',
+            Email: formData.email,
+            Phone: formData.phoneNumber,
+            ProductInfo: formData.roomType,
+            AmountPaid: calculateTotalCost()
+        };
+
+        // Concatenate parameters in the specified order
+        const requestDataString = `K1USRID=${requestData.K1USRID}|K1PWD=${requestData.K1PWD}|Name=${requestData.Name}|AppNo=${requestData.AppNo}|Phone=${requestData.Phone}|Email=${requestData.Email}|ProductInfo=${requestData.ProductInfo}|AmountPaid=${requestData.AmountPaid}`;
+
+        // Generate checksum based on concatenated string
+        const checksum = generateHash512(requestDataString);
+
+        // Append checksum and return URL
+        const formValue = `${requestDataString}|CheckSum=${checksum}|ReturnURL=http://localhost:58851/College/Purenewal.aspx`;
+
+        // Create form element
+        const form = document.createElement('form');
+        form.id = 'FormPost';
+        form.method = 'post';
+        form.action = 'https://koneportal.cmsuat.co.in:1443/SPORTI/Index/UXhBakNVanVwTFRWM3IremdWSjV5dz09';
+
+        // Create and append input for SPORTIFormData
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.id = 'SPORTIFormData';
+        input.name = 'SPORTIFormData';
+        input.value = formValue;
+        form.appendChild(input);
+
+        // Append form to body and submit
+        document.body.appendChild(form);
+        form.submit();
+    };
     return (
         <div className='boork-room container-fluid p-3 p-md-5'>
             <div className="row">
@@ -166,7 +211,7 @@ function MainRoomBook() {
                             <li className='list-group-item'>Check Out: {formData.checkOut}</li>
                             <li className='list-group-item'>Room Cost: {calculateTotalCost()}</li>
                             <li className='list-group-item'><h1 className='fs-2 fw-bold'>Total: {calculateTotalCost()}</h1> </li>
-                            <button className="btn btn-primary mt-4">Continue</button>
+                            <button className="btn btn-primary mt-4" onClick={createPaymentForm}>Continue</button>
                         </ul>
                     </div>
                 </div>

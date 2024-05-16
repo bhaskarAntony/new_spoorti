@@ -30,23 +30,23 @@ const team = [
     },
     {
         profile:profile3,
-        name:'Sri Deepan M N        ',
+        name:'Sri Deepan M N, IPS',
         role:'SECRETARY, SPORTI',
         desc:'I/C DIGP & Commandant 1st Battalion KSRP',
-        contact:'+919480805801'
+        contact:'+91 9480805801'
     },
     {
         profile:'./images/aboutus/suresh.jpg',
-        name:'Sri Suresh M G ',
+        name:'Sri Suresh M G',
         role:'Mess officer SPORTI 2',
         desc:'Asst. Commandant 1st Battalion KSRP',
-        contact:'9480805828'
+        contact:'+91 9480805828'
     },
     {
         profile:profile4,
         name:'Sri Mufid Khan',
         role:'Mess Officer, SPORTI',
-        contact:'9480805887'
+        contact:'+91 9480805887'
     }
 ]
 export default team;

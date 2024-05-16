@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import SuccessPopup from '../../components/popups/SuccessPopup';
 import CryptoJS from 'crypto-js';
+import { Dropdown } from 'react-bootstrap';
+import axios from 'axios';
 
 function MainFunctionHallBooking() {
+    const [ApplicationNo, setApplicationNo] = useState(null)
     const [formData, setFormData] = useState({
         username: '',
         email: '',
@@ -59,16 +62,16 @@ function MainFunctionHallBooking() {
         return hash.toString(CryptoJS.enc.Hex);
     };
 
-    const createPaymentForm = () => {
+    const createPaymentForm = (name, email, phonenumber, service, applicationNo) => {
         const requestData = {
             K1USRID: 'K1SPOTIUSER',
             K1PWD: '39d16932b27ba15a4c77fd09f8817b2dbce0089dfd45b602fdad8881127002560c5249a77c9dce96fc88a035a1393553ca80f1196b2f89a27b701525533fc55c',
-            Name: 'Deepak Hegadihal',
-            AppNo: 'AN0170',
-            Email: 'DEEPAKHEGADIHAL@GMAIL.COM',
-            Phone: '9035040814',
-            ProductInfo: 'Rooom Booking',
-            AmountPaid: 500
+            Name: formData.user,
+            AppNo: 'MD89786',
+            Email: formData.email,
+            Phone: formData.phoneNumber,
+            ProductInfo: formData.serviceName,
+            AmountPaid: calculateTotalCost()
         };
 
         // Concatenate parameters in the specified order
@@ -97,6 +100,24 @@ function MainFunctionHallBooking() {
         // Append form to body and submit
         document.body.appendChild(form);
         form.submit();
+    };
+
+
+    const submitForm = () => {
+        axios.post('http://localhost:5000/api/submitForm', formData)
+            .then(response => {
+                const { success, user} = response.data;
+                console.log(response)
+                if (success) {
+                    // setApplicationNo(applicationNo);
+                    createPaymentForm(formData.username, formData.email, formData.phoneNumber, formData.serviceName, user.applicationNo)
+                    setMessage(`Booking submitted successfully with application number ${user.applicationNo}`);
+                    openModal('Success', `Booking submitted successfully with application number ${user.applicationNo}`)
+                } else {
+                    setMessage('Failed to submit booking');
+                }
+            })
+            .catch(error => console.error('Error submitting form:', error));
     };
     
 
@@ -145,13 +166,35 @@ function MainFunctionHallBooking() {
                         <div className="col-md-6">
                             <div className="form-group mt-3">
                                 <label htmlFor="serviceName" className="form-label">Service Name</label>
-                                <input type="text" className="form-control" name="serviceName" id="serviceName" value={formData.serviceName} onChange={handleFormChange} />
+                                <Dropdown className='w-100'>
+                                    <Dropdown.Toggle className='bg-light text-dark border-secondary w-100 text-start'>
+                                        {formData.serviceName || 'Select Service Name'}
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceName: 'Main Event Hall Booking' })}>Main Event Hall Booking</Dropdown.Item>
+                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceName: 'Conference Hall Booking' })}>Conference Hall Booking</Dropdown.Item>
+                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceName: 'Conference Hall Booking' })}>Training Hall Booking</Dropdown.Item>
+                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceName: 'Barbeque Area Booking' })}>Barbeque Area Booking</Dropdown.Item>
+                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceName: 'Badminton' })}>BADMINTON Booking</Dropdown.Item>
+                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceName: 'mini theatre' })}>MINI THEATRE Booking</Dropdown.Item>
+                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceName: 'table tennis' })}>TABLE TENNIS Booking</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="form-group mt-3">
                                 <label htmlFor="serviceType" className="form-label">Service Type</label>
-                                <input type="text" className="form-control" name="serviceType" id="serviceType" value={formData.serviceType} onChange={handleFormChange} />
+                                <Dropdown className='w-100'>
+                                    <Dropdown.Toggle className='bg-light text-dark border-secondary w-100 text-start'>
+                                        {formData.serviceType || 'Select Service Type'}
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceType: 'Private Parties' })}>Private Parties</Dropdown.Item>
+                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceType: 'Senior Police Officers of Other Govt Department' })}>Senior Police Officers of Other Govt Department</Dropdown.Item>
+                                        <Dropdown.Item onClick={() => setFormData({ ...formData, serviceType: 'Serving and Senior Police Officers' })}>Serving and Senior Police Officers</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
                             </div>
                         </div>
                     </div>
