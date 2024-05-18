@@ -6,9 +6,9 @@ function SuccessPopup({show, close, title, desc, error}) {
   return (
     <div>
          <Modal show={show} onHide={close} centered>
-        {/* <Modal.Header closeButton>
-          <Modal.Title>{title}</Modal.Title>
-        </Modal.Header> */}
+        <Modal.Header closeButton className='border-0'>
+          {/* <Modal.Title>{title}</Modal.Title> */}
+        </Modal.Header>
         <Modal.Body className='text-center p-3'>
          {
           error?(
@@ -30,6 +30,7 @@ function SuccessPopup({show, close, title, desc, error}) {
                 <Link to='/additional-details/123' className='blue-btn p-3 mb-3 d-block'>Next</Link>
             ):(null)
           } */}
+          
         </Modal.Body>
         {/* <Modal.Footer>
           <Button variant="secondary" onClick={close}>

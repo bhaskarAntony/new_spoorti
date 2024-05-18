@@ -3,6 +3,7 @@ import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
+import { useDialog } from '../components/popups/DialogContext';
 
 const Login = (props) => {
   const [email, setEmail] = useState('');
@@ -10,19 +11,22 @@ const Login = (props) => {
   const { setIsAuthenticated, setUser } = useAuth();
   const navigate = useNavigate();
   const {location} = useAuth()
+  const {openDialog} = useDialog()
 
   const login = async (e) => {
     e.preventDefault()
     try {
       const response = await axios.post('https://sporti-backend-2-o22y.onrender.com/api/login', { email, password });
       setUser(response.data.user);
-      alert(location)
+    //   alert(location)
       console.log(location);
       setIsAuthenticated(true);
       localStorage.setItem('token', response.data.token);
-      navigate(location.pathname);
+      openDialog('Success', 'successfully completed Login', false);
+      navigate('/');
+      
     } catch (error) {
-        alert('no')
+        openDialog('Invalid email or password', 'Please Check the details and try again.', true);
       console.error('Login failed', error);
     }
   };
