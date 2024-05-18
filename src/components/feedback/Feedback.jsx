@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import SuccessPopup from '../popups/SuccessPopup';
 import { useDialog } from '../popups/DialogContext';
+import Loading from '../popups/Loading';
 
 function Feedback({sporti}) {
   const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ function Feedback({sporti}) {
     subject: '',
     message: ''
   });
+  const [loading, setLoading] = useState(false)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,15 +23,20 @@ function Feedback({sporti}) {
   const handleSubmit = (e) => {
     e.preventDefault();
     // You can perform any client-side validation here before submitting
-
+    setLoading(true);
     axios.post('https://sporti-backend-2-o22y.onrender.com/api/feedback', formData)
       .then(response => {
+        setLoading(false)
         openDialog('Success', 'Form submitted successfully', false);
       })
       .catch(error => {
+        setLoading(false)
         openDialog('Error', `Form submission failed: ${error.message}`, true);
       });
   };
+  if(loading){
+    return <Loading/>
+  }
 
   return (
     <div className="row mt-4">

@@ -49,7 +49,7 @@ const Login = (props) => {
     <div className="container card shadow">
         <div className="row align-items-center">
             <div className="col-md-6">
-            <img src="./images/aboutus/smwaus_1.jpg" alt="" className="w-100" />
+            <img src="./images/aboutus/smwaus_1.jpg" alt="logo" className="w-100" />
             </div>
             <div className="col-md-6">
             <form onSubmit={login}>
