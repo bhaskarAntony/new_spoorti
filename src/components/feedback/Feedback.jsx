@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import SuccessPopup from '../popups/SuccessPopup';
+import { useDialog } from '../popups/DialogContext';
 
 function Feedback({sporti}) {
   const [formData, setFormData] = useState({
@@ -14,18 +16,18 @@ function Feedback({sporti}) {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+  const { openDialog } = useDialog();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // You can perform any client-side validation here before submitting
 
-    axios.post('http://localhost:5000/api/feedback', formData)
+    axios.post('https://sporti-backend-2-o22y.onrender.com/api/feedback', formData)
       .then(response => {
-        alert('Form submitted successfully');
-        // Optionally, you can reset the form here
+        openDialog('Success', 'Form submitted successfully', false);
       })
       .catch(error => {
-        alert('Form submission failed:', error);
+        openDialog('Error', `Form submission failed: ${error.message}`, true);
       });
   };
 
@@ -108,6 +110,7 @@ function Feedback({sporti}) {
           </form>
         </div>
       </div>
+    
     </div>
   );
 }

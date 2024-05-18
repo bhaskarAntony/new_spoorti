@@ -50,6 +50,7 @@ const roomBookingFAQs = [
 
 
 function Home() {
+    const  isAuthenticated  =true;
   return (
     <div>
         <Hero/>
@@ -267,13 +268,19 @@ function Home() {
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.0273609615388!2d77.612095!3d12.970101!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1715a47fbf91%3A0x105bdbe2d51128a2!2sSenior%20Police%20Officer&#39;s%20Research%20and%20Training%20Institute%20(SPORTI)!5e0!3m2!1sen!2sbe!4v1713247899969!5m2!1sen!2sbe" width="600" height="500" className='rounded-3 w-100' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
            </div>
         </div> */}
-        <div className="text-center p-3 p-md-5 login-banner bg-light">
-             <i class="bi bi-stars fs-2 text-warning"></i>
-             <p className="subtitle fs-6 text-secondary text-center">SPORTI</p>
-            <h1 className="fs-2 fw-bold title">Login for room booking/Event Booking </h1>
-          
-            <Link to='/login' className="blue-btn">Login Now</Link>
-        </div>
+       {
+        isAuthenticated ?(
+            null
+        ):(
+            <div className="text-center p-3 p-md-5 login-banner bg-light">
+            <i class="bi bi-stars fs-2 text-warning"></i>
+            <p className="subtitle fs-6 text-secondary text-center">SPORTI</p>
+           <h1 className="fs-2 fw-bold title">Login for room booking/Event Booking </h1>
+         
+           <Link to='/login' className="blue-btn">Login Now</Link>
+       </div>
+        )
+       }
         <Recents/>
 
         

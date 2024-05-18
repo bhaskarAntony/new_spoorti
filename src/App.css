@@ -118,6 +118,9 @@ text-align: center;
   margin: auto;
   text-align: center;
 }
+.w-100{
+  max-width: 100% !important;
+}
 
 /* button:hover{
   opacity: 0.5 !important;

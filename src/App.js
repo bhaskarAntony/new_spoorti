@@ -38,6 +38,7 @@ import ConferenceHallBook from './pages/Conferencehall/ConferenceHallBook';
 import MainRoomBookingPage from './pages/Rooms/MainRoomBookingPage';
 import ServiceBook from './pages/Booking/ServiceBook';
 import MainRoomBook from './pages/Rooms/MainRoomBook';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   useEffect(()=>{
@@ -51,7 +52,7 @@ function App() {
     <Header/>
     <Routes>
       <Route path='/' element={<Home/>}/>
-      <Route path='/food' element={<Food/>}/>
+      
       <Route path='/cart' element={<FoodCart/>}/>
       <Route path='/room' element={<MainRoomBook/>}/>
       <Route path='/roomview/:id/:sportiId' element={<RoomView/>}/>
@@ -70,12 +71,17 @@ function App() {
       <Route path='/food/order/:id' element={<ViewFood/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Registration/>}/>
-      <Route path='/services/:sporti' element={<Services/>}/>
+     <Route element={<ProtectedRoute/>}>
+     <Route path='/food' element={<Food/>}/>
+     
+     <Route path='/services/book' element={<ServiceBook/>}/>
+     </Route>
+     <Route path='/services/:sporti' element={<Services/>}/>
       <Route path='/registration' element={<Registration/>}/>
       <Route path='/additional-details/:id' element={<AdditionalDetailsForm/>}/>
       <Route path='/admin/:id' element={<Admin/>}/>
       <Route path='/view/:id' element={<View/>}/>
-      <Route path='/services/book' element={<ServiceBook/>}/>
+    
       <Route path='/conference-hall' element={<ConferenceHallBook/>}/>
     </Routes>
     <Footer/>
