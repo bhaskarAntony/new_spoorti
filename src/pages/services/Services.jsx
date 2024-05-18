@@ -3,6 +3,7 @@ import servicesData from '../../data/services';
 import './style.css';
 import { Link, useParams } from 'react-router-dom';
 import ImagePopup from '../../components/popups/ImagePopup';
+import Loading from '../../components/popups/Loading';
 
 function Services() {
   const { sporti } = useParams(); // Destructure sporti from useParams()
@@ -17,7 +18,7 @@ function Services() {
   }, [sporti]); // Trigger effect whenever sporti changes
 
   if (!service) {
-    return <div>Loading...</div>; // Render loading indicator while data is being fetched
+    return <Loading/>; // Render loading indicator while data is being fetched
   }
 
 

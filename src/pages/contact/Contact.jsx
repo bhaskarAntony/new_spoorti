@@ -3,6 +3,7 @@ import './style.css'
 import Feedback from '../../components/feedback/Feedback'
 import { useParams } from 'react-router-dom';
 import contactInfo from '../../data/contactinfo';
+import Loading from '../../components/popups/Loading';
 
 function Contact() {
   const { sporti } = useParams(); // Destructure sporti from useParams()
@@ -14,7 +15,7 @@ function Contact() {
   }, [sporti]); // Trigger effect whenever sporti changes
 
   if (!contact) {
-    return <div>Loading...</div>; // Render loading indicator while data is being fetched
+    return <Loading/>; // Render loading indicator while data is being fetched
   }
 
   return (
