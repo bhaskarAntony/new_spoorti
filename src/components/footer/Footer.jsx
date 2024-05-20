@@ -5,9 +5,8 @@ import logo from  '../../assets/images/logoDark.svg'
 function Footer() {
  
   return (
-    <footer>
-    <div className="footer-wave ">
-    </div>
+    <footer className='p-2 p-md-5'>
+   
     <section className="footer_container d-flex flex-column justify-content-between container-fluid bg-texture" id="footer">
     <div className="row">
       
