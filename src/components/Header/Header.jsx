@@ -39,7 +39,7 @@ function Header({toggleTheme, theme}) {
           <Nav.Link href="/about">About Us</Nav.Link>
           <Nav.Link href="/services/sporti1">SPORTI-1</Nav.Link>
           <Nav.Link href="/services/sporti2">SPORTI-2</Nav.Link>
-          <Nav.Link href="/registration">Login</Nav.Link>
+          <Nav.Link href="/login">Login</Nav.Link>
           <Nav.Link href="/events&gallery">Events & Gallery</Nav.Link>
           <Nav.Link href="/faqs">FAQ's</Nav.Link>
           <NavDropdown
@@ -86,7 +86,7 @@ function Header({toggleTheme, theme}) {
             <li><a href="/services/sporti2">SPORTI-2</a></li>
            
 
-            <li><a href="/signup" >Login</a></li>
+            <li><a href="/login" >Login</a></li>
      
             <li><a href="/events&gallery"><i class="bi bi-images"></i> Events & Gallery</a></li>
             <li><a href="/faqs"><i class="bi bi-stars"></i> FAQ's</a></li>

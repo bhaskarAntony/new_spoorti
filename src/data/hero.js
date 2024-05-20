@@ -6,7 +6,7 @@ const heroImages = [
   {
     url: image1,
     description_en: "The lush green atmosphere and pleasant ambience     ",
-    description_ka: "SPORTI ಕ್ಯಾಂಪಸ್ನಲ್ಲಿಹಚ್ಚ ಹಸಿರಿನ ವಾತಾವರಣ ಮತ್ತುಆಹ್ಲಾದಕರ ವಾತಾವರಣ",
+    description_ka: "SPORTI ಕ್ಯಾಂಪg room at SPORTI-2    ಸ್ನಲ್ಲಿಹಚ್ಚ ಹಸಿರಿನ ವಾತಾವರಣ ಮತ್ತುಆಹ್ಲಾದಕರ ವಾತಾವರಣ",
     caption_en: "Welcome to SPORTI-1",
     caption_ka: "SPORTI ಗೆ ಸುಸ್ವಾಗತ"
   },
@@ -19,14 +19,14 @@ const heroImages = [
   },
   {
     url: './images/home/home4.jpg',
-    description_en: "Well organized neatly maintained Training room at SPORTI-2     ",
+    description_en: "VRO MANAGED RESTAURANT AT SPORTI-1",
     description_ka: "SPORTI ನಲ್ಲಿ ಸುಸಂಘಟಿತ ಮತ್ತು ಅಚ್ಚುಕಟ್ಟಾಗಿ ನಿರ್ವಹಿಸಲಾದ ಮೀಟಿಂಗ್ ಹಾಲ್",
     caption_en: "",
     caption_ka: "SPORTI ಗೆ ಸುಸ್ವಾಗತ"
   },
   {
-    url:image3,
-    description_en: "Well lighted Conference Hall",
+    url:'./images/home/home3.jpg',
+    description_en: "MINI THEATRE FACILITY AT SPORTI-1",
     description_ka: "ಇತರ ಸೌಕರ್ಯಗಳ ಜೊತೆಗೆ SPORTI ನಲ್ಲಿ ನೈರ್ಮಲ್ಯ ಮತ್ತು ಆರಾಮದಾಯಕ ವಸತಿ ಸೌಲಭ್ಯ",
     caption_en: "",
     caption_ka: "SPORTI ಗೆ ಸುಸ್ವಾಗತ"

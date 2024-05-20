@@ -9,13 +9,14 @@ import '../node_modules/bootstrap-icons/font/bootstrap-icons.css'
 import 'aos/dist/aos.css';
 import { AuthProvider } from './context/AuthContext.js';
 import { DialogProvider } from './components/popups/DialogContext.jsx';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
       <DialogProvider>
       <AuthProvider>
-        <App/>
+      <App />
     </AuthProvider>
       </DialogProvider>
   

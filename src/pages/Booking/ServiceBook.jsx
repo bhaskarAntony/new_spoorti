@@ -148,7 +148,10 @@ function MainFunctionHallBooking() {
                         <div className="col-md-6">
                             <div className="form-group mt-3">
                                 <label htmlFor="sporti" className="form-label">SPORTI</label>
-                                <input type="text" className="form-control" name="sporti" id="sporti" value={formData.sporti} onChange={handleFormChange} />
+                                <select className="form-control" name="sporti" id="sporti" value={formData.sporti} onChange={handleFormChange} >
+                                    <option value="sporti 1">SPORTI-1</option>
+                                    <option value="sporti 2">SPORTI-2</option>
+                                </select>
                             </div>
                         </div>
                         <div className="col-md-6">

@@ -1,7 +1,7 @@
 const gallerydata = [
    {
     id:1,
-    title:'Sporti 1 Gallery',
+    title:'Sporti-1 Gallery',
     image:'./images/events/SportiGallery/1.JPG',
     images:[
         {
@@ -96,7 +96,7 @@ const gallerydata = [
    },
    {
     id:2,
-    title:'Sporti 2 Gallery',
+    title:'Sporti-2 Gallery',
     image:'/images/sporti2_gallery/image5.JPG',
     images:[
         {

@@ -41,6 +41,7 @@ import MainRoomBook from './pages/Rooms/MainRoomBook';
 import ProtectedRoute from './components/ProtectedRoute';
 import FontSizeSelector from './font-resizer/FontSizeSelector';
 import { useAuth } from './context/AuthContext';
+import ScrollToTop from './components/ScrollToTop';
 
 function App(){
   useEffect(()=>{
