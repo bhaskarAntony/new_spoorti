@@ -56,11 +56,11 @@ function Services() {
             {service.services.map((item, index) => (
               <div className={`row p-3 rounded-3 mb-4 align-items-center ${index % 2 === 0 ? 'order-1' : 'order-2'}`} key={index}>
                 <div className="col-12 col-md-3">
-                  <img src={item.image} alt="" className="w-100 mb-3" onClick={()=>openModal(item.image, item.title)} />
+                  <img src={item.image} alt="" className="w-100 mb-3 rounded" onClick={()=>openModal(item.image, item.title)} />
                 </div>
                 <div className="col-12 col-md-9">
                   <h1 className="fs-4 title fw-bold">{item.title}</h1>
-                  <p className="mt-2 fs-6 text-secondary">{item.desc}</p>
+                  <p className="mt-2 lead text-secondary">{item.desc}</p>
                   {
                     item.isBook ? (
                     //   <Link to={`/services/book/${item.title.trim('-')}`} className='blue-btn rounded-5'>

@@ -22,6 +22,10 @@
     background: #00000079;
     padding: 3px;
 }
+.all-services{
+    position: sticky;
+    top: 0px;
+}
 
 
 
