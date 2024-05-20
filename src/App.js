@@ -40,6 +40,7 @@ import ServiceBook from './pages/Booking/ServiceBook';
 import MainRoomBook from './pages/Rooms/MainRoomBook';
 import ProtectedRoute from './components/ProtectedRoute';
 import FontSizeSelector from './font-resizer/FontSizeSelector';
+import { useAuth } from './context/AuthContext';
 
 function App(){
   useEffect(()=>{
@@ -61,6 +62,7 @@ function App(){
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
+  const {logout} = useAuth();
  
   return (
     <div className="App overflow-hidden">
@@ -68,7 +70,7 @@ function App(){
     <BrowserRouter>
     {/* <FontSizeSelector selectedFontSize={fontSize} handleFontSizeChange={handleFontSizeChange} /> */}
     <Header toggleTheme={toggleTheme} theme={theme}/>
-    
+      {/* <button onClick={logout}>Logout</button> */}
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/cart' element={<FoodCart/>}/>

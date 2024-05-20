@@ -146,55 +146,55 @@ const gallerydata = [
        
     ]
    },
-   {
-    id:3,
-    title:'Mini Theatre Opening Ceremony',
-    image:'/images/events/MiniTheatreOpening/srwe_2017_1.jpg',
-    images:[
-        {
-            original: "/images/events/MiniTheatreOpening/srwe_2017_1.jpg",
-            thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_1.jpg",
-          },
-          {
-            original: "/images/events/MiniTheatreOpening/srwe_2017_2.jpg",
-            thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_2.jpg",
-          },
-          {
-            original: "/images/events/MiniTheatreOpening/srwe_2017_3.jpg",
-            thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_3.jpg",
-          },
-          {
-            original: "/images/events/MiniTheatreOpening/srwe_2017_4.jpg",
-            thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_4.jpg",
-          },
-          {
-            original: "/images/events/MiniTheatreOpening/srwe_2017_5.jpg",
-            thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_5.jpg",
-          },
-          {
-            original: "/images/events/MiniTheatreOpening/srwe_2017_6.jpg",
-            thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_6.jpg",
-          },
-          {
-            original: "/images/events/MiniTheatreOpening/srwe_2017_7.jpg",
-            thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_7.jpg",
-          },
-          {
-            original: "/images/events/MiniTheatreOpening/srwe_2017_8.jpg",
-            thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_8.jpg",
-          },
-          {
-            original: "/images/events/MiniTheatreOpening/srwe_2017_9.jpg",
-            thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_9.jpg",
-          },
-          {
-            original: "/images/events/MiniTheatreOpening/srwe_2017_10.jpg",
-            thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_10.jpg",
-          }
+//    {
+//     id:3,
+//     title:'Mini Theatre Opening Ceremony',
+//     image:'/images/events/MiniTheatreOpening/srwe_2017_1.jpg',
+//     images:[
+//         {
+//             original: "/images/events/MiniTheatreOpening/srwe_2017_1.jpg",
+//             thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_1.jpg",
+//           },
+//           {
+//             original: "/images/events/MiniTheatreOpening/srwe_2017_2.jpg",
+//             thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_2.jpg",
+//           },
+//           {
+//             original: "/images/events/MiniTheatreOpening/srwe_2017_3.jpg",
+//             thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_3.jpg",
+//           },
+//           {
+//             original: "/images/events/MiniTheatreOpening/srwe_2017_4.jpg",
+//             thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_4.jpg",
+//           },
+//           {
+//             original: "/images/events/MiniTheatreOpening/srwe_2017_5.jpg",
+//             thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_5.jpg",
+//           },
+//           {
+//             original: "/images/events/MiniTheatreOpening/srwe_2017_6.jpg",
+//             thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_6.jpg",
+//           },
+//           {
+//             original: "/images/events/MiniTheatreOpening/srwe_2017_7.jpg",
+//             thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_7.jpg",
+//           },
+//           {
+//             original: "/images/events/MiniTheatreOpening/srwe_2017_8.jpg",
+//             thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_8.jpg",
+//           },
+//           {
+//             original: "/images/events/MiniTheatreOpening/srwe_2017_9.jpg",
+//             thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_9.jpg",
+//           },
+//           {
+//             original: "/images/events/MiniTheatreOpening/srwe_2017_10.jpg",
+//             thumbnail: "/images/events/MiniTheatreOpening/srwe_2017_10.jpg",
+//           }
             
         
-    ]
-   },
+//     ]
+//    },
    {
     id:4,
     title:'Superannuation ceremony of Sri. Pratap Reddy, IPS',

@@ -4,7 +4,7 @@ import { Navigate, Outlet, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const ProtectedRoute = () => {
-    const isAuthenticated = false; // Replace false with your authentication logic
+    const isAuthenticated = useAuth(); // Replace false with your authentication logic
     const location = useLocation();
     const { setLocation } = useAuth();
 

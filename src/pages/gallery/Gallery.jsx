@@ -72,10 +72,10 @@ function Gallery() {
             })}
             {itemIndex !== null && imageIndex !== null && (
                 <Modal show={show} onHide={closeModal} centered className='bg-transparent'  size="lg">
-                    <Modal.Header closeButton>
+                    {/* <Modal.Header closeButton>
                         <Modal.Title>{gallerydata[itemIndex].title}</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body className="text-center bg-transparent">
+                    </Modal.Header> */}
+                    <Modal.Body className="text-center bg-transparent p-0">
                        <div className="popup-image">
                        <img
                             src={gallerydata[itemIndex].images[imageIndex].original}
