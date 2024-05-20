@@ -33,7 +33,7 @@ function Services() {
 
   return (
     <div className='services'>
-      <div className={`contact-banner ${service.title=="SPORTI 1"? 'sporti1':'sporti2'}`}>
+      <div className={`contact-banner ${service.title=="SPORTI-1"? 'sporti1':'sporti2'}`}>
 
         <div className="skew-container"> 
           <div className="skew-left">

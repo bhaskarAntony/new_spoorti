@@ -39,20 +39,38 @@ import MainRoomBookingPage from './pages/Rooms/MainRoomBookingPage';
 import ServiceBook from './pages/Booking/ServiceBook';
 import MainRoomBook from './pages/Rooms/MainRoomBook';
 import ProtectedRoute from './components/ProtectedRoute';
+import FontSizeSelector from './font-resizer/FontSizeSelector';
 
-function App() {
+function App(){
   useEffect(()=>{
-    Aos.init()
+    Aos.init();
   }, [])
+
+  const [fontSize, setFontSize] = useState('16px'); // Default font size
+
+  const handleFontSizeChange = (event) => {
+    setFontSize(event.target.value);
+  };
+
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+  };
  
   return (
     <div className="App overflow-hidden">
    <TranslationHOC>
     <BrowserRouter>
-    <Header/>
+    {/* <FontSizeSelector selectedFontSize={fontSize} handleFontSizeChange={handleFontSizeChange} /> */}
+    <Header toggleTheme={toggleTheme} theme={theme}/>
+    
     <Routes>
       <Route path='/' element={<Home/>}/>
-      
       <Route path='/cart' element={<FoodCart/>}/>
       <Route path='/room' element={<MainRoomBook/>}/>
       <Route path='/roomview/:id/:sportiId' element={<RoomView/>}/>
@@ -71,17 +89,16 @@ function App() {
       <Route path='/food/order/:id' element={<ViewFood/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Registration/>}/>
-     <Route element={<ProtectedRoute/>}>
-     <Route path='/food' element={<Food/>}/>
-     
-     <Route path='/services/book' element={<ServiceBook/>}/>
+      <Route element={<ProtectedRoute/>}>
+      <Route path='/food' element={<Food/>}/>
+      <Route path='/services/book' element={<ServiceBook/>}/>
      </Route>
+
      <Route path='/services/:sporti' element={<Services/>}/>
       <Route path='/registration' element={<Registration/>}/>
       <Route path='/additional-details/:id' element={<AdditionalDetailsForm/>}/>
       <Route path='/admin/:id' element={<Admin/>}/>
       <Route path='/view/:id' element={<View/>}/>
-    
       <Route path='/conference-hall' element={<ConferenceHallBook/>}/>
     </Routes>
     <Footer/>

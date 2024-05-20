@@ -18,7 +18,7 @@ const heroImages = [
     caption_ka: "SPORTI ಗೆ ಸುಸ್ವಾಗತ"
   },
   {
-    url: image4,
+    url: './images/home/home4.jpg',
     description_en: "Well organized neatly maintained Training room at SPORTI-2     ",
     description_ka: "SPORTI ನಲ್ಲಿ ಸುಸಂಘಟಿತ ಮತ್ತು ಅಚ್ಚುಕಟ್ಟಾಗಿ ನಿರ್ವಹಿಸಲಾದ ಮೀಟಿಂಗ್ ಹಾಲ್",
     caption_en: "",

@@ -9,7 +9,7 @@ import membersData from '../../data/members'
 function About() {
   return (
     <div>
-        <div className="contact-banner ">
+        <div className="contact-banner about-banner">
             {/* <h1 className='fs-1 fw-bold text-center'>About us</h1>
             <p className="fs-6 text-center">
             SPORTI consists of a team of Senior Officers from various units of the Police Department. It also has a Working Committee who conduct various Conferences and Workshops to discuss the operations and functioning of the Institute. The team hosts periodic meetings every last Friday of the month for effective improvements of the Institute.

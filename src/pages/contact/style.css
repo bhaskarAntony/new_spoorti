@@ -1,8 +1,11 @@
-.contact-banner{
-    background: url(../../assets//images/banner1.jpg) no-repeat center;
+.sporti1{
+    background: url(../../../public/images/sporti1/sporti1_banner.jpg) no-repeat center;
     background-size: cover;
     min-height: 50vh;
     background-attachment: fixed;
+}
+.contact-banner{
+    
 }
 .contact-card{
     min-height: 250px;

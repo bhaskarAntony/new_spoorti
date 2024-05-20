@@ -20,7 +20,7 @@ function Contact() {
 
   return (
     <div className='contact'>
-   <div className="contact-banner">
+   <div className={`contact-banner ${contact.title=='SPORTI 1'?'sporti1':'sporti2'}`}>
     <div className="skew-container">
         <div className="skew-left">
             <h1 className="fs-2 fw-bold">CONTACT US</h1>

@@ -7,8 +7,10 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../../assets/images/main_logo.svg'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useState } from 'react';
+import ThemeToggle from '../../Theme/ThemeToggle';
 
-function Header() {
+function Header({toggleTheme, theme}) {
+ 
   
   const [show, setShow] = useState(false);
   const [showDropdown1, setShowDropdown1] = useState(false);
@@ -19,6 +21,7 @@ function Header() {
     
   return (
    <header>
+       {/* <ThemeToggle toggleTheme={toggleTheme} theme={theme} /> */}
   <Navbar expand="lg" className="navbar p-0">
   <Container fluid className='p-0'>
     <div className="logo-container d-flex align-items-center bg-white">
