@@ -11,7 +11,6 @@ const ProtectedRoute = () => {
     if (!isAuthenticated) {
         setLocation(location); // Set the current location in the auth context
     }
-
     return (
         <React.Fragment>
             {isAuthenticated ? (

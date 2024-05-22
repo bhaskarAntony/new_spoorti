@@ -12,6 +12,7 @@ const FontSizeSelector = ({ selectedFontSize, handleFontSizeChange }) => {
         <option value="20px">20px</option>
         <option value="24px">24px</option>
       </select>
+      <i></i>
     </div>
   );
 };
