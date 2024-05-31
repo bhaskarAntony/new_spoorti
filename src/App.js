@@ -42,6 +42,8 @@ import ProtectedRoute from './components/ProtectedRoute';
 import FontSizeSelector from './font-resizer/FontSizeSelector';
 import { useAuth } from './context/AuthContext';
 import ScrollToTop from './components/ScrollToTop';
+import Payment from './pages/payment/Payment';
+// import Verify from './pages/Verification/Verify';
 
 function App(){
   useEffect(()=>{
@@ -69,6 +71,7 @@ function App(){
     <div className="App overflow-hidden">
    <TranslationHOC>
     <BrowserRouter>
+    <ScrollToTop/>
     {/* <FontSizeSelector selectedFontSize={fontSize} handleFontSizeChange={handleFontSizeChange} /> */}
     <Header toggleTheme={toggleTheme} theme={theme}/>
       {/* <button onClick={logout}>Logout</button> */}
@@ -94,6 +97,7 @@ function App(){
       <Route path='/signup' element={<Registration/>}/>
       <Route element={<ProtectedRoute/>}>
       <Route path='/food' element={<Food/>}/>
+      <Route path='/payment/:applicationNo' element={<Payment/>}/>
       <Route path='/services/book' element={<ServiceBook/>}/>
      </Route>
 

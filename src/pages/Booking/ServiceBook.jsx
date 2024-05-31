@@ -3,24 +3,32 @@ import SuccessPopup from '../../components/popups/SuccessPopup';
 import CryptoJS from 'crypto-js';
 import { Dropdown } from 'react-bootstrap';
 import axios from 'axios';
+import Loading from '../../components/popups/Loading';
+import { useNavigate } from 'react-router-dom';
 
 function MainFunctionHallBooking() {
     const [ApplicationNo, setApplicationNo] = useState(null)
     const [formData, setFormData] = useState({
-        username: '',
+        username: 'test Payemnt',
         email: '',
         phoneNumber: '',
         sporti: '',
         checkIn: '',
         checkOut: '',
-        serviceName: null,
-        serviceType: null,
-        totalAmount: 0
+        serviceName: '',
+        serviceType: '',
+        Paidamount:'pending',
+        Paiddatetime:'pending',
+        K1TranNo:'pending',    
+        SPORTIPWD:'pending',
+        SPORTIUSRID:'pending',
+        CheckSum:'pending'
     });
     const [showmodal, setShowModal] = useState(false);
     const [desc, setDesc] = useState(null);
     const [title, setTitle] = useState(null);
     const [message, setMessage] = useState('');
+    const [isLoading, setIsLoading] = useState(false)
     const [errors, setErrors] = useState({
         username: '',
         email: '',
@@ -148,12 +156,12 @@ function MainFunctionHallBooking() {
         const requestData = {
             K1USRID: 'K1SPOTIUSER',
             K1PWD: '39d16932b27ba15a4c77fd09f8817b2dbce0089dfd45b602fdad8881127002560c5249a77c9dce96fc88a035a1393553ca80f1196b2f89a27b701525533fc55c',
-            Name: formData.user,
-            AppNo: 'MD89786',
+            Name: formData.username,
+            AppNo: applicationNo,
             Email: formData.email,
             Phone: formData.phoneNumber,
             ProductInfo: formData.serviceName,
-            AmountPaid: calculateTotalCost()
+            AmountPaid: calculateTotalCost(),
         };
 
         // Concatenate parameters in the specified order
@@ -183,25 +191,34 @@ function MainFunctionHallBooking() {
         document.body.appendChild(form);
         form.submit();
     };
+    const navigate = useNavigate()
 
     const submitForm = (e) => {
         e.preventDefault()
+        setIsLoading(true)
       if(validateForm()){
-        axios.post('http://localhost:5000/api/submitForm', formData)
+        axios.post('https://sporti-backend-2-o22y.onrender.com/api/payment', formData)
         .then(response => {
             const { success, user } = response.data;
             console.log(response)
             if (success) {
+                setIsLoading(false);
                 createPaymentForm(formData.username, formData.email, formData.phoneNumber, formData.serviceName, user.applicationNo)
                 setMessage(`Booking submitted successfully with application number ${user.applicationNo}`);
                 openModal('Success', `Booking submitted successfully with application number ${user.applicationNo}`)
+                // navigate('/payment');
+
             } else {
+                setIsLoading(false);
                 setMessage('Failed to submit booking');
             }
         })
         .catch(error => console.error('Error submitting form:', error));
       }
     };
+    if(isLoading){
+        return <Loading/>
+    }
 
     return (
         <div className='main-function-hall-booking container-fluid p-3 p-md-5'>
@@ -211,11 +228,11 @@ function MainFunctionHallBooking() {
                    <form action="" onSubmit={submitForm}>
                    <div className="row">
                             <div className="col-md-12">
-                                <div className="form-group mt-3">
+                                {/* <div className="form-group mt-3">
                                     <label htmlFor="username" className="form-label">Username</label>
                                     <input type="text" className="form-control" name="username" id="username" value={formData.username} onChange={handleFormChange} />
                                     {errors.username && <small className="text-danger">{errors.username}</small>}
-                                </div>
+                                </div> */}
                             </div>
                             <div className="col-md-12">
                                 <div className="form-group mt-3">
@@ -229,6 +246,29 @@ function MainFunctionHallBooking() {
                                     <label htmlFor="phoneNumber" className="form-label">Phone Number</label>
                                     <input type="text" className="form-control" name="phoneNumber" id="phoneNumber" value={formData.phoneNumber} onChange={handleFormChange} />
                                     {errors.phoneNumber && <small className="text-danger">{errors.phoneNumber}</small>}
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <div className="form-group mt-3">
+                                    <label htmlFor="check" className="form-label">checkin</label>
+                                    <input type="date" className="form-control" name="checkIn" id="phoneNumber" value={formData.checkIn} onChange={handleFormChange} />
+                                    {errors.checkIn && <small className="text-danger">{errors.checkIn}</small>}
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <div className="form-group mt-3">
+                                    <label htmlFor="check" className="form-label">check out</label>
+                                    <input type="date" className="form-control" name="checkOut" id="phoneNumber" value={formData.checkOut} onChange={handleFormChange} />
+                                    {errors.checkOut && <small className="text-danger">{errors.checkOut}</small>}
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <div className="form-group mt-3">
+                                    <label htmlFor="check" className="form-label">Sporti</label>
+                                   <select name="sporti" className='form-select' id="" value={formData.sporti} onChange={handleFormChange}>
+                                    <option value="sporti1">SPORTI-1</option>
+                                    <option value="sporti2">SPORTI-2</option>
+                                   </select>
                                 </div>
                             </div>
                         <div className="col-md-6">
@@ -268,7 +308,7 @@ function MainFunctionHallBooking() {
                             </div>
                         </div>
                     </div>
-                    <button className="btn btn-primary mt-4" type='submit'>Continue</button>
+                    <button className="btn btn-primary mt-4" type='submit'>Send Request</button>
                    </form>
                 </div>
                 <div className="col-md-4">

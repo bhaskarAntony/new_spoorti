@@ -3,6 +3,7 @@ import gallerydata from '../../data/gallery';
 import { useParams } from 'react-router-dom';
 import { Modal, Button } from 'react-bootstrap';
 import './style.css';
+import LazyLoad from 'react-lazy-load';
 
 function Gallery() {
     const { id } = useParams();
@@ -55,12 +56,14 @@ function Gallery() {
                                 {item.images.map((image, subindex) => (
                                     <div className="col-6 col-md-3 mb-3" key={subindex}>
                                         <div className="gallery-card service-card h-100">
+                                      
                                             <img
                                                 src={image.original}
                                                 alt=""
                                                 className="w-100 h-100"
                                                 onClick={() => openModal(index, subindex)}
                                             />
+                                            
                                         </div>
                                     </div>
                                 ))}
@@ -77,9 +80,11 @@ function Gallery() {
                     </Modal.Header> */}
                     <Modal.Body className="text-center bg-transparent p-0">
                        <div className="popup-image">
+                     
                        <img
                             src={gallerydata[itemIndex].images[imageIndex].original}
                             alt=""
+                            loading='lazy'
                             className="w-100"
                         />
                         <button className='prev'  onClick={showPrevImage} disabled={imageIndex === 0}><i class="bi bi-chevron-compact-left display-3"></i></button>

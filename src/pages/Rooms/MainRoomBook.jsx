@@ -190,8 +190,9 @@ function MainRoomBook() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validateForm()) {
-            createPaymentForm();
+            
             openModal('Success', 'Your booking was successful.');
+            createPaymentForm();
         }
     };
 

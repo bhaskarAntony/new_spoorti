@@ -27,7 +27,7 @@ function Header({toggleTheme, theme}) {
   <Container fluid className='p-0'>
     <div className="logo-container d-flex align-items-center bg-white">
     <Navbar.Brand href="/"><div className='d-flex gap-2 align-items-center logo'>
-      <img src={logo} alt="logo" /> 
+      <img src={logo} alt="logo" className='main-logo' /> 
       <h1 className="fs-3 fw-bold m-0 text-black">SPORTI</h1></div></Navbar.Brand>
     </div>
 

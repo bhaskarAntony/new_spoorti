@@ -1,8 +1,6 @@
-
-
 .about-banner{
-    background: url('../../../public/images/aboutus/about_us_banner.jpg') center top !important;
-    background-size: 100% !important;
+    background: url('../../../public/images/aboutus/about_us_banner.jpg') no-repeat center top !important;
+    background-size:cover !important;
     color: #fff;
     min-height: 80vh !important;
     background-attachment: fixed !important;
@@ -11,7 +9,6 @@
     height: 300px;
     object-fit: contain;
     object-fit: cover;
-   
 }
 .profile-card{
     /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */

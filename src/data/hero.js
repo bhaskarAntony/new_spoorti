@@ -25,7 +25,7 @@ const heroImages = [
     caption_ka: "SPORTI ಗೆ ಸುಸ್ವಾಗತ"
   },
   {
-    url:'./images/home/home3.jpg',
+    url:'/images/home/home3.jpg',
     description_en: "MINI THEATRE FACILITY AT SPORTI-1",
     description_ka: "ಇತರ ಸೌಕರ್ಯಗಳ ಜೊತೆಗೆ SPORTI ನಲ್ಲಿ ನೈರ್ಮಲ್ಯ ಮತ್ತು ಆರಾಮದಾಯಕ ವಸತಿ ಸೌಲಭ್ಯ",
     caption_en: "",
