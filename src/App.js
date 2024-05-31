@@ -97,7 +97,7 @@ function App(){
       <Route path='/signup' element={<Registration/>}/>
       <Route element={<ProtectedRoute/>}>
       <Route path='/food' element={<Food/>}/>
-      <Route path='/payment/' element={<Payment/>}/>
+      <Route path='/payment/:applicationNo' element={<Payment/>}/>
       <Route path='/services/book' element={<ServiceBook/>}/>
      </Route>
 
