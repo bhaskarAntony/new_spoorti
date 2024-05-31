@@ -17,7 +17,7 @@ const team = [
         desc:'Commissioner, Bengaluru City Police'
     },
     {
-        profile:'https://t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg',
+        profile:'https://english.varthabharati.in/storage/uploads/karavali/sandeep_vb_67.jpeg',
         name:'Sri Sandeep Patil, IPS',
         role:'Supervisory officer, SPORTI-2',
         desc:'IGP, KSRP'

@@ -26,7 +26,7 @@ const membersData = [
     },
     {
         name:'Sri Raman Guptha, IPS ',
-        role:'IGP & Add commissioner police, East Bengaluru City',
+        role:'IGP & Addl Commissioner of Police (East) Bengaluru City',
         desc:'Member '
     },
     {

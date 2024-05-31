@@ -203,10 +203,10 @@ function MainFunctionHallBooking() {
             console.log(response)
             if (success) {
                 setIsLoading(false);
-                createPaymentForm(formData.username, formData.email, formData.phoneNumber, formData.serviceName, user.applicationNo)
+                // createPaymentForm(formData.username, formData.email, formData.phoneNumber, formData.serviceName, user.applicationNo)
                 setMessage(`Booking submitted successfully with application number ${user.applicationNo}`);
                 openModal('Success', `Booking submitted successfully with application number ${user.applicationNo}`)
-                // navigate('/payment');
+                navigate('/');
 
             } else {
                 setIsLoading(false);

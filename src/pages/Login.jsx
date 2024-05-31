@@ -18,21 +18,23 @@ const Login = (props) => {
   const login = async (e) => {
     e.preventDefault()
     setLoading(true)
-    try {
-      const response = await axios.post('https://sporti-backend-2-o22y.onrender.com/api/login', { email, password });
-      setUser(response.data.user);
-      setLoading(false)
-      console.log(location);
-      setIsAuthenticated(true);
-      localStorage.setItem('token', response.data.token);
-      openDialog('Success', 'successfully completed Login', false);
-      navigate('/');
+    // try {
+    //   const response = await axios.post('https://sporti-backend-2-o22y.onrender.com/api/login', { email, password });
+    //   setUser(response.data.user);
+    //   setLoading(false)
+    //   console.log(location);
+    //   setIsAuthenticated(true);
+    //   localStorage.setItem('token', response.data.token);
+    
+    //   navigate('/');
       
-    } catch (error) {
-        setLoading(false)
-        openDialog('Invalid email or password', 'Please Check the details and try again.', true);
-      console.error('Login failed', error);
-    }
+    // } catch (error) {
+    //     setLoading(false)
+    //     openDialog('Invalid email or password', 'Please Check the details and try again.', true);
+    //   console.error('Login failed', error);
+    // }
+    openDialog('Success', 'successfully completed Login', false);
+    navigate('/');
   };
 
   if(loading){
