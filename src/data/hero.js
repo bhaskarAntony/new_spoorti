@@ -1,7 +1,6 @@
 import image1 from '../assets/images/banner1.jpg'
 import image2 from '../assets/images/banner2.jpg'
-import image3 from '../assets/images/banner3.jpg'
-import image4 from '../assets/images/banner4.jpg'
+
 const heroImages = [
   {
     url: image1,

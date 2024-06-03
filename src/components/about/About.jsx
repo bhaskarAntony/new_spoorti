@@ -1,14 +1,17 @@
 import React from 'react'
+import { useLanguage } from '../../context/LangaugeContext'
+import about from '../../data/AboutSection';
 
 function About() {
+    const {isKannada} = useLanguage();
   return (
     <div className='about-container p-3 px-md-5 bg-light py-1'>
         <div className="row align-items-center">
             <div className="col-12 col-md-6">
                 <div className="about-left mb-3">
-                    <p className="fs-4">Since 1973</p>
-                <h1 className="fs-3 fw-bold title">SPORTI - Senior Police Officers <br /> Research and Training Institute</h1>
-                <p className="fs-6 text-secondary">SPORTI - Senior Police Officers Research and Training Institute was established in the year 1973 and has been successfully catering to the needs of Police department. It was priorly known as Senior Police Officer Mess and renamed to SPORTI in 2019 to enhance the quality of services being provided. </p>
+                    <p className="fs-4">{isKannada?about.tag_ka:about.tag_en}</p>
+                <h1 className="fs-3 fw-bold title">{isKannada?about.heading_ka:about.heading_en}</h1>
+                <p className="fs-6 text-secondary">{isKannada?about.desc_ka:about.desc_en}</p>
                 </div>
                 <div className="btns d-flex flex-wrap gap-3 mt-3"> 
                     <a href='/about' className="main-btn">Know More</a>

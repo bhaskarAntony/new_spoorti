@@ -2,15 +2,18 @@ import React from 'react';
 import './style.css';
 import faqs from '../../data/faqs';
 import Feedback from '../../components/feedback/Feedback';
+import { useLanguage } from '../../context/LangaugeContext';
 
 function Faqs() {
+  const { isKannada } = useLanguage();
+
   return (
     <div>
       <div className="faqs-page">
         <div className="contact-banner">
           <div className="skew-container">
             <div className="skew-left">
-              <h1 className="fs-2 fw-bold">FAQ's</h1>
+              <h1 className="fs-2 fw-bold">{isKannada ? 'ಪತಿ' : "FAQ's"}</h1>
             </div>
             <div className="skew-right d-flex align-items-center">
               <h1 className="fs-2 fw-bold"></h1>
@@ -32,7 +35,7 @@ function Faqs() {
                       aria-expanded="true"
                       aria-controls={`collapse-${index}`}
                     >
-                      {item.question}
+                      {isKannada ? item.question_ka : item.question_en}
                     </button>
                   </h2>
                   <div
@@ -41,8 +44,8 @@ function Faqs() {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                      {Array.isArray(item.answer) ? (
-                        item.answer.map((subItem, subIndex) => (
+                      {Array.isArray(isKannada ? item.answer_ka : item.answer_en) ? (
+                        (isKannada ? item.answer_ka : item.answer_en).map((subItem, subIndex) => (
                           <div key={subIndex}>
                             <h4>{subItem.SPORTI}</h4>
                             {subItem.description && <p>{subItem.description}</p>}
@@ -51,7 +54,7 @@ function Faqs() {
                           </div>
                         ))
                       ) : (
-                        <p>{item.answer}</p>
+                        <p>{isKannada ? item.answer_ka : item.answer_en}</p>
                       )}
                     </div>
                   </div>
@@ -63,11 +66,11 @@ function Faqs() {
 
         <div className="feedback text-center p-3">
           <i className="bi bi-stars fs-2 text-warning"></i>
-          <h1 className="fs-2 fw-bold">WRITE TO US</h1>
-          <span className="fs-6 subtitle d-block text-center">FEEL FREE TO SEND US A MESSAGE</span>
+          <h1 className="fs-2 fw-bold">{isKannada ? 'ನಮಗೆ ಬರೆಯಿರಿ' : 'WRITE TO US'}</h1>
+          <span className="fs-6 subtitle d-block text-center">{isKannada ? 'ನಮಗೆ ಸಂದೇಶ ಕಳುಹಿಸಲು ಮುಕ್ತವಾಗಿ ಕಳುಹಿಸಿ' : 'FEEL FREE TO SEND US A MESSAGE'}</span>
         </div>
 
-      <Feedback/>
+        <Feedback />
       </div>
     </div>
   );

@@ -4,6 +4,8 @@ import './style.css'
 import About from '../../components/about/About'
 import { Link } from 'react-router-dom'
 import Recents from '../../components/Recents/Recents'
+import { useLanguage } from '../../context/LangaugeContext'
+import Benefits from '../../data/Benefits'
 
 const roomBookingFAQs = [
     {
@@ -51,6 +53,7 @@ const roomBookingFAQs = [
 
 function Home() {
     const  isAuthenticated  =true;
+    const {isKannada} = useLanguage()
   return (
     <div>
         <Hero/>
@@ -293,14 +296,19 @@ function Home() {
         <div className="container-fluid s1 p-3 p-md-5 py-5 overflow-hidden">
             <div className="row align-items-center">
                 <div className="col-12 col-md-6 mb-4">
-                    <h1 className="fs-3 fw-bold title">Discover Exclusive Benefits of Booking Rooms for Police Officers</h1>
-                    <p className="fs-6 text-secondary">Police officers can access a variety of facilities tailored to their needs, including accommodation, dining, and event hosting. These services are designed to cater to both professional engagements and personal leisure, offering spaces for meetings, dining experiences, and recreational activities like sports. Additionally, specialized services are available for organizing events and functions, ensuring seamless coordination and execution. Moreover, police officers can also reserve facilities for their peers from other cadres, fostering camaraderie and collaboration across different branches of law enforcement.</p>
+                    <h1 className="fs-3 fw-bold title">{isKannada?Benefits.heading_ka:Benefits.heading_en}</h1>
+                    <p className="fs-6 text-secondary">{isKannada?Benefits.desc_ka:Benefits.desc_en}</p>
                     <ul>
-                        <li><i class="bi bi-check2 text-success"></i>Police officers can access a range of tailored facilities, including accommodation, dining, and event hosting, designed to meet their professional and personal needs.</li>
-                        <li><i class="bi bi-check2 text-success"></i> encompass spaces for meetings, dining experiences, and recreational activities, promoting both productivity and relaxation.</li>
+                        {
+                            Benefits.points.map((item, index)=>(
+                                <li><i class="bi bi-check2 text-success"></i> {isKannada?item.kannada:item.english}</li>
+                            ))
+                        }
+
+                      
                     </ul>
                     <div className="d-flex gap-2 mt-4">
-                        <a href='/signup' className="main-btn p-2 px-5">Sign up</a>
+                        {/* <a href='/signup' className="main-btn p-2 px-5">Sign up</a> */}
                         {/* <a href='/services' className="btn-outline p-2 text-dark">Learn more</a> */}
                     </div>
                 </div>

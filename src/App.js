@@ -43,6 +43,7 @@ import FontSizeSelector from './font-resizer/FontSizeSelector';
 import { useAuth } from './context/AuthContext';
 import ScrollToTop from './components/ScrollToTop';
 import Payment from './pages/payment/Payment';
+import { useLanguage } from './context/LangaugeContext';
 // import Verify from './pages/Verification/Verify';
 
 function App(){
@@ -66,9 +67,11 @@ function App(){
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
   const {logout} = useAuth();
+  const {setIsKannada, isKannada} = useLanguage();
  
   return (
     <div className="App overflow-hidden">
+      <button onClick={()=>setIsKannada(!isKannada)}>{isKannada?'To English':'To Kannada'}</button>
    <TranslationHOC>
     <BrowserRouter>
     <ScrollToTop/>
